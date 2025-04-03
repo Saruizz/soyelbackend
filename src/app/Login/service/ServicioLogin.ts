@@ -127,17 +127,9 @@ class ServicioLogin {
                 [codUsuario]
             );
 
-            const ultimoIngreso = await pool.oneOrNone(
-                `SELECT 
-                    i.cod_ingreso as codIngreso,
-                    TO_CHAR(i.fecha_ingreso, 'DD/MM/YYYY') as fechaIngreso,
-                    TO_CHAR(i.hora_ingreso, 'HH12:MI:SS AM') as horaIngreso
-                FROM ingresos i
-                WHERE i.cod_usuario = $1
-                ORDER BY i.fecha_ingreso DESC, i.hora_ingreso DESC
-                LIMIT 1`,
-                [codUsuario]
-            );
+            const ultimoIngreso = await pool.oneOrNone(SQL_INGRESO.LAST_ENTRY, [
+                codUsuario,
+            ]);
 
             res.status(200).json({
                 respuesta: "Sesión válida",
@@ -148,12 +140,13 @@ class ServicioLogin {
                     nombresUsuario: infoUsuario.nombresusuario,
                     apellidosUsuario: infoUsuario.apellidosusuario,
                 },
-                ingreso: ultimoIngreso ? {
-                    codIngreso: ultimoIngreso.codingreso,
-                    fechaIngreso: ultimoIngreso.fechaingreso,
-                    horaIngreso: ultimoIngreso.horaingreso
-                } : null
-
+                ingreso: ultimoIngreso
+                    ? {
+                        codIngreso: ultimoIngreso.codingreso,
+                        fechaIngreso: ultimoIngreso.fechaingreso,
+                        horaIngreso: ultimoIngreso.horaingreso,
+                    }
+                    : null,
             });
         } catch (error) {
             console.log(error);
@@ -204,10 +197,9 @@ class ServicioLogin {
         const { codUsuario } = req.params;
 
         try {
-            const historialIngresos = await pool.result(
-                SQL_INGRESO.FIND_BY_USER,
-                [codUsuario]
-            );
+            const historialIngresos = await pool.result(SQL_INGRESO.FIND_BY_USER, [
+                codUsuario,
+            ]);
 
             if (historialIngresos.rows.length === 0) {
                 return res.status(404).json({
