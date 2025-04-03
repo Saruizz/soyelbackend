@@ -1,0 +1,260 @@
+@startuml "Sistema de Gestión de Parqueadero - Casos de Uso Completos"
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+' Actores principales
+actor "Administrador" as Admin
+actor "Operador" as Operator
+actor "Cliente" as Client
+actor "Sistema" as System
+actor "Supervisor" as Supervisor
+
+' Paquetes para organizar casos de uso
+package "Gestión de Usuarios" {
+  usecase "Registrar Usuario" as RegistrarUsuario
+  usecase "Modificar Usuario" as ModificarUsuario
+  usecase "Eliminar Usuario" as EliminarUsuario
+  usecase "Consultar Usuario" as ConsultarUsuario
+  usecase "Gestionar Roles" as GestionarRoles
+  usecase "Crear Rol" as CrearRol
+  usecase "Modificar Rol" as ModificarRol
+  usecase "Eliminar Rol" as EliminarRol
+  usecase "Asignar Permisos a Rol" as AsignarPermisosRol
+  usecase "Asignar Permisos a Usuario" as AsignarPermisosUsuario
+  usecase "Revocar Permisos" as RevocarPermisos
+  usecase "Autenticar Usuario" as AutenticarUsuario
+  usecase "Recuperar Contraseña" as RecuperarContrasena
+  usecase "Cerrar Sesión" as CerrarSesion
+  usecase "Gestionar Accesos" as GestionarAccesos
+  usecase "Auditar Accesos" as AuditarAccesos
+  usecase "Bloquear Acceso" as BloquearAcceso
+  usecase "Generar UUID" as GenerarUUID
+}
+
+package "Gestión de Parqueaderos" {
+  usecase "Registrar Parqueadero" as RegistrarParqueadero
+  usecase "Modificar Parqueadero" as ModificarParqueadero
+  usecase "Eliminar Parqueadero" as EliminarParqueadero
+  usecase "Consultar Parqueadero" as ConsultarParqueadero
+  usecase "Administrar Puestos" as AdministrarPuestos
+  usecase "Crear Puesto" as CrearPuesto
+  usecase "Modificar Puesto" as ModificarPuesto
+  usecase "Eliminar Puesto" as EliminarPuesto
+  usecase "Deshabilitar Puesto" as DeshabilitarPuesto
+  usecase "Configurar Tarifas" as ConfigurarTarifas
+  usecase "Definir Tarifa por Tipo de Vehículo" as DefinirTarifaPorTipoVehiculo
+  usecase "Aplicar Descuentos" as AplicarDescuentos
+  usecase "Modificar Tarifas" as ModificarTarifas
+  usecase "Gestionar Ubicaciones" as GestionarUbicaciones
+  usecase "Crear Ubicación" as CrearUbicacion
+  usecase "Modificar Ubicación" as ModificarUbicacion
+  usecase "Eliminar Ubicación" as EliminarUbicacion
+  usecase "Organizar Jerarquía de Ubicaciones" as OrganizarJerarquiaUbicaciones
+}
+
+package "Gestión de Vehículos" {
+  usecase "Registrar Vehículo" as RegistrarVehiculo
+  usecase "Modificar Vehículo" as ModificarVehiculo
+  usecase "Eliminar Vehículo" as EliminarVehiculo
+  usecase "Consultar Vehículo" as ConsultarVehiculo
+  usecase "Asociar Vehículo a Usuario" as AsociarVehiculoUsuario
+  usecase "Desasociar Vehículo de Usuario" as DesasociarVehiculoUsuario
+  usecase "Transferir Vehículo a Otro Usuario" as TransferirVehiculoOtroUsuario
+  usecase "Gestionar Tipos de Vehículos" as GestionarTiposVehiculos
+  usecase "Crear Tipo de Vehículo" as CrearTipoVehiculo
+  usecase "Modificar Tipo de Vehículo" as ModificarTipoVehiculo
+  usecase "Eliminar Tipo de Vehículo" as EliminarTipoVehiculo
+}
+
+package "Operación Diaria" {
+  usecase "Registrar Ingreso de Vehículo" as RegistrarIngresoVehiculo
+  usecase "Verificar Disponibilidad" as VerificarDisponibilidad
+  usecase "Registrar Vehículo Visitante" as RegistrarVehiculoVisitante
+  usecase "Registrar Salida de Vehículo" as RegistrarSalidaVehiculo
+  usecase "Calcular Tiempo de Estadía" as CalcularTiempoEstadia
+  usecase "Calcular Valor a Pagar" as CalcularValorPagar
+  usecase "Generar Servicio Diario" as GenerarServicioDiario
+  usecase "Emitir Comprobante" as EmitirComprobante
+  usecase "Registrar Pago" as RegistrarPago
+  usecase "Gestionar Servicios Especiales" as GestionarServiciosEspeciales
+  usecase "Crear Servicio Mensual" as CrearServicioMensual
+  usecase "Renovar Servicio" as RenovarServicio
+  usecase "Cancelar Servicio" as CancelarServicio
+  usecase "Asignar Puesto" as AsignarPuesto
+  usecase "Reasignar Puesto" as ReasignarPuesto
+  usecase "Liberar Puesto" as LiberarPuesto
+}
+
+package "Gestión de Turnos" {
+  usecase "Crear Turno" as CrearTurno
+  usecase "Modificar Turno" as ModificarTurno
+  usecase "Eliminar Turno" as EliminarTurno
+  usecase "Consultar Turno" as ConsultarTurno
+  usecase "Asignar Operador a Turno" as AsignarOperadorTurno
+  usecase "Desasignar Operador de Turno" as DesasignarOperadorTurno
+  usecase "Modificar Asignación" as ModificarAsignacion
+  usecase "Registrar Ingreso a Turno" as RegistrarIngresoTurno
+  usecase "Registrar Salida de Turno" as RegistrarSalidaTurno
+  usecase "Reportar Novedad en Turno" as ReportarNovedadTurno
+  usecase "Generar Calendario de Turnos" as GenerarCalendarioTurnos
+}
+
+package "Reportes y Dashboard" {
+  usecase "Consultar Ocupación Actual" as ConsultarOcupacionActual
+  usecase "Ver Mapa de Ocupación" as VerMapaOcupacion
+  usecase "Filtrar por Tipo de Vehículo" as FiltrarPorTipoVehiculo
+  usecase "Generar Reporte de Ingresos" as GenerarReporteIngresos
+  usecase "Reporte por Período" as ReportePorPeriodo
+  usecase "Reporte por Parqueadero" as ReportePorParqueadero
+  usecase "Reporte por Tipo de Servicio" as ReportePorTipoServicio
+  usecase "Consultar Historial de Servicios" as ConsultarHistorialServicios
+  usecase "Historial por Vehículo" as HistorialPorVehiculo
+  usecase "Historial por Cliente" as HistorialPorCliente
+  usecase "Histórico de Tarifas" as HistoricoTarifas
+  usecase "Analizar Tendencias de Uso" as AnalizarTendenciasUso
+  usecase "Estadísticas de Ocupación" as EstadisticasOcupacion
+  usecase "Horas Pico" as HorasPico
+  usecase "Proyección de Ingresos" as ProyeccionIngresos
+}
+
+package "Gestión de Funcionalidades" {
+  usecase "Crear Funcionalidad" as CrearFuncionalidad
+  usecase "Modificar Funcionalidad" as ModificarFuncionalidad
+  usecase "Eliminar Funcionalidad" as EliminarFuncionalidad
+  usecase "Organizar Menú de Funcionalidades" as OrganizarMenuFuncionalidades
+  usecase "Marcar Funcionalidad como Favorita" as MarcarFuncionalidadFavorita
+}
+
+package "Facturación y Pagos" {
+  usecase "Generar Factura" as GenerarFactura
+  usecase "Anular Factura" as AnularFactura
+  usecase "Registrar Pago en Efectivo" as RegistrarPagoEfectivo
+  usecase "Registrar Pago Electrónico" as RegistrarPagoElectronico
+  usecase "Generar Informe Contable" as GenerarInformeContable
+}
+
+' Relaciones de Admin
+Admin --> RegistrarUsuario
+Admin --> ModificarUsuario
+Admin --> EliminarUsuario
+Admin --> ConsultarUsuario
+Admin --> GestionarRoles
+Admin --> CrearRol
+Admin --> ModificarRol
+Admin --> EliminarRol
+Admin --> AsignarPermisosRol
+Admin --> AsignarPermisosUsuario
+Admin --> RevocarPermisos
+Admin --> AuditarAccesos
+Admin --> BloquearAcceso
+Admin --> RegistrarParqueadero
+Admin --> ModificarParqueadero
+Admin --> EliminarParqueadero
+Admin --> AdministrarPuestos
+Admin --> ConfigurarTarifas
+Admin --> DefinirTarifaPorTipoVehiculo
+Admin --> AplicarDescuentos
+Admin --> ModificarTarifas
+Admin --> GestionarUbicaciones
+Admin --> GestionarTiposVehiculos
+Admin --> CrearTipoVehiculo
+Admin --> ModificarTipoVehiculo
+Admin --> EliminarTipoVehiculo
+Admin --> CrearTurno
+Admin --> CrearFuncionalidad
+Admin --> ModificarFuncionalidad
+Admin --> EliminarFuncionalidad
+Admin --> OrganizarMenuFuncionalidades
+
+' Relaciones de Supervisor
+Supervisor --> AuditarAccesos
+Supervisor --> CrearTurno
+Supervisor --> ModificarTurno
+Supervisor --> EliminarTurno
+Supervisor --> AsignarOperadorTurno
+Supervisor --> DesasignarOperadorTurno
+Supervisor --> ModificarAsignacion
+Supervisor --> GenerarCalendarioTurnos
+Supervisor --> ConsultarOcupacionActual
+Supervisor --> GenerarReporteIngresos
+Supervisor --> AnalizarTendenciasUso
+Supervisor --> GenerarInformeContable
+
+' Relaciones de Operator
+Operator --> AutenticarUsuario
+Operator --> CerrarSesion
+Operator --> RegistrarVehiculo
+Operator --> ConsultarVehiculo
+Operator --> AsociarVehiculoUsuario
+Operator --> RegistrarIngresoVehiculo
+Operator --> VerificarDisponibilidad
+Operator --> RegistrarVehiculoVisitante
+Operator --> RegistrarSalidaVehiculo
+Operator --> CalcularTiempoEstadia
+Operator --> CalcularValorPagar
+Operator --> GenerarServicioDiario
+Operator --> EmitirComprobante
+Operator --> GestionarServiciosEspeciales
+Operator --> AsignarPuesto
+Operator --> ReasignarPuesto
+Operator --> LiberarPuesto
+Operator --> RegistrarIngresoTurno
+Operator --> RegistrarSalidaTurno
+Operator --> ReportarNovedadTurno
+Operator --> ConsultarOcupacionActual
+Operator --> VerMapaOcupacion
+Operator --> FiltrarPorTipoVehiculo
+Operator --> ConsultarHistorialServicios
+Operator --> MarcarFuncionalidadFavorita
+Operator --> GenerarFactura
+Operator --> RegistrarPagoEfectivo
+Operator --> RegistrarPagoElectronico
+
+' Relaciones de Client
+Client --> AutenticarUsuario
+Client --> RecuperarContrasena
+Client --> CerrarSesion
+Client --> RegistrarVehiculo
+Client --> ModificarVehiculo
+Client --> AsociarVehiculoUsuario
+Client --> RegistrarIngresoVehiculo
+Client --> RegistrarSalidaVehiculo
+Client --> RegistrarPago
+Client --> CrearServicioMensual
+Client --> RenovarServicio
+Client --> ConsultarHistorialServicios
+Client --> HistorialPorVehiculo
+Client --> MarcarFuncionalidadFavorita
+
+' Relaciones de System
+System --> GestionarAccesos
+System --> GenerarUUID
+System --> VerificarDisponibilidad
+System --> CalcularTiempoEstadia
+System --> CalcularValorPagar
+System --> GenerarServicioDiario
+System --> ConsultarOcupacionActual
+System --> EstadisticasOcupacion
+System --> HorasPico
+System --> ProyeccionIngresos
+
+' Algunas relaciones de inclusión y extensión clave
+RegistrarUsuario .> GenerarUUID : <<include>>
+AutenticarUsuario .> GestionarAccesos : <<include>>
+RegistrarIngresoVehiculo .> AsignarPuesto : <<include>>
+RegistrarIngresoVehiculo .> VerificarDisponibilidad : <<include>>
+RegistrarSalidaVehiculo .> CalcularTiempoEstadia : <<include>>
+RegistrarSalidaVehiculo .> CalcularValorPagar : <<include>>
+RegistrarSalidaVehiculo .> GenerarServicioDiario : <<include>>
+GenerarServicioDiario .> ConfigurarTarifas : <<include>>
+GenerarServicioDiario .> EmitirComprobante : <<include>>
+AsignarOperadorTurno .> CrearTurno : <<include>>
+VerMapaOcupacion .> ConsultarOcupacionActual : <<extend>>
+FiltrarPorTipoVehiculo .> ConsultarOcupacionActual : <<extend>>
+RegistrarParqueadero .> GestionarUbicaciones : <<include>>
+AdministrarPuestos .> GestionarTiposVehiculos : <<include>>
+GenerarFactura .> GenerarServicioDiario : <<include>>
+
+@enduml
