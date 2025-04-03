@@ -102,6 +102,14 @@ class ServicioLogin {
                     "FROM usuarios u " +
                     "JOIN roles r ON u.cod_rol = r.cod_rol " +
                     "WHERE u.cod_usuario = $1", [codUsuario]);
+                const ultimoIngreso = yield dbConnection_1.default.oneOrNone(`SELECT 
+                    i.cod_ingreso as codIngreso,
+                    TO_CHAR(i.fecha_ingreso, 'DD/MM/YYYY') as fechaIngreso,
+                    TO_CHAR(i.hora_ingreso, 'HH12:MI:SS AM') as horaIngreso
+                FROM ingresos i
+                WHERE i.cod_usuario = $1
+                ORDER BY i.fecha_ingreso DESC, i.hora_ingreso DESC
+                LIMIT 1`, [codUsuario]);
                 res.status(200).json({
                     respuesta: "Sesión válida",
                     sesionValida: true,
@@ -111,6 +119,11 @@ class ServicioLogin {
                         nombresUsuario: infoUsuario.nombresusuario,
                         apellidosUsuario: infoUsuario.apellidosusuario,
                     },
+                    ingreso: ultimoIngreso ? {
+                        codIngreso: ultimoIngreso.codingreso,
+                        fechaIngreso: ultimoIngreso.fechaingreso,
+                        horaIngreso: ultimoIngreso.horaingreso
+                    } : null
                 });
             }
             catch (error) {
@@ -156,13 +169,7 @@ class ServicioLogin {
         return __awaiter(this, void 0, void 0, function* () {
             const { codUsuario } = req.params;
             try {
-                const historialIngresos = yield dbConnection_1.default.result(`SELECT 
-                    i.cod_ingreso as codIngreso,
-                    TO_CHAR(i.fecha_ingreso, 'DD/MM/YYYY') as fechaIngreso,
-                    TO_CHAR(i.hora_ingreso, 'HH12:MI:SS AM') as horaIngreso
-                FROM ingresos i
-                WHERE i.cod_usuario = $1
-                ORDER BY i.fecha_ingreso DESC, i.hora_ingreso DESC`, [codUsuario]);
+                const historialIngresos = yield dbConnection_1.default.result(sql_ingreso_1.SQL_INGRESO.FIND_BY_USER, [codUsuario]);
                 if (historialIngresos.rows.length === 0) {
                     return res.status(404).json({
                         respuesta: "No se encontraron registros de ingreso para el usuario",
