@@ -18,14 +18,21 @@ const uuid_1 = require("uuid");
 const sql_acceso_1 = require("../repository/sql_acceso");
 const sql_ingreso_1 = require("../repository/sql_ingreso");
 const Ingreso_1 = __importDefault(require("../model/Ingreso"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 class ServicioLogin {
     static iniciarSesion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { correoAcceso, claveAcceso } = req.body;
+            const claveCifrada = bcryptjs_1.default.hashSync(claveAcceso);
+            console.log("La contraseña es: " + claveCifrada);
             try {
                 // Verificar si el usuario existe con las credenciales proporcionadas
-                const datosUsuario = yield dbConnection_1.default.oneOrNone(sql_acceso_1.SQL_ACCESO.FIND_BY_CREDENTIALS, [correoAcceso, claveAcceso]);
-                if (!datosUsuario) {
+                const datosUsuario = yield dbConnection_1.default.oneOrNone(sql_acceso_1.SQL_ACCESO.FIND_BY_EMAIL, [correoAcceso]);
+                console.log(datosUsuario);
+                const isValid = bcryptjs_1.default.compareSync(claveAcceso, datosUsuario.claveacceso);
+                console.log("Clave base datos: " + isValid);
+                console.log("Clave de postman: " + claveAcceso);
+                if (!datosUsuario || !isValid) {
                     return res.status(401).json({
                         respuesta: "Credenciales incorrectas",
                         autenticado: false,

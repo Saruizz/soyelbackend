@@ -7,21 +7,30 @@ import { SQL_ACCESO } from "../repository/sql_acceso";
 import { SQL_INGRESO } from "../repository/sql_ingreso";
 import Ingreso from "../model/Ingreso";
 
+import cifrar from "bcryptjs";
+
 class ServicioLogin {
     protected static async iniciarSesion(
         req: Request,
         res: Response
     ): Promise<any> {
         const { correoAcceso, claveAcceso } = req.body;
-
+        const claveCifrada = cifrar.hashSync(claveAcceso as string);
+        console.log("La contraseña es: " + claveCifrada);
         try {
             // Verificar si el usuario existe con las credenciales proporcionadas
             const datosUsuario = await pool.oneOrNone(
-                SQL_ACCESO.FIND_BY_CREDENTIALS,
-                [correoAcceso, claveAcceso]
+                SQL_ACCESO.FIND_BY_EMAIL,
+                [correoAcceso]
             );
 
-            if (!datosUsuario) {
+            console.log(datosUsuario);
+
+            const isValid = cifrar.compareSync(claveAcceso, datosUsuario.claveacceso);
+            console.log("Clave base datos: " + isValid);
+            console.log("Clave de postman: " + claveAcceso);
+
+            if (!datosUsuario || !isValid) {
                 return res.status(401).json({
                     respuesta: "Credenciales incorrectas",
                     autenticado: false,

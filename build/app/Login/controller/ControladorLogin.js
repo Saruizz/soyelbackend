@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const ServicioLogin_1 = __importDefault(require("../service/ServicioLogin"));
 class ControladorLogin extends ServicioLogin_1.default {
     llamarIniciarSesion(req, res) {
+        console.log("Credenciales: ", req.body.claveAcceso);
         ServicioLogin_1.default.iniciarSesion(req, res);
     }
     llamarValidarSesion(req, res) {

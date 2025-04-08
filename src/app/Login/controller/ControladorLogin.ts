@@ -3,6 +3,7 @@ import ServicioLogin from "../service/ServicioLogin";
 
 class ControladorLogin extends ServicioLogin {
     public llamarIniciarSesion(req: Request, res: Response): void {
+        console.log("Credenciales: ", req.body.claveAcceso);
         ServicioLogin.iniciarSesion(req, res);
     }
 
