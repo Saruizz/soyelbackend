@@ -6,6 +6,11 @@ import { v4 as uuidv4 } from "uuid";
 import { SQL_ACCESO } from "../repository/sql_acceso";
 import { SQL_INGRESO } from "../repository/sql_ingreso";
 import Ingreso from "../model/Ingreso";
+import jwt, { SignOptions } from "jsonwebtoken";
+import dotenv from "dotenv";
+
+dotenv.config({ path: "variables.env" });
+
 
 import cifrar from "bcryptjs";
 
@@ -45,6 +50,22 @@ class ServicioLogin {
                 datosUsuario.codusuario,
                 nuevoUUID,
             ]);
+
+            // Generar el token de autenticación
+            const payload = {
+                codUsuario: datosUsuario.codusuario,
+                nombreRol: datosUsuario.nombrerol,
+                nombresUsuario: datosUsuario.nombresusuario,
+                apellidosUsuario: datosUsuario.apellidosusuario,
+            };
+            
+            const secret = process.env.JWT_SECRET as string;
+            
+            const options: SignOptions = {
+                expiresIn: Number(process.env.JWT_EXPIRES_IN),
+            };
+            
+            const token = jwt.sign(payload, secret, options);
 
             // Registrar el ingreso al sistema
             const nuevoIngreso = await pool.one(SQL_INGRESO.ADD, [
@@ -86,6 +107,7 @@ class ServicioLogin {
             res.status(200).json({
                 respuesta: "Inicio de sesión exitoso",
                 autenticado: true,
+                token,
                 usuario: {
                     codUsuario: infoUsuario.codusuario,
                     nombreRol: infoUsuario.nombrerol,
