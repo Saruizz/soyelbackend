@@ -10,6 +10,7 @@ const RutaRol_1 = __importDefault(require("../../app/rol/route/RutaRol"));
 const RutaTipoVehiculo_1 = __importDefault(require("../../app/tipo_vehiculo/route/RutaTipoVehiculo"));
 const RutaTarifaDiaria_1 = __importDefault(require("../../app/tarifa_diaria/route/RutaTarifaDiaria"));
 const RutaLogin_1 = __importDefault(require("../../app/Login/route/RutaLogin"));
+const Security_1 = __importDefault(require("../../middleware/Security"));
 class Servidor {
     constructor() {
         this.app = (0, express_1.default)();
@@ -20,7 +21,7 @@ class Servidor {
         this.app.use(express_1.default.urlencoded({ extended: true }));
         this.app.use("/api/rol", RutaRol_1.default);
         this.app.use("/api/tipo_vehiculo", RutaTipoVehiculo_1.default);
-        this.app.use("/api/tarifa_diaria", RutaTarifaDiaria_1.default);
+        this.app.use("/api/tarifa_diaria", Security_1.default.check, RutaTarifaDiaria_1.default);
         this.app.use("/api/login", RutaLogin_1.default);
     }
     arranquelo() {

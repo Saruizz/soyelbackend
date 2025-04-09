@@ -18,6 +18,9 @@ const uuid_1 = require("uuid");
 const sql_acceso_1 = require("../repository/sql_acceso");
 const sql_ingreso_1 = require("../repository/sql_ingreso");
 const Ingreso_1 = __importDefault(require("../model/Ingreso"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config({ path: "variables.env" });
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 class ServicioLogin {
     static iniciarSesion(req, res) {
@@ -45,6 +48,7 @@ class ServicioLogin {
                     datosUsuario.codusuario,
                     nuevoUUID,
                 ]);
+                // Generar el token de autenticación
                 // Registrar el ingreso al sistema
                 const nuevoIngreso = yield dbConnection_1.default.one(sql_ingreso_1.SQL_INGRESO.ADD, [
                     datosUsuario.codusuario,
@@ -55,6 +59,8 @@ class ServicioLogin {
                     "FROM usuarios u " +
                     "JOIN roles r ON u.cod_rol = r.cod_rol " +
                     "WHERE u.cod_usuario = $1", [datosUsuario.codusuario]);
+                const secret = process.env.JWT_SECRET;
+                const token = jsonwebtoken_1.default.sign(infoUsuario, secret, { expiresIn: "1m" });
                 if (!infoUsuario) {
                     return res.status(404).json({
                         respuesta: "No se encontró información del usuario",
@@ -67,13 +73,7 @@ class ServicioLogin {
                 res.status(200).json({
                     respuesta: "Inicio de sesión exitoso",
                     autenticado: true,
-                    usuario: {
-                        codUsuario: infoUsuario.codusuario,
-                        nombreRol: infoUsuario.nombrerol,
-                        nombresUsuario: infoUsuario.nombresusuario,
-                        apellidosUsuario: infoUsuario.apellidosusuario,
-                        uuidAcceso: acceso.uuidAcceso,
-                    },
+                    token,
                     ingreso: {
                         codIngreso: ingreso.codIngreso,
                         fechaIngreso: ingreso.fechaIngreso,
