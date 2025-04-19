@@ -6,33 +6,45 @@ import rutaTipoVehiculoApi from "../../app/tipo_vehiculo/route/RutaTipoVehiculo"
 import rutaTarifaDiariaApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 import rutaLoginApi from "../../app/Login/route/RutaLogin";
 import security from "../../middleware/Security";
+//joan
+//Miguel
+//Wilson
+//Sebastian
+//Andres
+//Eduardo
 
 class Servidor {
-    public app: express.Application;
+  public app: express.Application;
 
-    constructor() {
-        this.app = express();
+  constructor() {
+    this.app = express();
 
-        this.app.set("PORT", 3123); // Solo un set para el puerto
-        this.app.use(cors());
-        this.app.use(morgan("dev"));
-        this.app.use(express.json({ limit: "100Mb" }));
-        this.app.use(express.urlencoded({ extended: true }));
+    this.app.set("PORT", 3123); // Solo un set para el puerto
+    this.app.use(cors());
+    this.app.use(morgan("dev"));
+    this.app.use(express.json({ limit: "100Mb" }));
+    this.app.use(express.urlencoded({ extended: true }));
 
-        this.app.use("/api/rol", rutaRolApi);
-        this.app.use("/api/tipo_vehiculo", rutaTipoVehiculoApi);
+    this.app.use("/api/rol", rutaRolApi);
+    this.app.use("/api/tipo_vehiculo", rutaTipoVehiculoApi);
 
-        this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
+    this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
-        this.app.use("/api/login", rutaLoginApi);
+    this.app.use("/api/login", rutaLoginApi);
 
-    }
+    //joan
+    //Miguel
+    //Wilson
+    //Sebastian
+    //Andres
+    //Eduardo
+  }
 
-    public arranquelo(): void {
-        this.app.listen(this.app.get("PORT"), () => {
-            console.log("Listo el backend en el puerto ", this.app.get("PORT"));
-        });
-    }
+  public arranquelo(): void {
+    this.app.listen(this.app.get("PORT"), () => {
+      console.log("Listo el backend en el puerto ", this.app.get("PORT"));
+    });
+  }
 }
 
 export default Servidor;
