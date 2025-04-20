@@ -6,6 +6,8 @@ import rutaTipoVehiculoApi from "../../app/tipo_vehiculo/route/RutaTipoVehiculo"
 import rutaTarifaDiariaApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 import rutaLoginApi from "../../app/Login/route/RutaLogin";
 import security from "../../middleware/Security";
+import rutaTurnoApi from "../../app/turnos/route/RutaTurno";
+import rutaRelTurnoUsuarioApi from "../../app/rel-turno-usuario/route/RutaRelTurnoUsuario";
 
 class Servidor {
     public app: express.Application;
@@ -25,6 +27,9 @@ class Servidor {
         this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
         this.app.use("/api/login", rutaLoginApi);
+
+         this.app.use("/api/turno", rutaTurnoApi);
+         this.app.use("/api/rel_turno_usuario", rutaRelTurnoUsuarioApi);
 
     }
 
