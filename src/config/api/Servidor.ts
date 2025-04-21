@@ -9,6 +9,7 @@ import security from "../../middleware/Security";
 import rutaTurnoApi from "../../app/turno/route/RutaTurno";
 import rutaParqueaderoApi from "../../app/parqueadero/route/RutaParqueadero";
 import rutaUbicacionApi from "../../app/ubicaciones/route/RutaUbicacion";
+import rutaRelTurnoUsuarioApi from "../../app/rel-turno-usuario/route/RutaRelTurnoUsuario";
 //joan
 //Miguel
 //Wilson
@@ -34,11 +35,8 @@ class Servidor {
     this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
     this.app.use("/api/login", rutaLoginApi);
-
-         this.app.use("/api/turno", rutaTurnoApi);
-         this.app.use("/api/rel_turno_usuario", rutaRelTurnoUsuarioApi);
-
-    }
+    this.app.use("/api/turno", rutaTurnoApi);
+    this.app.use("/api/rel_turno_usuario", rutaRelTurnoUsuarioApi);
     //joan
     //Miguel
     this.app.use("/api/turno", rutaTurnoApi);
@@ -48,7 +46,7 @@ class Servidor {
     //Sebastian
     //Andres
     //Eduardo
-  
+  }
 
   public arranquelo(): void {
     this.app.listen(this.app.get("PORT"), () => {

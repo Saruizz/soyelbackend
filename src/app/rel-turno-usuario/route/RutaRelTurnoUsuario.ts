@@ -19,4 +19,5 @@ class RutaRelTurnoUsuario {
     }
 }
 
-export default new RutaRelTurnoUsuario().rutaApi;
+const rutaRelTurnoUsuarioApi = new RutaRelTurnoUsuario().rutaApi;
+export default rutaRelTurnoUsuarioApi;
