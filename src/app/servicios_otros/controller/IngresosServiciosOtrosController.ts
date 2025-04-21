@@ -2,17 +2,9 @@ import { Request, Response } from 'express';
 import IngresosServiciosOtros from '../model/IngresosServiciosOtros';
 import IngresosServiciosOtrosService from '../service/IngresosServiciosOtrosService';
 import ServiciosOtrosService from '../service/ServiciosOtrosService';
-import DateUtils from '../utils/DateUtils';
 
-class IngresosServiciosOtrosController {
-    private servicioIngresos: IngresosServiciosOtrosService;
-    private servicioOtros: ServiciosOtrosService;
-
-    constructor() {
-        this.servicioIngresos = IngresosServiciosOtrosService.getInstance();
-        this.servicioOtros = ServiciosOtrosService.getInstance();
-    }
-
+class IngresosServiciosOtrosController extends IngresosServiciosOtrosService{
+    
     private async handleError(error: unknown, res: Response, mensaje: string): Promise<void> {
         console.error(`Error en IngresosServiciosOtrosController: ${mensaje}`, error);
         res.status(500).json({
@@ -36,7 +28,7 @@ class IngresosServiciosOtrosController {
                 return;
             }
 
-            const servicio = await this.servicioOtros.obtenerServicioPorId(cod_servicio, res);
+            const servicio = await obtenerServicioPorId(cod_servicio, res);
             if (!servicio) return;
 
             const ingreso = new IngresosServiciosOtros(
@@ -105,7 +97,7 @@ class IngresosServiciosOtrosController {
                 return;
             }
 
-            await this.servicioIngresos.obtenerIngresosPorFecha(fechaInicio, fechaFin, res);
+            await IngresosServiciosOtrosService.obtenerIngresosPorFecha(fechaInicio, fechaFin, res);
         } catch (error) {
             await this.handleError(error, res, 'Error al obtener los ingresos por fecha');
         }
@@ -125,7 +117,7 @@ class IngresosServiciosOtrosController {
                 return;
             }
 
-            const ingresoExistente = await this.servicioIngresos.obtenerIngresoPorIdInterno(codIngreso);
+            const ingresoExistente = await IngresosServiciosOtrosService.obtenerIngresoPorIdInterno(codIngreso);
             if (!ingresoExistente) {
                 res.status(404).json({
                     success: false,
@@ -145,7 +137,7 @@ class IngresosServiciosOtrosController {
                 true
             );
             
-            await this.servicioIngresos.actualizarIngreso(ingreso, res);
+            await IngresosServiciosOtrosService.actualizarIngreso(ingreso);
         } catch (error) {
             await this.handleError(error, res, 'Error al actualizar el ingreso');
         }
@@ -162,11 +154,11 @@ class IngresosServiciosOtrosController {
                 });
                 return;
             }
-            await this.servicioIngresos.anularIngreso(codIngreso, res);
+            await IngresosServiciosOtrosService.anularIngreso(codIngreso, res);
         } catch (error) {
             await this.handleError(error, res, 'Error al anular el ingreso');
         }
     }
 }
-
-export default new IngresosServiciosOtrosController();
+const ingresosServiciosOtrosController =new IngresosServiciosOtrosController();
+export default ingresosServiciosOtrosController;

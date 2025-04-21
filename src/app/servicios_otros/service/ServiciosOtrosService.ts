@@ -3,10 +3,12 @@ import { ServiceResponse } from "../interfaces/ServiceResponse";
 import ServiciosOtros from "../model/ServiciosOtros";
 import ServiciosOtrosRepository from "../repository/ServiciosOtrosRepository";
 
-class ServiciosOtrosService {
+class ServiciosOtrosService extends ServiciosOtrosRepository{
     private static instance: ServiciosOtrosService | null = null;
 
-    private constructor() {}
+    constructor() {
+        super();
+    }
 
     public static getInstance(): ServiciosOtrosService {
         if (!ServiciosOtrosService.instance) {
@@ -26,10 +28,10 @@ class ServiciosOtrosService {
     }
 
     private validateServicio(servicio: ServiciosOtros): string | null {
-        if (!servicio.getNombreServicio()) {
+        if (!servicio.nombreServicio) {
             return "El nombre del servicio es requerido";
         }
-        if (servicio.getPrecio() < 0) {
+        if (servicio.precio < 0) {
             return "El precio debe ser mayor o igual a 0";
         }
         return null;
@@ -114,7 +116,7 @@ class ServiciosOtrosService {
                 );
             }
 
-            const servicioExistente = await ServiciosOtrosRepository.obtenerServicioPorId(servicio.getCodServicio());
+            const servicioExistente = await ServiciosOtrosRepository.obtenerServicioPorId(servicio.codServicio);
             if (!servicioExistente) {
                 return res.status(404).json(
                     this.createResponse(false, "Servicio no encontrado")

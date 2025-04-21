@@ -1,4 +1,3 @@
-import { Response } from "express";
 
 class ServiciosOtros {
     // Propiedades del modelo
