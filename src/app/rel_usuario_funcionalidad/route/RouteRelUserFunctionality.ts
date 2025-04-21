@@ -14,5 +14,5 @@ class RouteRelUserFunctionality {
         this.RouteApi.delete("/delete",datosRelUserFunctionalityDelete,controllerDeleteRelRolFunctionality.delete,validarDatos.ahora);
     }
 }
-const routeRelUserFunctionality = new RouteRelUserFunctionality();
-export default routeRelUserFunctionality.RouteApi;
+const routeRelUserFunctionality = new RouteRelUserFunctionality().RouteApi;
+export default routeRelUserFunctionality;

@@ -21,5 +21,5 @@ class RutaUser{
 
 //el api son los endpoint
 
-const rutasUser=new RutaUser();
-export default rutasUser.rutalRolApi;
+const rutasUser=new RutaUser().rutalRolApi;
+export default rutasUser;

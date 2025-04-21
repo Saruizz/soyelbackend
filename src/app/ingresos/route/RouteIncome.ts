@@ -18,5 +18,5 @@ class RouteIncome{
     }
 }
 
-const routeIncome = new RouteIncome();
+const routeIncome = new RouteIncome().routeincomeApi;
 export default routeIncome;

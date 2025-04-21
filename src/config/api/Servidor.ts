@@ -10,11 +10,16 @@ import rutaTurnoApi from "../../app/turno/route/RutaTurno";
 import rutaParqueaderoApi from "../../app/parqueadero/route/RutaParqueadero";
 import rutaUbicacionApi from "../../app/ubicaciones/route/RutaUbicacion";
 import rutaRelTurnoUsuarioApi from "../../app/rel-turno-usuario/route/RutaRelTurnoUsuario";
+import rutasUser from "../../app/usuarios/route/routeUser";
+import routeIncome from "../../app/ingresos/route/RouteIncome";
+import routeAccess from "../../app/accesos/route/RouteAccess";
+import routeFunctionalityApi from "../../app/funcionalidades/route/routeFunctionality";
+import routeRelRolFunctionality from "../../app/rel_rol_functionalidad/route/RouteRelRolFuncionality";
+import routeRelUserFunctionality from "../../app/rel_usuario_funcionalidad/route/RouteRelUserFunctionality";
 //joan
 //Miguel
 //Wilson
 //Sebastian
-//Andres
 //Eduardo
 
 class Servidor {
@@ -42,9 +47,15 @@ class Servidor {
     this.app.use("/api/turno", rutaTurnoApi);
     this.app.use("/api/parqueadero", rutaParqueaderoApi);
     this.app.use("/api/ubicacion", rutaUbicacionApi);
+
+    this.app.use("/api/usuarios", rutasUser);
+    this.app.use("/api/ingresos", routeIncome);
+    this.app.use("/api/acceso", routeAccess);
+    this.app.use("/api/funcionalidades", routeFunctionalityApi);
+    this.app.use("/api/rel_rol_functionality", routeRelRolFunctionality);
+    this.app.use("/api/rel_user_functionality", routeRelUserFunctionality);
     //Wilson
     //Sebastian
-    //Andres
     //Eduardo
   }
 

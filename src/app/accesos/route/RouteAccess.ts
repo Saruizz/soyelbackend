@@ -17,5 +17,5 @@ class RouteAccess {
         this.routeAccessApi.delete("/delete/:codUsuario", datosAccessDelete,controllerAccessDelete.delete);
     }
 }
-const routeAccess=new RouteAccess();
+const routeAccess=new RouteAccess().routeAccessApi;
 export default routeAccess;

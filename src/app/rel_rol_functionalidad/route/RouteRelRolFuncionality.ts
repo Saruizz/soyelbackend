@@ -28,5 +28,5 @@ class RouteRelRolFunctionality {
     );
   }
 }
-
-export default RouteRelRolFunctionality;
+const routeRelRolFunctionality = new RouteRelRolFunctionality().rutaRelRolFunctionalityApi;
+export default routeRelRolFunctionality;
