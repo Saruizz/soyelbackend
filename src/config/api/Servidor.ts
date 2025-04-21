@@ -6,6 +6,9 @@ import rutaTipoVehiculoApi from "../../app/tipo_vehiculo/route/RutaTipoVehiculo"
 import rutaTarifaDiariaApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 import rutaLoginApi from "../../app/Login/route/RutaLogin";
 import security from "../../middleware/Security";
+import rutaTurnoApi from "../../app/turno/route/RutaTurno";
+import rutaParqueaderoApi from "../../app/parqueadero/route/RutaParqueadero";
+import rutaUbicacionApi from "../../app/ubicaciones/route/RutaUbicacion";
 //joan
 //Miguel
 //Wilson
@@ -34,6 +37,9 @@ class Servidor {
 
     //joan
     //Miguel
+    this.app.use("/api/turno", rutaTurnoApi);
+    this.app.use("/api/parqueadero", rutaParqueaderoApi);
+    this.app.use("/api/ubicacion", rutaUbicacionApi);
     //Wilson
     //Sebastian
     //Andres
