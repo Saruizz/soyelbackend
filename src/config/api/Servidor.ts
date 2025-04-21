@@ -6,6 +6,8 @@ import rutaTipoVehiculoApi from "../../app/tipo_vehiculo/route/RutaTipoVehiculo"
 import rutaTarifaDiariaApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 import rutaLoginApi from "../../app/Login/route/RutaLogin";
 import security from "../../middleware/Security";
+import rutaTurnoApi from "../../app/turnos/route/RutaTurno";
+import rutaRelTurnoUsuarioApi from "../../app/rel-turno-usuario/route/RutaRelTurnoUsuario";
 //joan
 //Miguel
 //Wilson
@@ -32,13 +34,17 @@ class Servidor {
 
     this.app.use("/api/login", rutaLoginApi);
 
+         this.app.use("/api/turno", rutaTurnoApi);
+         this.app.use("/api/rel_turno_usuario", rutaRelTurnoUsuarioApi);
+
+    }
     //joan
     //Miguel
     //Wilson
     //Sebastian
     //Andres
     //Eduardo
-  }
+  
 
   public arranquelo(): void {
     this.app.listen(this.app.get("PORT"), () => {
