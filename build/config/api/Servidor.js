@@ -11,6 +11,15 @@ const RutaTipoVehiculo_1 = __importDefault(require("../../app/tipo_vehiculo/rout
 const RutaTarifaDiaria_1 = __importDefault(require("../../app/tarifa_diaria/route/RutaTarifaDiaria"));
 const RutaLogin_1 = __importDefault(require("../../app/Login/route/RutaLogin"));
 const Security_1 = __importDefault(require("../../middleware/Security"));
+const RutaTurno_1 = __importDefault(require("../../app/turno/route/RutaTurno"));
+const RutaParqueadero_1 = __importDefault(require("../../app/parqueadero/route/RutaParqueadero"));
+const RutaUbicacion_1 = __importDefault(require("../../app/ubicaciones/route/RutaUbicacion"));
+//joan
+//Miguel
+//Wilson
+//Sebastian
+//Andres
+//Eduardo
 class Servidor {
     constructor() {
         this.app = (0, express_1.default)();
@@ -23,6 +32,15 @@ class Servidor {
         this.app.use("/api/tipo_vehiculo", RutaTipoVehiculo_1.default);
         this.app.use("/api/tarifa_diaria", Security_1.default.check, RutaTarifaDiaria_1.default);
         this.app.use("/api/login", RutaLogin_1.default);
+        //joan
+        //Miguel
+        this.app.use("/api/turno", RutaTurno_1.default);
+        this.app.use("/api/parqueadero", RutaParqueadero_1.default);
+        this.app.use("/api/ubicacion", RutaUbicacion_1.default);
+        //Wilson
+        //Sebastian
+        //Andres
+        //Eduardo
     }
     arranquelo() {
         this.app.listen(this.app.get("PORT"), () => {
