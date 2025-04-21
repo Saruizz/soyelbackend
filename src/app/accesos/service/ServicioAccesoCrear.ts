@@ -1,4 +1,4 @@
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import Accesos from "../model/Accesos";
 import { Response } from "express";
 import { sql_accesos } from "../repository/sql_accesos";

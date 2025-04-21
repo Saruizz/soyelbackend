@@ -1,5 +1,5 @@
 import { Response } from "express";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import { sql_usuarios } from "../repository/sql_user";
 
 class ServiceUserGet {

@@ -1,5 +1,5 @@
 import { Response } from "express";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import sqlIngreso from "../repository/sql_ingreso";
 import Ingreso from "../model/Ingreso";
 

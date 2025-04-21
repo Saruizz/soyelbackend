@@ -1,6 +1,6 @@
 import { Response } from "express";
 import Accesos from "../model/Accesos";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import { sql_accesos } from "../repository/sql_accesos";
 
 class ServiceAccessDelete {

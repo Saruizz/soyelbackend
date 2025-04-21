@@ -1,6 +1,6 @@
 // Servicio ServicioUsuarioEliminar.ts
 import { Response } from "express";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import { sql_usuarios } from "../repository/sql_user";
 import sqlIngreso from "../../ingresos/repository/sql_ingreso";
 import { sql_accesos } from "../../accesos/repository/sql_accesos";
