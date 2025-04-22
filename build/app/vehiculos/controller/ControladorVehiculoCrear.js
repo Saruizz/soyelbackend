@@ -8,8 +8,8 @@ const Vehiculo_1 = __importDefault(require("../model/Vehiculo"));
 class ControladorVehiculoCrear extends ServicioVehiculoCrear_1.default {
     llamarGrabarVehiculo(req, res) {
         const objTemporal = new Vehiculo_1.default(0, 0, 0, "");
-        objTemporal.codTipoVehiculo = req.body.codTipoVehiculo;
         objTemporal.codUsuario = req.body.codUsuario;
+        objTemporal.codTipoVehiculo = req.body.codTipoVehiculo;
         objTemporal.placaVehiculo = req.body.placaVehiculo;
         ServicioVehiculoCrear_1.default.grabarVehiculo(objTemporal, res);
     }

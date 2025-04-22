@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_vehiculo_1 = require("../repository/sql_vehiculo");
-class ServicioVeiculoConsulta {
+class ServicioVehiculoConsulta {
     static obtenerTodos(res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -42,7 +42,7 @@ class ServicioVeiculoConsulta {
         return __awaiter(this, void 0, void 0, function* () {
             const { codVehiculo } = req.params;
             try {
-                const misDatos = yield dbConnection_1.default.result(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PRIMARY_KEY, [
+                const misDatos = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PRIMARY_KEY, [
                     codVehiculo,
                 ]);
                 if (!misDatos) {
@@ -52,8 +52,7 @@ class ServicioVeiculoConsulta {
                 }
                 res.status(200).json({
                     respuesta: "Consulta de vehículo por código exitosa",
-                    cantidad: 1,
-                    vehiculo: misDatos.rows,
+                    vehiculo: misDatos,
                 });
             }
             catch (miError) {
@@ -116,16 +115,15 @@ class ServicioVeiculoConsulta {
         return __awaiter(this, void 0, void 0, function* () {
             const { placaVehiculo } = req.params;
             try {
-                const misDatos = yield dbConnection_1.default.result(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PLACA, [placaVehiculo]);
-                if (misDatos.rows.length === 0) {
+                const misDatos = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PLACA, [placaVehiculo]);
+                if (!misDatos) {
                     return res.status(404).json({
-                        respuesta: "No se encontro vehículo para la placa especificada",
+                        respuesta: "No se encontró vehículo para la placa especificada",
                     });
                 }
                 res.status(200).json({
                     respuesta: "Consulta de vehículo por placa exitosa",
-                    cantidad: misDatos.rows.length,
-                    vehiculos: misDatos.rows,
+                    vehiculo: misDatos,
                 });
             }
             catch (miError) {
@@ -137,4 +135,4 @@ class ServicioVeiculoConsulta {
         });
     }
 }
-exports.default = ServicioVeiculoConsulta;
+exports.default = ServicioVehiculoConsulta;

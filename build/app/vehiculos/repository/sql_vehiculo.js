@@ -6,7 +6,8 @@ exports.SQL_VEHICULO = {
         cod_tipo_vehiculo as codTipoVehiculo, \
         cod_usuario as codUsuario, \
         placa_vehiculo as placaVehiculo \
-        FROM vehiculos",
+        FROM vehiculos \
+        ORDER BY cod_vehiculo",
     FIND_BY_PRIMARY_KEY: "SELECT cod_vehiculo as codVehiculo, \
         cod_tipo_vehiculo as codTipoVehiculo, \
         cod_usuario as codUsuario, \

@@ -12,18 +12,19 @@ class ServicioVehiculoActualizar {
             if (
                 !objVehiculo ||
                 !objVehiculo.codVehiculo ||
-                !objVehiculo.placaVehiculo ||
                 !objVehiculo.codTipoVehiculo ||
-                !objVehiculo.codUsuario
+                !objVehiculo.codUsuario ||
+                !objVehiculo.placaVehiculo
             ) {
                 return res.status(400).json({
                     respuesta: "Datos de vehículo inválidos",
                 });
             }
 
+            // Verificar que el vehículo existe
             const vehiculoExistente = await pool.oneOrNone(
-                SQL_VEHICULO.FIND_BY_PLACA,
-                [objVehiculo.placaVehiculo]
+                SQL_VEHICULO.FIND_BY_PRIMARY_KEY,
+                [objVehiculo.codVehiculo]
             );
 
             if (!vehiculoExistente) {
@@ -32,24 +33,28 @@ class ServicioVehiculoActualizar {
                 });
             }
 
-            const vehiculos = await pool.one(SQL_VEHICULO.HOW_MANY, [
-                objVehiculo.placaVehiculo,
-            ]);
+            // Verificar si la nueva placa existe en otro vehículo (excepto en el actual)
+            if (vehiculoExistente.placavehiculo !== objVehiculo.placaVehiculo) {
+                const placaExistente = await pool.oneOrNone(
+                    SQL_VEHICULO.FIND_BY_PLACA,
+                    [objVehiculo.placaVehiculo]
+                );
 
-            if (vehiculos.cantidad > 0) {
-                return res.status(409).json({
-                    respuesta: "Ya existe un vehículo con esta placa",
-                });
+                if (placaExistente && placaExistente.codvehiculo !== objVehiculo.codVehiculo) {
+                    return res.status(409).json({
+                        respuesta: "Ya existe un vehículo con esta placa",
+                    });
+                }
             }
 
-            const resultado = await pool.result(SQL_VEHICULO.UPDATE, [
+            const resultado = await pool.oneOrNone(SQL_VEHICULO.UPDATE, [
                 objVehiculo.codVehiculo,
                 objVehiculo.codTipoVehiculo,
                 objVehiculo.codUsuario,
                 objVehiculo.placaVehiculo,
             ]);
 
-            if (resultado.rowCount === 0) {
+            if (!resultado) {
                 return res.status(500).json({
                     respuesta: "No se pudo actualizar el vehículo",
                 });
@@ -57,17 +62,13 @@ class ServicioVehiculoActualizar {
 
             res.status(200).json({
                 respuesta: "Vehículo actualizado correctamente",
-                detalles: {
-                    filasActualizadas: resultado.rowCount,
-                    placaVehiculo: objVehiculo.placaVehiculo,
-                    nuevoCodTipoVehiculo: objVehiculo.codTipoVehiculo,
-                    nuevoCodUsuario: objVehiculo.codUsuario,
-                },
+                vehiculo: resultado
             });
-        } catch (miError) {
+        } catch (miError: any) {
             console.log(miError);
             res.status(500).json({
                 respuesta: "Error interno al actualizar el vehículo",
+                error: miError.message
             });
         }
     }
