@@ -1,4 +1,3 @@
-import { Response } from "express";
 import ServiciosOtros from "./ServiciosOtros";
 
 class IngresosServiciosOtros {
