@@ -8,7 +8,7 @@ import { sql_accesos } from "../../accesos/repository/sql_accesos";
 class ServiceUserDelete {
   protected static async eliminarUsuario(codUsuario: number, res: Response): Promise<any> {
     await pool
-      .task(async (consulta) => {
+      .task(async (consulta: any) => {
         const usuarios = await consulta.oneOrNone(sql_usuarios.FIND_BY_ID, [codUsuario]);
         if (usuarios == null) {
           res.status(400).json({ respuesta: "No se encuentra registrado este usuario" });
