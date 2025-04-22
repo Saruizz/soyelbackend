@@ -1,5 +1,5 @@
 import { Response } from "express";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import { sql_usuarios } from "../repository/sql_user";
 
 class ServiceUserGet {
@@ -9,7 +9,7 @@ class ServiceUserGet {
     await pool
       .result(sql_usuarios.FIND_ALL)
       .then((misDatos) => {
-        res.status(200).json({usuario: misDatos.rows});
+        res.status(200).json({ usuario: misDatos.rows });
       })
       .catch((miError) => {
         console.log(miError);

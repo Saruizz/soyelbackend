@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dbConnetions_1 = __importDefault(require("../../../config/connection/dbConnetions"));
+const dbConnetions_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_user_1 = require("../repository/sql_user");
 const sql_ingreso_1 = __importDefault(require("../../ingresos/repository/sql_ingreso"));
 const sql_accesos_1 = require("../../accesos/repository/sql_accesos");

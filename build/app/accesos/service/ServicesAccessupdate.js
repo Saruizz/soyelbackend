@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dbConnetions_1 = __importDefault(require("../../../config/connection/dbConnetions"));
+const dbConnetions_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_accesos_1 = require("../repository/sql_accesos");
 class ServicesAccessupdate {
     static updateAccess(obj, res) {

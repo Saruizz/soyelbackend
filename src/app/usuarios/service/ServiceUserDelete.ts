@@ -1,6 +1,6 @@
 // Servicio ServicioUsuarioEliminar.ts
 import { Response } from "express";
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import { sql_usuarios } from "../repository/sql_user";
 import sqlIngreso from "../../ingresos/repository/sql_ingreso";
 import { sql_accesos } from "../../accesos/repository/sql_accesos";
@@ -8,7 +8,7 @@ import { sql_accesos } from "../../accesos/repository/sql_accesos";
 class ServiceUserDelete {
   protected static async eliminarUsuario(codUsuario: number, res: Response): Promise<any> {
     await pool
-      .task(async(consulta)=>{
+      .task(async (consulta) => {
         const usuarios = await consulta.oneOrNone(sql_usuarios.FIND_BY_ID, [codUsuario]);
         if (usuarios == null) {
           res.status(400).json({ respuesta: "No se encuentra registrado este usuario" });
