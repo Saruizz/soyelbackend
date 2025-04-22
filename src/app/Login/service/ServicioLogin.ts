@@ -14,6 +14,7 @@ dotenv.config({ path: "variables.env" });
 
 import cifrar from "bcryptjs";
 import InfoToken from "../model/InfoToken";
+import sql_login from "../repository/sql_login";
 
 class ServicioLogin {
     protected static async iniciarSesion(
@@ -22,7 +23,6 @@ class ServicioLogin {
     ): Promise<any> {
         const { correoAcceso, claveAcceso } = req.body;
         const claveCifrada = cifrar.hashSync(claveAcceso as string);
-        console.log("La contraseña es: " + claveCifrada);
         try {
             // Verificar si el usuario existe con las credenciales proporcionadas
             const datosUsuario = await pool.oneOrNone(
@@ -33,8 +33,6 @@ class ServicioLogin {
             console.log(datosUsuario);
 
             const isValid = cifrar.compareSync(claveAcceso, datosUsuario.claveacceso);
-            console.log("Clave base datos: " + isValid);
-            console.log("Clave de postman: " + claveAcceso);
 
             if (!datosUsuario || !isValid) {
                 return res.status(401).json({
@@ -52,10 +50,6 @@ class ServicioLogin {
                 nuevoUUID,
             ]);
 
-            // Generar el token de autenticación
-
-
-
             // Registrar el ingreso al sistema
             const nuevoIngreso = await pool.one(SQL_INGRESO.ADD, [
                 datosUsuario.codusuario,
@@ -63,11 +57,7 @@ class ServicioLogin {
 
             // Obtener información del usuario
             const infoUsuario = await pool.oneOrNone(
-                "SELECT u.cod_usuario as codUsuario, u.nombres_usuario as nombresUsuario, " +
-                "u.apellidos_usuario as apellidosUsuario, r.nombre_rol as nombreRol " +
-                "FROM usuarios u " +
-                "JOIN roles r ON u.cod_rol = r.cod_rol " +
-                "WHERE u.cod_usuario = $1",
+                sql_login.getData,
                 [datosUsuario.codusuario]
             ) as InfoToken;
 
@@ -82,29 +72,15 @@ class ServicioLogin {
                 });
             }
 
-            const acceso = new Acceso(
-                usuarioActualizado.codusuario,
-                usuarioActualizado.correoacceso,
-                usuarioActualizado.claveacceso,
-                usuarioActualizado.uuidacceso
-            );
-
-            const ingreso = new Ingreso(
-                nuevoIngreso.codingreso,
-                nuevoIngreso.codusuario,
-                nuevoIngreso.fechaingreso,
-                nuevoIngreso.horaingreso
-            );
-
             // Respuesta exitosa con información de usuario
             res.status(200).json({
                 respuesta: "Inicio de sesión exitoso",
                 autenticado: true,
                 token,
                 ingreso: {
-                    codIngreso: ingreso.codIngreso,
-                    fechaIngreso: ingreso.fechaIngreso,
-                    horaIngreso: ingreso.horaIngreso,
+                    codIngreso: nuevoIngreso.codingreso || null,
+                    fechaIngreso: nuevoIngreso.fechaingreso || null,
+                    horaIngreso: nuevoIngreso.horaingreso || null,
                 },
             });
         } catch (error) {
@@ -136,11 +112,7 @@ class ServicioLogin {
 
             // Obtener información del usuario
             const infoUsuario = await pool.oneOrNone(
-                "SELECT u.cod_usuario as codUsuario, u.nombres_usuario as nombresUsuario, " +
-                "u.apellidos_usuario as apellidosUsuario, r.nombre_rol as nombreRol " +
-                "FROM usuarios u " +
-                "JOIN roles r ON u.cod_rol = r.cod_rol " +
-                "WHERE u.cod_usuario = $1",
+                sql_login.dataUser,
                 [codUsuario]
             );
 

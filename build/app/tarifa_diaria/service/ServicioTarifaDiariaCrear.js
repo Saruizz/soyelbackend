@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_tarifa_diaria_1 = require("../repository/sql_tarifa_diaria");
-const TarifaDiaria_1 = __importDefault(require("../model/TarifaDiaria"));
 class ServicioTarifaDiariaCrear {
     static grabarTarifaDiaria(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -27,7 +26,6 @@ class ServicioTarifaDiariaCrear {
                     });
                 }
                 const nuevaTarifa = yield dbConnection_1.default.one(sql_tarifa_diaria_1.SQL_TARIFA_DIARIA.ADD, [codParqueadero, codTipoVehiculo, valorTarifaDiaria]);
-                const tarifaDiaria = new TarifaDiaria_1.default(nuevaTarifa.codparqueadero, nuevaTarifa.codtipovehiculo, nuevaTarifa.valortarifadiaria);
                 res.status(201).json({
                     respuesta: "Tarifa diaria creada correctamente",
                     nuevaTarifa: nuevaTarifa

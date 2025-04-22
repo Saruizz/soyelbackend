@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_tarifa_diaria_1 = require("../repository/sql_tarifa_diaria");
-const TarifaDiaria_1 = __importDefault(require("../model/TarifaDiaria"));
 class ServicioTarifaDiariaConsulta {
     // Obtener todas las tarifas diarias
     static obtenerTodos(res) {
@@ -51,8 +50,6 @@ class ServicioTarifaDiariaConsulta {
                         respuesta: "No se encontró la tarifa diaria solicitada",
                     });
                 }
-                // Crear una instancia de la entidad con los datos obtenidos
-                const tarifaDiaria = new TarifaDiaria_1.default(miDato.codparqueadero, miDato.codtipovehiculo, miDato.valortarifadiaria);
                 res.status(200).json({
                     respuesta: "Consulta de tarifa diaria exitosa",
                     cantidad: 1,

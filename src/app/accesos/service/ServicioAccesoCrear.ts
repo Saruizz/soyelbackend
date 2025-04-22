@@ -1,4 +1,4 @@
-import pool from "../../../config/connection/dbConnetions";
+import pool from "../../../config/connection/dbConnection";
 import Accesos from "../model/Accesos";
 import { Response } from "express";
 import { sql_accesos } from "../repository/sql_accesos";
@@ -15,19 +15,19 @@ class ServicioAccesoCrear {
         );
         if (!usuarioExiste) {
           caso = 3;
-        }else{
-            const access: any = await consulta.oneOrNone(sql_accesos.getById, [
-              obj.codUsuario,
-            ]);
-            if (access == null) {
-              caso = 2;
-            }
-            objGrabado = await consulta.one(sql_accesos.create, [
-              obj.codUsuario,
-              obj.correo,
-              obj.clave,
-              obj.uuid,
-            ]);
+        } else {
+          const access: any = await consulta.oneOrNone(sql_accesos.getById, [
+            obj.codUsuario,
+          ]);
+          if (access == null) {
+            caso = 2;
+          }
+          objGrabado = await consulta.one(sql_accesos.create, [
+            obj.codUsuario,
+            obj.correo,
+            obj.clave,
+            obj.uuid,
+          ]);
         }
         return { caso, objGrabado };
       })
