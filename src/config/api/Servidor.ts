@@ -18,6 +18,7 @@ import routeRelRolFunctionality from "../../app/rel_rol_functionalidad/route/Rou
 import routeRelUserFunctionality from "../../app/rel_usuario_funcionalidad/route/RouteRelUserFunctionality";
 import rutaPuestoApi from "../../app/puesto/route/RutaPuesto";
 import rutaServicioDiarioApi from "../../app/servicio_diario/route/RutaServicioDiario";
+import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
 //joan
 //Miguel
 //Wilson
