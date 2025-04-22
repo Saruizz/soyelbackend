@@ -42,11 +42,19 @@ class Servidor {
         this.app.use("/api/login", RutaLogin_1.default);
         this.app.use("/api/turno", RutaTurno_1.default);
         this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
+        this.app.use("/api/turno", RutaTurno_1.default);
+        this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
         //joan
         //Miguel
         this.app.use("/api/turno", RutaTurno_1.default);
         this.app.use("/api/parqueadero", RutaParqueadero_1.default);
         this.app.use("/api/ubicacion", RutaUbicacion_1.default);
+        this.app.use("/api/usuarios", routeUser_1.default);
+        this.app.use("/api/ingresos", RouteIncome_1.default);
+        this.app.use("/api/acceso", RouteAccess_1.default);
+        this.app.use("/api/funcionalidades", routeFunctionality_1.default);
+        this.app.use("/api/rel_rol_functionality", RouteRelRolFuncionality_1.default);
+        this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
         this.app.use("/api/usuarios", routeUser_1.default);
         this.app.use("/api/ingresos", RouteIncome_1.default);
         this.app.use("/api/acceso", RouteAccess_1.default);

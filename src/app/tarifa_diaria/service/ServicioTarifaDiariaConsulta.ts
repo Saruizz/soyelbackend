@@ -46,13 +46,6 @@ class ServicioTarifaDiariaConsulta {
                 });
             }
 
-            // Crear una instancia de la entidad con los datos obtenidos
-            const tarifaDiaria = new TarifaDiaria(
-                miDato.codparqueadero,
-                miDato.codtipovehiculo,
-                miDato.valortarifadiaria
-            );
-
             res.status(200).json({
                 respuesta: "Consulta de tarifa diaria exitosa",
                 cantidad: 1,
