@@ -5,6 +5,7 @@ import rutaRolApi from "../../app/rol/route/RutaRol";
 import rutaTipoVehiculoApi from "../../app/tipo_vehiculo/route/RutaTipoVehiculo";
 import rutaTarifaDiariaApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 import rutaLoginApi from "../../app/Login/route/RutaLogin";
+import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
 
 class Servidor {
     public app: express.Application;
@@ -22,7 +23,7 @@ class Servidor {
         this.app.use("/api/tipo_vehiculo", rutaTipoVehiculoApi);
         this.app.use("/api/tarifa_diaria", rutaTarifaDiariaApi);
         this.app.use("/api/login", rutaLoginApi);
-
+        this.app.use("/api/vehiculo", rutaVehiculoApi);
     }
 
     public arranquelo(): void {

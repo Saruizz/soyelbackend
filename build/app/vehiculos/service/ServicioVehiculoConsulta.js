@@ -53,7 +53,7 @@ class ServicioVeiculoConsulta {
                 res.status(200).json({
                     respuesta: "Consulta de vehículo por código exitosa",
                     cantidad: 1,
-                    vehiculo: misDatos,
+                    vehiculo: misDatos.rows,
                 });
             }
             catch (miError) {
@@ -132,30 +132,6 @@ class ServicioVeiculoConsulta {
                 console.log(miError);
                 res.status(500).json({
                     respuesta: "Error interno al consultar vehículos por placa",
-                });
-            }
-        });
-    }
-    static obtenerPorParqueadero(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const { codParqueadero } = req.params;
-            try {
-                const misDatos = yield dbConnection_1.default.result(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_ID_PARQUEADERO, [codParqueadero]);
-                if (misDatos.rows.length === 0) {
-                    return res.status(404).json({
-                        respuesta: "No se encontraron vehículos para el parqueadero especificado",
-                    });
-                }
-                res.status(200).json({
-                    respuesta: "Consulta de vehículos por código parqueadero exitosa",
-                    cantidad: misDatos.rows.length,
-                    vehiculos: misDatos.rows,
-                });
-            }
-            catch (miError) {
-                console.log(miError);
-                res.status(500).json({
-                    respuesta: "Error interno al consultar vehículos por parqueadero",
                 });
             }
         });

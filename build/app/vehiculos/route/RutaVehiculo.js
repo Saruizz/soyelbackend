@@ -21,7 +21,6 @@ class RutaVehiculo {
         this.rutaVehiculoApi.get("/getbytipovehiculo/:codTipoVehiculo", ValidarDatos_1.default.ahora, ControladorVehiculoConsulta_1.default.llamarObtenerPorTipoVehiculo);
         this.rutaVehiculoApi.get("/getbyusuario/:codUsuario", ValidarDatos_1.default.ahora, ControladorVehiculoConsulta_1.default.llamarObtenerPorUsuario);
         this.rutaVehiculoApi.get("/getbyplaca/:placaVehiculo", ValidarDatos_1.default.ahora, ControladorVehiculoConsulta_1.default.llamarObtenerPorPlaca);
-        this.rutaVehiculoApi.get("/getbyparqueadero/:codParqueadero", ValidarDatos_1.default.ahora, ControladorVehiculoConsulta_1.default.llamarObtenerPorParqueadero);
     }
     configurararRutasGestion() {
         this.rutaVehiculoApi.post("/add", ValidarDatos_1.default.ahora, ControladorVehiculoCrear_1.default.llamarGrabarVehiculo);
