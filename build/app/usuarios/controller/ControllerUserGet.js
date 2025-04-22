@@ -19,6 +19,12 @@ class ControllerUserGet extends ServiceUserGet_1.default {
             yield ServiceUserGet_1.default.obtenerUsuarios(res);
         });
     }
+    getUserById(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { codUsuario } = Number(req.params.codUsuario);
+            yield ServiceUserGet_1.default.getUserById(codUsuario, res);
+        });
+    }
 }
 const controllerUserGet = new ControllerUserGet();
 exports.default = controllerUserGet;

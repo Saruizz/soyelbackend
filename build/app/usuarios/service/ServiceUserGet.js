@@ -28,5 +28,18 @@ class ServiceUserGet {
             });
         });
     }
+    static getUserById(codUsuario, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield dbConnection_1.default
+                .result(sql_user_1.sql_usuarios.FIND_BY_ID, [codUsuario])
+                .then((misDatos) => {
+                res.status(200).json({ usuario: misDatos.rows });
+            })
+                .catch((miError) => {
+                console.log(miError);
+                res.status(400).json({ respuesta: "Error al obtener usuario" });
+            });
+        });
+    }
 }
 exports.default = ServiceUserGet;

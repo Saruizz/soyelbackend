@@ -23,6 +23,7 @@ const RouteRelRolFuncionality_1 = __importDefault(require("../../app/rel_rol_fun
 const RouteRelUserFunctionality_1 = __importDefault(require("../../app/rel_usuario_funcionalidad/route/RouteRelUserFunctionality"));
 const RutaPuesto_1 = __importDefault(require("../../app/puesto/route/RutaPuesto"));
 const RutaServicioDiario_1 = __importDefault(require("../../app/servicio_diario/route/RutaServicioDiario"));
+const RutaVehiculo_1 = __importDefault(require("../../app/vehiculos/route/RutaVehiculo"));
 //joan
 //Miguel
 //Wilson
@@ -42,8 +43,6 @@ class Servidor {
         this.app.use("/api/login", RutaLogin_1.default);
         this.app.use("/api/turno", RutaTurno_1.default);
         this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
-        this.app.use("/api/turno", RutaTurno_1.default);
-        this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
         //joan
         //Miguel
         this.app.use("/api/turno", RutaTurno_1.default);
@@ -55,14 +54,9 @@ class Servidor {
         this.app.use("/api/funcionalidades", routeFunctionality_1.default);
         this.app.use("/api/rel_rol_functionality", RouteRelRolFuncionality_1.default);
         this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
-        this.app.use("/api/usuarios", routeUser_1.default);
-        this.app.use("/api/ingresos", RouteIncome_1.default);
-        this.app.use("/api/acceso", RouteAccess_1.default);
-        this.app.use("/api/funcionalidades", routeFunctionality_1.default);
-        this.app.use("/api/rel_rol_functionality", RouteRelRolFuncionality_1.default);
-        this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
         //Wilson
         //Sebastian
+        this.app.use("api/vehiculo", RutaVehiculo_1.default);
         //Eduardo
         this.app.use("/api/puesto", RutaPuesto_1.default);
         this.app.use("/api/servicio_diario", RutaServicioDiario_1.default);

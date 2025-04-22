@@ -15,6 +15,7 @@ class RutaUser {
         this.rutalRolApi = (0, express_1.Router)();
         //Aqui el endpoint siempre ira en minuscula y ingles en este caso gettall para obtener todos los roles
         this.rutalRolApi.get("/get", ControllerUserGet_1.default.getUsers);
+        this.rutalRolApi.get("/get/:codUsuario", ControllerUserGet_1.default.getUserById);
         this.rutalRolApi.post("/add", ValidationUser_1.datosUserCreate, ControllerUserCreate_1.default.createUser, ValidarDatos_1.default.ahora);
         this.rutalRolApi.delete("/delete/:codUsuario", ValidationUser_1.datosUserDelete, ControllerUserDelete_1.default.deleteUser, ValidarDatos_1.default.ahora);
         this.rutalRolApi.put('/update', ValidationUser_1.datosUserUpdate, ControllerUserUpdate_1.default.updateUser, ValidarDatos_1.default.ahora);
