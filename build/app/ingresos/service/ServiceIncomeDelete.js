@@ -12,12 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dbConnetions_1 = __importDefault(require("../../../config/connection/dbConnection"));
+const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_ingreso_1 = __importDefault(require("../repository/sql_ingreso"));
 class ServiceIncomeDelete {
     static deleteIncome(obj, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield dbConnetions_1.default
+            yield dbConnection_1.default
                 .task((consulta) => __awaiter(this, void 0, void 0, function* () {
                 const ingreso = yield consulta.any(sql_ingreso_1.default.DELETE, [obj.codIngreso]);
                 return { objeto: ingreso };
