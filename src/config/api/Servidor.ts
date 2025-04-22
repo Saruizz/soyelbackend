@@ -16,6 +16,7 @@ import routeAccess from "../../app/accesos/route/RouteAccess";
 import routeFunctionalityApi from "../../app/funcionalidades/route/routeFunctionality";
 import routeRelRolFunctionality from "../../app/rel_rol_functionalidad/route/RouteRelRolFuncionality";
 import routeRelUserFunctionality from "../../app/rel_usuario_funcionalidad/route/RouteRelUserFunctionality";
+import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
 //joan
 //Miguel
 //Wilson
@@ -56,6 +57,7 @@ class Servidor {
     this.app.use("/api/rel_user_functionality", routeRelUserFunctionality);
     //Wilson
     //Sebastian
+    this.app.use("api/vehiculo", rutaVehiculoApi);
     //Eduardo
   }
 

@@ -13,28 +13,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
-const Acceso_1 = __importDefault(require("../model/Acceso"));
 const uuid_1 = require("uuid");
 const sql_acceso_1 = require("../repository/sql_acceso");
 const sql_ingreso_1 = require("../repository/sql_ingreso");
-const Ingreso_1 = __importDefault(require("../model/Ingreso"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config({ path: "variables.env" });
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const sql_login_1 = __importDefault(require("../repository/sql_login"));
 class ServicioLogin {
     static iniciarSesion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { correoAcceso, claveAcceso } = req.body;
             const claveCifrada = bcryptjs_1.default.hashSync(claveAcceso);
-            console.log("La contraseña es: " + claveCifrada);
             try {
                 // Verificar si el usuario existe con las credenciales proporcionadas
                 const datosUsuario = yield dbConnection_1.default.oneOrNone(sql_acceso_1.SQL_ACCESO.FIND_BY_EMAIL, [correoAcceso]);
                 console.log(datosUsuario);
                 const isValid = bcryptjs_1.default.compareSync(claveAcceso, datosUsuario.claveacceso);
-                console.log("Clave base datos: " + isValid);
-                console.log("Clave de postman: " + claveAcceso);
                 if (!datosUsuario || !isValid) {
                     return res.status(401).json({
                         respuesta: "Credenciales incorrectas",
@@ -48,17 +44,12 @@ class ServicioLogin {
                     datosUsuario.codusuario,
                     nuevoUUID,
                 ]);
-                // Generar el token de autenticación
                 // Registrar el ingreso al sistema
                 const nuevoIngreso = yield dbConnection_1.default.one(sql_ingreso_1.SQL_INGRESO.ADD, [
                     datosUsuario.codusuario,
                 ]);
                 // Obtener información del usuario
-                const infoUsuario = yield dbConnection_1.default.oneOrNone("SELECT u.cod_usuario as codUsuario, u.nombres_usuario as nombresUsuario, " +
-                    "u.apellidos_usuario as apellidosUsuario, r.nombre_rol as nombreRol " +
-                    "FROM usuarios u " +
-                    "JOIN roles r ON u.cod_rol = r.cod_rol " +
-                    "WHERE u.cod_usuario = $1", [datosUsuario.codusuario]);
+                const infoUsuario = yield dbConnection_1.default.oneOrNone(sql_login_1.default.getData, [datosUsuario.codusuario]);
                 const secret = process.env.JWT_SECRET;
                 const token = jsonwebtoken_1.default.sign(infoUsuario, secret, { expiresIn: "1m" });
                 if (!infoUsuario) {
@@ -67,17 +58,15 @@ class ServicioLogin {
                         autenticado: false,
                     });
                 }
-                const acceso = new Acceso_1.default(usuarioActualizado.codusuario, usuarioActualizado.correoacceso, usuarioActualizado.claveacceso, usuarioActualizado.uuidacceso);
-                const ingreso = new Ingreso_1.default(nuevoIngreso.codingreso, nuevoIngreso.codusuario, nuevoIngreso.fechaingreso, nuevoIngreso.horaingreso);
                 // Respuesta exitosa con información de usuario
                 res.status(200).json({
                     respuesta: "Inicio de sesión exitoso",
                     autenticado: true,
                     token,
                     ingreso: {
-                        codIngreso: ingreso.codIngreso,
-                        fechaIngreso: ingreso.fechaIngreso,
-                        horaIngreso: ingreso.horaIngreso,
+                        codIngreso: nuevoIngreso.codingreso || null,
+                        fechaIngreso: nuevoIngreso.fechaingreso || null,
+                        horaIngreso: nuevoIngreso.horaingreso || null,
                     },
                 });
             }
@@ -104,11 +93,7 @@ class ServicioLogin {
                     });
                 }
                 // Obtener información del usuario
-                const infoUsuario = yield dbConnection_1.default.oneOrNone("SELECT u.cod_usuario as codUsuario, u.nombres_usuario as nombresUsuario, " +
-                    "u.apellidos_usuario as apellidosUsuario, r.nombre_rol as nombreRol " +
-                    "FROM usuarios u " +
-                    "JOIN roles r ON u.cod_rol = r.cod_rol " +
-                    "WHERE u.cod_usuario = $1", [codUsuario]);
+                const infoUsuario = yield dbConnection_1.default.oneOrNone(sql_login_1.default.dataUser, [codUsuario]);
                 const ultimoIngreso = yield dbConnection_1.default.oneOrNone(sql_ingreso_1.SQL_INGRESO.LAST_ENTRY, [
                     codUsuario,
                 ]);

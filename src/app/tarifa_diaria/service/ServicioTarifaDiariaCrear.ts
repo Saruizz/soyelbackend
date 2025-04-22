@@ -24,12 +24,6 @@ class ServicioTarifaDiariaCrear {
                 [codParqueadero, codTipoVehiculo, valorTarifaDiaria]
             );
 
-            const tarifaDiaria = new TarifaDiaria(
-                nuevaTarifa.codparqueadero,
-                nuevaTarifa.codtipovehiculo,
-                nuevaTarifa.valortarifadiaria
-            );
-
             res.status(201).json({
                 respuesta: "Tarifa diaria creada correctamente",
                 nuevaTarifa: nuevaTarifa

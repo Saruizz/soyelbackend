@@ -14,11 +14,18 @@ const Security_1 = __importDefault(require("../../middleware/Security"));
 const RutaTurno_1 = __importDefault(require("../../app/turno/route/RutaTurno"));
 const RutaParqueadero_1 = __importDefault(require("../../app/parqueadero/route/RutaParqueadero"));
 const RutaUbicacion_1 = __importDefault(require("../../app/ubicaciones/route/RutaUbicacion"));
+const RutaRelTurnoUsuario_1 = __importDefault(require("../../app/rel-turno-usuario/route/RutaRelTurnoUsuario"));
+const routeUser_1 = __importDefault(require("../../app/usuarios/route/routeUser"));
+const RouteIncome_1 = __importDefault(require("../../app/ingresos/route/RouteIncome"));
+const RouteAccess_1 = __importDefault(require("../../app/accesos/route/RouteAccess"));
+const routeFunctionality_1 = __importDefault(require("../../app/funcionalidades/route/routeFunctionality"));
+const RouteRelRolFuncionality_1 = __importDefault(require("../../app/rel_rol_functionalidad/route/RouteRelRolFuncionality"));
+const RouteRelUserFunctionality_1 = __importDefault(require("../../app/rel_usuario_funcionalidad/route/RouteRelUserFunctionality"));
+const RutaVehiculo_1 = __importDefault(require("../../app/vehiculos/route/RutaVehiculo"));
 //joan
 //Miguel
 //Wilson
 //Sebastian
-//Andres
 //Eduardo
 class Servidor {
     constructor() {
@@ -32,14 +39,22 @@ class Servidor {
         this.app.use("/api/tipo_vehiculo", RutaTipoVehiculo_1.default);
         this.app.use("/api/tarifa_diaria", Security_1.default.check, RutaTarifaDiaria_1.default);
         this.app.use("/api/login", RutaLogin_1.default);
+        this.app.use("/api/turno", RutaTurno_1.default);
+        this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
         //joan
         //Miguel
         this.app.use("/api/turno", RutaTurno_1.default);
         this.app.use("/api/parqueadero", RutaParqueadero_1.default);
         this.app.use("/api/ubicacion", RutaUbicacion_1.default);
+        this.app.use("/api/usuarios", routeUser_1.default);
+        this.app.use("/api/ingresos", RouteIncome_1.default);
+        this.app.use("/api/acceso", RouteAccess_1.default);
+        this.app.use("/api/funcionalidades", routeFunctionality_1.default);
+        this.app.use("/api/rel_rol_functionality", RouteRelRolFuncionality_1.default);
+        this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
         //Wilson
         //Sebastian
-        //Andres
+        this.app.use("api/vehiculo", RutaVehiculo_1.default);
         //Eduardo
     }
     arranquelo() {

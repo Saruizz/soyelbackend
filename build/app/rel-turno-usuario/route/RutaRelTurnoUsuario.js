@@ -19,4 +19,5 @@ class RutaRelTurnoUsuario {
         this.rutaApi.put("/update/:codTurnoUsuario", ValidarDatos_1.default.ahora, ControladorRelTurnoUsuario_1.default.actualizarRelacion);
     }
 }
-exports.default = new RutaRelTurnoUsuario().rutaApi;
+const rutaRelTurnoUsuarioApi = new RutaRelTurnoUsuario().rutaApi;
+exports.default = rutaRelTurnoUsuarioApi;

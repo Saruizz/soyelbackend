@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import ServicioTipoVehiculoConsulta from "../service/ServicioTipoVehiculoConsulta";
 
 class ControladorTipoVehiculoConsulta extends ServicioTipoVehiculoConsulta {
-    public llamarObtenerTodos(raq: Request, res: Response): void {
+    public llamarObtenerTodos(res: Response): void {
         ServicioTipoVehiculoConsulta.obtenerTodos(res);
     }
 }
