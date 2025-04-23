@@ -1,0 +1,784 @@
+@startuml umlParqueadero
+skinparam classAttributeIconSize 0
+
+class ControllerFunctionalityCreate{
+  +create(req: Request, res: Response)
+}
+
+class ServiceFunctionalityCreate{
+  #create(obj: Functionality, res: Response)
+}
+
+class ControllerFunctionalityDelete{
+  +delete(req: Request, res: Response)
+}
+
+class ServiceFunctionalityDelete{
+  #delete(id: number, res: Response)
+}
+
+class ControllerFunctionalityGet{
+  +getAll(req: Request, res: Response)
+}
+
+class ServiceFunctionalityGet{
+  #getAll(res: Response)
+}
+
+class ControllerFunctionalityUpdate{
+  +update(req: Request, res: Response)
+}
+
+class ServiceFunctionalityUpdate{
+  #update(obj: Functionality, res: Response)
+}
+
+class Functionality{
+  -_codFuncionalidad : number
+  -_codPadreFuncionalidad : number | null
+  -_nombreFuncionalidad : string
+  -_urlFuncionalidad : string
+  +codFuncionalidad : number
+  +codPadreFuncionalidad : number | null
+  +nombreFuncionalidad : string
+  +urlFuncionalidad : string
+}
+
+class RouteFunctionality{
+  +routeFunctionalityApi : Router
+}
+
+class ControladorRolActualizar{
+  +llamarActualizar(req: Request, res: Response): void
+}
+
+class ServicioRolActualizar{
+  #actualizarRol(objRol: Rol, res: Response): Promise<any>
+}
+
+class ControladorRolBorrar{
+  +llamarBorrar(req: Request, res: Response): void
+}
+
+class ServicioRolBorrar{
+  #borrar(obj: Rol, res: Response): Promise<any>
+}
+
+class ControladorRolConsulta{
+  +llamarObtenerTodos(raq: Request, res: Response): void
+}
+
+class ServicioRolConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+}
+
+class ControladorRolCrear{
+  +llamarGrabarRol(req: Request, res: Response): void
+}
+
+class ServicioRolCrear{
+  #grabarRol(obj: Rol, res: Response): Promise<any>
+}
+
+class Rol{
+  -_codRol : number
+  -_nombreRol : string
+  +codRol : number
+  +nombreRol : string
+}
+
+class RutaRol{
+  +rutaRolApi : Router
+}
+
+class ControllerUserCreate{
+  +createUser(req: Request, res: Response): void
+}
+
+class ServicioUsuarioCrear{
+  #grabarUsuario(obj: Usuario, res: Response): Promise<any>
+}
+
+class ControllerUserDelete{
+  +deleteUser(req: Request, res: Response): Promise<any>
+}
+
+class ServiceUserDelete{
+  #eliminarUsuario(codUsuario: number, res: Response): Promise<any>
+}
+
+class ControllerUserGet{
+  +getUsers(req: Request, res: Response): Promise<any>
+  +getUserById(req: Request, res: Response): Promise<any>
+}
+
+class ServiceUserGet{
+  #obtenerUsuarios(res: Response): Promise<any>
+  #getUserById(codUsuario: number, res: Response): Promise<any>
+}
+
+class ControllerUserUpdate{
+  +updateUser(req: Request, res: Response): void
+}
+
+class ServiceUserUpdate{
+  #updateUser(obj: Usuario, res: Response): Promise<any>
+}
+
+class Usuario{
+  -_codUsuario : number
+  -_codRol : number
+  -_documentoUsuario : string
+  -_nombresUsuario : string
+  -_apellidosUsuario : string
+  -_generoUsuario : number
+  -_fechaNacimientoUsuario : Date
+  -_telefonoUsuario : string
+  + <<readonly>> codUsuario : number
+  + <<readonly>> codRol : number
+  + <<readonly>> documentoUsuario : string
+  + <<readonly>> nombresUsuario : string
+  + <<readonly>> apellidosUsuario : string
+  + <<readonly>> generoUsuario : number
+  + <<readonly>> fechaNacimientoUsuario : Date
+  + <<readonly>> telefonoUsuario : string
+}
+
+class RutaUser{
+  +rutalRolApi : Router
+}
+
+class ControladorLogin{
+  +llamarIniciarSesion(req: Request, res: Response): void
+  +llamarValidarSesion(req: Request, res: Response): void
+  +llamarCerrarSesion(req: Request, res: Response): void
+  +llamarObtenerHistorialIngresos(req: Request, res: Response): void
+}
+
+class ServicioLogin{
+  #iniciarSesion(req: Request, res: Response): Promise<any>
+  #validarSesion(req: Request, res: Response): Promise<any>
+  #cerrarSesion(req: Request, res: Response): Promise<any>
+  #obtenerHistorialIngresos(req: Request, res: Response): Promise<any>
+}
+
+class Acceso{
+  -_codUsuario : number
+  -_correoAcceso : String
+  -_claveAcceso : String
+  -_uuidAcceso : String
+  +codUsuario : number
+  +correoAcceso : String
+  +claveAcceso : String
+  +uuidAcceso : String
+}
+
+class InfoToken{
+  +codUsuario : number
+  +nombresUsuario : string
+  +apellidosUsuario : string
+  +nombreRol : string
+}
+
+class Ingreso{
+  -_codIngreso : number
+  -_codUsuario : number
+  -_fechaIngreso : Date
+  -_horaIngreso : Date
+  +codIngreso : number
+  +codUsuario : number
+  +fechaIngreso : Date
+  +horaIngreso : Date
+}
+
+class RutaLogin{
+  +rutaLoginApi : Router
+  -configurarRutas(): void
+}
+
+class ControladorParqueaderoActualizar{
+  +llamarActualizar(req: Request, res: Response): void
+}
+
+class ServicioParqueaderoActualizar{
+  #actualizarParqueadero(objParqueadero: Parqueadero, res: Response): Promise<any>
+}
+
+class ControladorParqueaderoBorrar{
+  +llamarBorrar(req: Request, res: Response): void
+}
+
+class ServicioParqueaderoBorrar{
+  #borrar(obj: Parqueadero, res: Response): Promise<any>
+}
+
+class ControladorParqueaderoConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): void
+}
+
+class ServicioParqueaderoConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+}
+
+class ControladorParqueaderoCrear{
+  +llamarGrabarParqueadero(req: Request, res: Response): void
+}
+
+class ServicioParqueaderoCrear{
+  #grabarParqueadero(obj: Parqueadero, res: Response): Promise<any>
+}
+
+class Parqueadero{
+  -_codParqueadero : number
+  -_codUbicacion : number
+  -_nombreParqueadero : string
+  -_dirParqueadero : string
+  -_telParqueadero : string
+  +codParqueadero : number
+  +codUbicacion : number
+  +nombreParqueadero : string
+  +dirParqueadero : string
+  +telParqueadero : string
+}
+
+class RutaParqueadero{
+  +rutaParqueaderoApi : Router
+}
+
+class ControladorPuestoActualizar{
+  +llamarActualizarPuesto(req: Request, res: Response): void
+}
+
+class ServicioPuestoActualizar{
+  #actualizarPuesto(req: Request, res: Response): Promise<any>
+}
+
+class ControladorPuestoBorrar{
+  +llamarBorrarPuesto(req: Request, res: Response): void
+}
+
+class ServicioPuestoBorrar{
+  #borrarPuesto(req: Request, res: Response): Promise<any>
+}
+
+class ControladorPuestoConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): void
+  +llamarObtenerUno(req: Request, res: Response): void
+}
+
+class ServicioPuestoConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+  #obtenerUno(req: Request, res: Response): Promise<any>
+}
+
+class ControladorPuestoCrear{
+  +llamarGrabarPuesto(req: Request, res: Response): void
+}
+
+class ServicioPuestoCrear{
+  #grabarPuesto(req: Request, res: Response): Promise<any>
+}
+
+class Puesto{
+  -_codPuesto : number
+  -_codParqueadero : number
+  -_codTipoVehiculo : number
+  -_detallePuesto : string
+  +codPuesto : number
+  +codParqueadero : number
+  +codTipoVehiculo : number
+  +detallePuesto : string
+}
+
+class RutaPuesto{
+  +rutaPuestoApi : Router
+  -configurarRutasConsulta(): void
+  -configurarRutasGestion(): void
+}
+
+class ControllerCreateRelRolFunctionality{
+  +create(req: Request, res: Response)
+}
+
+class ServiceCreateRelRolFunctionality{
+  #create(obj: Rel_rol_funcionalidad, res: Response)
+}
+
+class ControllerDeleteRelRolFunctionality{
+  +delete(req: Request, res: Response)
+}
+
+class ServiceDeleteRelRolFunctionality{
+  #delete(obj: Rel_rol_funcionalidad, res: Response)
+}
+
+class ControllerGetRelRolFunctionality{
+  +getAll(req: Request, res: Response)
+}
+
+class ServiceGetRelRolFunctionality{
+  #getAll(res: Response)
+}
+
+class Rel_rol_funcionalidad{
+  -_cod_rol : number
+  -_cod_funcionalidad : number
+  +cod_rol : number
+  +cod_funcionalidad : number
+}
+
+class RouteRelRolFunctionality{
+  +rutaRelRolFunctionalityApi : Router
+}
+
+class ControllerCreateRelUserFunctionality{
+  +createRelUserFunctionality(req: Request, res: Response)
+}
+
+class ServiceCreateRelUserFunctionality{
+  #create(obj: RelUserFunctionality, res: Response)
+}
+
+class ControllerDeleteRelUserFuncionality{
+  +deleteRelUserFunctionality(req: Request, res: Response)
+}
+
+class ServiceDeleteRelUserFunctionality{
+  #delete(obj: RelUserFunctionality, res: Response)
+}
+
+class ControllerGetRelUserFunctionality{
+  +getAllRelUserFunctionality(req: Request, res: Response)
+}
+
+class ServiceGetAllRelUserFunctional{
+  #getAllRelUserFunctionality(res: Response)
+}
+
+class RelUserFunctionality{
+  -_cod_usuario : number
+  -_cod_funcionalidad : number
+  +codUsuario : number
+  +codFuncionalidad : number
+}
+
+class RouteRelUserFunctionality{
+  +RouteApi : Router
+}
+
+class ControladorRelTurnoUsuario{
+  +crearRelacion(req: Request, res: Response): Promise<void>
+  +eliminarRelacion(req: Request, res: Response): Promise<void>
+  +obtenerRelacionPorId(req: Request, res: Response): Promise<void>
+  +obtenerTodasLasRelaciones(req: Request, res: Response): Promise<void>
+  +actualizarRelacion(req: Request, res: Response): Promise<void>
+}
+
+class RelTurnoUsuario{
+  -_codTurnoUsuario : number
+  -_codTurno : number
+  -_codUsuario : number
+  +codTurnoUsuario : number
+  +codTurno : number
+  +codUsuario : number
+}
+
+class RutaRelTurnoUsuario{
+  +rutaApi : Router
+  -configurarRutas(): void
+}
+
+class ServicioRelTurnoUsuario{
+  +crearRelacion(codTurno: number, codUsuario: number, res: Response): Promise<void>
+  +eliminarRelacion(codTurnoUsuario: number, res: Response): Promise<void>
+  +obtenerRelacionPorId(codTurnoUsuario: number, res: Response): Promise<void>
+  +obtenerTodasLasRelaciones(res: Response): Promise<void>
+  +actualizarRelacion(codTurnoUsuario: number, codTurno: number, codUsuario: number, res: Response): Promise<void>
+}
+
+class ControladorServicioDiarioActualizar{
+  +llamarActualizarServicioDiario(req: Request, res: Response): void
+}
+
+class ServicioDiarioActualizar{
+  #actualizarServicioDiario(req: Request, res: Response): Promise<any>
+}
+
+class ControladorServicioDiarioBorrar{
+  +llamarBorrarServicioDiario(req: Request, res: Response): void
+}
+
+class ServicioDiarioBorrar{
+  #borrarServicioDiario(req: Request, res: Response): Promise<any>
+}
+
+class ControladorServicioDiarioConsulta{
+  +llamaroObtenerTodos(req: Request, res: Response): void
+  +llamarObtenerUno(req: Request, res: Response): void
+  +llamarobtenerPorServicio(req: Request, res: Response): void
+}
+
+class ServicioDiarioConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+  #obtenerUno(req: Request, res: Response): Promise<any>
+  #obtenerPorCodigoServicio(req: Request, res: Response): Promise<any>
+}
+
+class ControladorServicioDiarioCrear{
+  +llamarGrabarServicioDiario(req: Request, res: Response): void
+}
+
+class ServicioDiarioCrear{
+  #grabarServicioDiario(req: Request, res: Response): Promise<any>
+}
+
+class ServicioDiario{
+  -_codServicioDiario : number
+  -_codParqueadero : number
+  -_codVehiculo : number
+  -_codPuesto : number
+  -_FechaInicioServicioDiario : Date
+  -_FechaFinServicioDiario : Date
+  -_valorServicioDiario : number
+  +codServicioDiario : number
+  +codParqueadero : number
+  +codVehiculo : number
+  +codPuesto : number
+  +fechaInicio : Date
+  +fechaFin : Date
+  +valorServicioDiario : number
+}
+
+class RutaServicioDiario{
+  +rutaServicioDiarioApi : Router
+  -configurarRutasConsulta(): void
+  -configurarRutasGestion(): void
+}
+
+class ControladorTarifaDiariaActualizar{
+  +llamarActualizarTarifaDiaria(req: Request, res: Response): void
+}
+
+class ServicioTarifaDiariaActualizar{
+  #actualizarTarifaDiaria(req: Request, res: Response): Promise<any>
+}
+
+class ControladorTarifaDiariaBorrar{
+  +llamarBorrarTarifaDiaria(req: Request, res: Response): void
+}
+
+class ServicioTarifaDiariaBorrar{
+  #borrarTarifaDiaria(req: Request, res: Response): Promise<any>
+}
+
+class ControladorTarifaDiariaConsulta{
+  +llamaroObtenerTodos(req: Request, res: Response): void
+  +llamarObtenerUno(req: Request, res: Response): void
+  +llamarObtenerPorParqueadero(req: Request, res: Response): void
+  +llamarObtenerPorTipoVehiculo(req: Request, res: Response): void
+}
+
+class ServicioTarifaDiariaConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+  #obtenerUno(req: Request, res: Response): Promise<any>
+  #obtenerPorParqueadero(req: Request, res: Response): Promise<any>
+  #obtenerPorTipoVehiculo(req: Request, res: Response): Promise<any>
+}
+
+class ControladorTarifaDiariaCrear{
+  +llamarGrabarTarifaDiaria(req: Request, res: Response): void
+}
+
+class ServicioTarifaDiariaCrear{
+  #grabarTarifaDiaria(req: Request, res: Response): Promise<any>
+}
+
+class TarifaDiaria{
+  -_codTipoVehiculo : number
+  -_codParqueadero : number
+  -_valorTarifaDiaria : number
+  +codTipoVehiculo : number
+  +codParqueadero : number
+  +valorTarifaDiaria : number
+}
+
+class RutaTarifaDiaria{
+  +rutaTarifaDiariaApi : Router
+  -configurarRutasConsulta(): void
+  -configurarRutasGestion(): void
+}
+
+class ControladortTipoVehiculoActualizar{
+  +llamarActualizar(req: Request, res: Response): void
+}
+
+class ServicioTipoVehiculoActualizar{
+  #actualizarTipoVehiculo(objTipoVehiculo: TipoVehiculo, res: Response): Promise<any>
+}
+
+class ControladorTipoVehiculoBorrar{
+  +llamarBorrar(req: Request, res: Response)
+}
+
+class ServicioTipoVehiculoBorrar{
+  #borrar(obj: TipoVehiculo, res: Response): Promise<any>
+}
+
+class ControladorTipoVehiculoConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): Promise<void>
+}
+
+class ServicioTipoVehiculoConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+}
+
+class ControladorTipoVehiculoCrear{
+  +llamarGrabarTipoVehiculo(req: Request, res: Response): void
+}
+
+class ServicioTipoVehiculoCrear{
+  #grabarTipoVehiculo(obj: TipoVehiculo, res: Response): Promise<any>
+}
+
+class TipoVehiculo{
+  -_codTipoVehiculo : number
+  -_claseTipoVehiculo : string
+  +codTipoVehiculo : number
+  +claseTipoVehiculo : string
+}
+
+class RutaTipoVehiculo{
+  +rutaTipoVehiculoApi : Router
+}
+
+class ControladorTurnoActualizar{
+  +llamarActualizar(req: Request, res: Response): Promise<void>
+}
+
+class ServicioTurnoActualizar{
+  +actualizarTurno(objTurno: any, res: Response): Promise<void>
+}
+
+class ControladorTurnoBorrar{
+  +llamarBorrar(req: Request, res: Response): Promise<void>
+}
+
+class ServicioTurnoBorrar{
+  +borrar(codigo: number, res: Response): Promise<any>
+}
+
+class ControladorTurnoConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): void
+}
+
+class ServicioTurnoConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+}
+
+class ControladorTurnoCrear{
+  +llamarGrabarTurno(req: Request, res: Response): Promise<void>
+}
+
+class ServicioTurnoCrear{
+  +grabarTurno(obj: Turno, res: Response): Promise<any>
+}
+
+class Turno{
+  -_codTurno : number
+  -_codParqueadero : number
+  -_descripcionTurno : string
+  -_fechaTurno : Date
+  -_horaInicioTurno : String
+  -_horaFinTurno : String
+  +cod_Turno : number
+  +cod_Parqueadero : number
+  +descripcion_Turno : string
+  +fecha_Turno : string | Date
+  +hora_Inicio_Turno : string
+  +hora_Fin_Turno : string
+  -normalizarHora(hora: string): string
+}
+
+class RutaTurno{
+  +rutaTurnoApi : Router
+}
+
+class ControladorUbicacionActualizar{
+  +llamarActualizar(req: Request, res: Response): void
+}
+
+class ServicioUbicacionActualizar{
+  #actualizarUbicacion(objUbicacion: Ubicacion, res: Response): Promise<any>
+}
+
+class ControladorUbicacionBorrar{
+  +llamarBorrar(req: Request, res: Response): void
+}
+
+class ControladorUbicacionConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): void
+}
+
+class ServicioUbicacionConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+}
+
+class ControladorUbicacionCrear{
+  +llamarGrabarUbicacion(req: Request, res: Response): void
+}
+
+class ServicioUbicacionCrear{
+  #grabarUbicacion(obj: Parqueadero, res: Response): Promise<any>
+}
+
+class Ubicacion{
+  -_codUbicacion : number
+  -_codPadreUbicacion : number
+  -_codExternoUbicacion : string
+  -_nombreUbicacion : string
+  +codUbicacion : number
+  +codPadreUbicacion : number
+  +codExternoUbicacion : string
+  +nombreUbicacion : string
+}
+
+class RutaUbicacion{
+  +rutaUbicacionApi : Router
+}
+
+class ServicioUbicacionBorrar{
+  #borrar(obj: Ubicacion, res: Response): Promise<any>
+}
+
+class ControladorVehiculoActualizar{
+  +llamarActualizarVehiculo(req: Request, res: Response): void
+}
+
+class ServicioVehiculoActualizar{
+  #actualizarVehiculo(objVehiculo: Vehiculo, res: Response): Promise<any>
+}
+
+class ControladorVehiculoBorrar{
+  +llamarBorrarVehiculo(req: Request, res: Response): void
+}
+
+class ServicioVehiculoBorrar{
+  #borrarVehiculo(obj: Vehiculo, res: Response): Promise<any>
+}
+
+class ControladorVehiculoConsulta{
+  +llamarObtenerTodos(req: Request, res: Response): void
+  +llamarObtenerPorCodVehiculo(req: Request, res: Response): void
+  +llamarObtenerPorTipoVehiculo(req: Request, res: Response): void
+  +llamarObtenerPorUsuario(req: Request, res: Response): void
+  +llamarObtenerPorPlaca(req: Request, res: Response): void
+}
+
+class ServicioVehiculoConsulta{
+  #obtenerTodos(res: Response): Promise<any>
+  #obtenerPorCodVehiculo(req: Request, res: Response): Promise<any>
+  #obtenerPorTipoVehiculo(req: Request, res: Response): Promise<any>
+  #obtenerPorUsuario(req: Request, res: Response): Promise<any>
+  #obtenerPorPlaca(req: Request, res: Response): Promise<any>
+}
+
+class ControladorVehiculoCrear{
+  +llamarGrabarVehiculo(req: Request, res: Response): void
+}
+
+class ServicioVehiculoCrear{
+  #grabarVehiculo(obj: Vehiculo, res: Response): Promise<any>
+}
+
+class Vehiculo{
+  -_codVehiculo : number
+  -_codTipoVehiculo : number
+  -_codUsuario : number
+  -_placaVehiculo : String
+  +codVehiculo : number
+  +codTipoVehiculo : number
+  +codUsuario : number
+  +placaVehiculo : String
+}
+
+class RutaVehiculo{
+  +rutaVehiculoApi : Router
+  -configurararRutasConsulta(): void
+  -configurararRutasGestion(): void
+}
+
+RouteFunctionality --> Router
+RutaRol --> Router
+Usuario --> Date
+RutaUser --> Router
+Acceso --> String
+Ingreso --> Date
+RutaLogin --> Router
+RutaParqueadero --> Router
+RutaPuesto --> Router
+RouteRelRolFunctionality --> Router
+RouteRelUserFunctionality --> Router
+RutaRelTurnoUsuario --> Router
+ServicioDiario --> Date
+RutaServicioDiario --> Router
+RutaTarifaDiaria --> Router
+RutaTipoVehiculo --> Router
+RutaTurno --> Router
+Turno --> Date
+Turno --> String
+RutaUbicacion --> Router
+Vehiculo --> String
+RutaVehiculo --> Router
+ServiceFunctionalityCreate <|-- ControllerFunctionalityCreate
+ServiceFunctionalityDelete <|-- ControllerFunctionalityDelete
+ServiceFunctionalityGet <|-- ControllerFunctionalityGet
+ServiceFunctionalityUpdate <|-- ControllerFunctionalityUpdate
+ServicioRolActualizar <|-- ControladorRolActualizar
+ServicioRolBorrar <|-- ControladorRolBorrar
+ServicioRolConsulta <|-- ControladorRolConsulta
+ServicioRolCrear <|-- ControladorRolCrear
+ServicioUsuarioCrear <|-- ControllerUserCreate
+ServiceUserDelete <|-- ControllerUserDelete
+ServiceUserGet <|-- ControllerUserGet
+ServiceUserUpdate <|-- ControllerUserUpdate
+ServicioLogin <|-- ControladorLogin
+ServicioParqueaderoActualizar <|-- ControladorParqueaderoActualizar
+ServicioParqueaderoBorrar <|-- ControladorParqueaderoBorrar
+ServicioParqueaderoConsulta <|-- ControladorParqueaderoConsulta
+ServicioParqueaderoCrear <|-- ControladorParqueaderoCrear
+ServicioPuestoActualizar <|-- ControladorPuestoActualizar
+ServicioPuestoBorrar <|-- ControladorPuestoBorrar
+ServicioPuestoConsulta <|-- ControladorPuestoConsulta
+ServicioPuestoCrear <|-- ControladorPuestoCrear
+ServiceCreateRelRolFunctionality <|-- ControllerCreateRelRolFunctionality
+ServiceDeleteRelRolFunctionality <|-- ControllerDeleteRelRolFunctionality
+ServiceGetRelRolFunctionality <|-- ControllerGetRelRolFunctionality
+ServiceCreateRelUserFunctionality <|-- ControllerCreateRelUserFunctionality
+ServiceDeleteRelUserFunctionality <|-- ControllerDeleteRelUserFuncionality
+ServiceGetAllRelUserFunctional <|-- ControllerGetRelUserFunctionality
+ServicioDiarioActualizar <|-- ControladorServicioDiarioActualizar
+ServicioDiarioBorrar <|-- ControladorServicioDiarioBorrar
+ServicioDiarioConsulta <|-- ControladorServicioDiarioConsulta
+ServicioDiarioCrear <|-- ControladorServicioDiarioCrear
+ServicioTarifaDiariaActualizar <|-- ControladorTarifaDiariaActualizar
+ServicioTarifaDiariaBorrar <|-- ControladorTarifaDiariaBorrar
+ServicioTarifaDiariaConsulta <|-- ControladorTarifaDiariaConsulta
+ServicioTarifaDiariaCrear <|-- ControladorTarifaDiariaCrear
+ServicioTipoVehiculoActualizar <|-- ControladortTipoVehiculoActualizar
+ServicioTipoVehiculoBorrar <|-- ControladorTipoVehiculoBorrar
+ServicioTipoVehiculoConsulta <|-- ControladorTipoVehiculoConsulta
+ServicioTipoVehiculoCrear <|-- ControladorTipoVehiculoCrear
+ServicioTurnoActualizar <|-- ControladorTurnoActualizar
+ServicioTurnoBorrar <|-- ControladorTurnoBorrar
+ServicioTurnoConsulta <|-- ControladorTurnoConsulta
+ServicioTurnoCrear <|-- ControladorTurnoCrear
+ServicioUbicacionActualizar <|-- ControladorUbicacionActualizar
+ServicioParqueaderoBorrar <|-- ControladorUbicacionBorrar
+ServicioUbicacionConsulta <|-- ControladorUbicacionConsulta
+ServicioUbicacionCrear <|-- ControladorUbicacionCrear
+ServicioVehiculoActualizar <|-- ControladorVehiculoActualizar
+ServicioVehiculoBorrar <|-- ControladorVehiculoBorrar
+ServicioVehiculoConsulta <|-- ControladorVehiculoConsulta
+ServicioVehiculoCrear <|-- ControladorVehiculoCrear
+
+@enduml
