@@ -8,16 +8,17 @@ class ServicioTipoVehiculoConsulta {
             const misDatos = await pool.result(SQL_TIPO_VEHICULO.FIND_ALL);
 
             if (misDatos.rows.length === 0) {
-                return res.status(404).json({
+                res.status(404).json({
                     respuesta: "No se encontraron tipos de vehículo"
                 });
+                return; // Solo devolver para detener la ejecución, no devolver el resultado de res.status
             }
 
             res.status(200).json({
                 respuesta: "Consulta de tipos de vehiculos exitosa",
                 cantidad: misDatos.rows.length,
                 tiposVehiculos: misDatos.rows
-            })
+            });
 
         } catch (miError) {
             console.error(miError);
