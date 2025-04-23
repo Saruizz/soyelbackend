@@ -59,7 +59,7 @@ class Servidor {
     this.app.use("/api/rel_user_functionality", routeRelUserFunctionality);
     //Wilson
     //Sebastian
-    this.app.use("api/vehiculo", rutaVehiculoApi);
+    this.app.use("/api/vehiculo", rutaVehiculoApi);
     //Eduardo
     this.app.use("/api/puesto", rutaPuestoApi);
     this.app.use("/api/servicio_diario", rutaServicioDiarioApi);
