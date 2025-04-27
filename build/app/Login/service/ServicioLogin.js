@@ -25,13 +25,31 @@ class ServicioLogin {
     static iniciarSesion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { correoAcceso, claveAcceso } = req.body;
+            // Validación básica de entrada
+            if (!correoAcceso || !claveAcceso) {
+                return res.status(400).json({
+                    respuesta: "Correo y contraseña son requeridos",
+                    autenticado: false,
+                });
+            }
             const claveCifrada = bcryptjs_1.default.hashSync(claveAcceso);
             try {
                 // Verificar si el usuario existe con las credenciales proporcionadas
-                const datosUsuario = yield dbConnection_1.default.oneOrNone(sql_acceso_1.SQL_ACCESO.FIND_BY_EMAIL, [correoAcceso]);
-                console.log(datosUsuario);
+                const datosUsuario = yield dbConnection_1.default.oneOrNone(sql_acceso_1.SQL_ACCESO.FIND_BY_EMAIL, [
+                    correoAcceso,
+                ]);
+                if (!datosUsuario) {
+                    return res.status(401).json({
+                        respuesta: "Credenciales incorrectas",
+                        autenticado: false,
+                    });
+                }
+                console.log(claveAcceso);
+                console.log(datosUsuario.claveacceso);
+                // Comparación CORRECTA de contraseña
                 const isValid = bcryptjs_1.default.compareSync(claveAcceso, datosUsuario.claveacceso);
-                if (!datosUsuario || !isValid) {
+                console.log(isValid);
+                if (!isValid) {
                     return res.status(401).json({
                         respuesta: "Credenciales incorrectas",
                         autenticado: false,
@@ -46,12 +64,14 @@ class ServicioLogin {
                 ]);
                 // Registrar el ingreso al sistema
                 const nuevoIngreso = yield dbConnection_1.default.one(sql_ingreso_1.SQL_INGRESO.ADD, [
-                    datosUsuario.codusuario,
+                    datosUsuario.codusuario // Pasar el ID de usuario como parámetro
                 ]);
                 // Obtener información del usuario
-                const infoUsuario = yield dbConnection_1.default.oneOrNone(sql_login_1.default.getData, [datosUsuario.codusuario]);
+                const infoUsuario = (yield dbConnection_1.default.oneOrNone(sql_login_1.default.getData, [
+                    datosUsuario.codusuario,
+                ]));
                 const secret = process.env.JWT_SECRET;
-                const token = jsonwebtoken_1.default.sign(infoUsuario, secret, { expiresIn: "1m" });
+                const token = jsonwebtoken_1.default.sign(infoUsuario, secret, { expiresIn: "2h" });
                 if (!infoUsuario) {
                     return res.status(404).json({
                         respuesta: "No se encontró información del usuario",
@@ -93,7 +113,9 @@ class ServicioLogin {
                     });
                 }
                 // Obtener información del usuario
-                const infoUsuario = yield dbConnection_1.default.oneOrNone(sql_login_1.default.dataUser, [codUsuario]);
+                const infoUsuario = yield dbConnection_1.default.oneOrNone(sql_login_1.default.dataUser, [
+                    codUsuario,
+                ]);
                 const ultimoIngreso = yield dbConnection_1.default.oneOrNone(sql_ingreso_1.SQL_INGRESO.LAST_ENTRY, [
                     codUsuario,
                 ]);

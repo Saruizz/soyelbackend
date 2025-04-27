@@ -24,11 +24,6 @@ const RouteRelUserFunctionality_1 = __importDefault(require("../../app/rel_usuar
 const RutaPuesto_1 = __importDefault(require("../../app/puesto/route/RutaPuesto"));
 const RutaServicioDiario_1 = __importDefault(require("../../app/servicio_diario/route/RutaServicioDiario"));
 const RutaVehiculo_1 = __importDefault(require("../../app/vehiculos/route/RutaVehiculo"));
-//joan
-//Miguel
-//Wilson
-//Sebastian
-//Eduardo
 class Servidor {
     constructor() {
         this.app = (0, express_1.default)();
@@ -41,25 +36,19 @@ class Servidor {
         this.app.use("/api/tipo_vehiculo", RutaTipoVehiculo_1.default);
         this.app.use("/api/tarifa_diaria", Security_1.default.check, RutaTarifaDiaria_1.default);
         this.app.use("/api/login", RutaLogin_1.default);
-        this.app.use("/api/turno", RutaTurno_1.default);
-        this.app.use("/api/rel_turno_usuario", RutaRelTurnoUsuario_1.default);
-        //joan
-        //Miguel
-        this.app.use("/api/turno", RutaTurno_1.default);
-        this.app.use("/api/parqueadero", RutaParqueadero_1.default);
-        this.app.use("/api/ubicacion", RutaUbicacion_1.default);
-        this.app.use("/api/usuarios", routeUser_1.default);
-        this.app.use("/api/ingresos", RouteIncome_1.default);
-        this.app.use("/api/acceso", RouteAccess_1.default);
-        this.app.use("/api/funcionalidades", routeFunctionality_1.default);
-        this.app.use("/api/rel_rol_functionality", RouteRelRolFuncionality_1.default);
-        this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
-        //Wilson
-        //Sebastian
-        this.app.use("/api/vehiculo", RutaVehiculo_1.default);
-        //Eduardo
-        this.app.use("/api/puesto", RutaPuesto_1.default);
-        this.app.use("/api/servicio_diario", RutaServicioDiario_1.default);
+        this.app.use("/api/turno", Security_1.default.check, RutaTurno_1.default);
+        this.app.use("/api/rel_turno_usuario", Security_1.default.check, RutaRelTurnoUsuario_1.default);
+        this.app.use("/api/parqueadero", Security_1.default.check, RutaParqueadero_1.default);
+        this.app.use("/api/ubicacion", Security_1.default.check, RutaUbicacion_1.default);
+        this.app.use("/api/usuarios", Security_1.default.check, routeUser_1.default);
+        this.app.use("/api/ingresos", Security_1.default.check, RouteIncome_1.default);
+        this.app.use("/api/acceso", Security_1.default.check, RouteAccess_1.default);
+        this.app.use("/api/funcionalidades", Security_1.default.check, routeFunctionality_1.default);
+        this.app.use("/api/rel_rol_functionality", Security_1.default.check, RouteRelRolFuncionality_1.default);
+        this.app.use("/api/rel_user_functionality", Security_1.default.check, RouteRelUserFunctionality_1.default);
+        this.app.use("/api/vehiculo", Security_1.default.check, RutaVehiculo_1.default);
+        this.app.use("/api/puesto", Security_1.default.check, RutaPuesto_1.default);
+        this.app.use("/api/servicio_diario", Security_1.default.check, RutaServicioDiario_1.default);
     }
     arranquelo() {
         this.app.listen(this.app.get("PORT"), () => {

@@ -2,6 +2,7 @@ import pool from "../../../config/connection/dbConnection";
 import Accesos from "../model/Accesos";
 import { Response } from "express";
 import { sql_accesos } from "../repository/sql_accesos";
+import cifrar from "bcryptjs";
 
 class ServicioAccesoCrear {
   protected static async crearAcceso(obj: Accesos, res: Response) {
@@ -22,10 +23,13 @@ class ServicioAccesoCrear {
           if (access == null) {
             caso = 2;
           }
+          const saltRounds = 10;
+          const hashedPassword = cifrar.hashSync(obj.clave, saltRounds);
+          // Guardar hashedPassword en la BD;
           objGrabado = await consulta.one(sql_accesos.create, [
             obj.codUsuario,
             obj.correo,
-            obj.clave,
+            hashedPassword,
             obj.uuid,
           ]);
         }

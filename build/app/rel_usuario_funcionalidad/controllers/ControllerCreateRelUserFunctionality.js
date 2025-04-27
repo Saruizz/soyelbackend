@@ -11,3 +11,5 @@ class ControllerCreateRelUserFunctionality extends ServiceCreateRelUserFunctiona
         ServiceCreateRelUserFunctionality_1.default.create(obj, res);
     }
 }
+const controllerCreateRelUserFunctionality = new ControllerCreateRelUserFunctionality();
+exports.default = controllerCreateRelUserFunctionality;

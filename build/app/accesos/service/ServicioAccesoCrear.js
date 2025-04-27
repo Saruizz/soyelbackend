@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dbConnection_1 = __importDefault(require("../../../config/connection/dbConnection"));
 const sql_accesos_1 = require("../repository/sql_accesos");
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 class ServicioAccesoCrear {
     static crearAcceso(obj, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -32,10 +33,13 @@ class ServicioAccesoCrear {
                     if (access == null) {
                         caso = 2;
                     }
+                    const saltRounds = 10;
+                    const hashedPassword = bcryptjs_1.default.hashSync(obj.clave, saltRounds);
+                    // Guardar hashedPassword en la BD;
                     objGrabado = yield consulta.one(sql_accesos_1.sql_accesos.create, [
                         obj.codUsuario,
                         obj.correo,
-                        obj.clave,
+                        hashedPassword,
                         obj.uuid,
                     ]);
                 }
