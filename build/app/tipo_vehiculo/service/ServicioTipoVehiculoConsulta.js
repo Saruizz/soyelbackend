@@ -20,9 +20,10 @@ class ServicioTipoVehiculoConsulta {
             try {
                 const misDatos = yield dbConnection_1.default.result(sql_tipo_vehiculo_1.SQL_TIPO_VEHICULO.FIND_ALL);
                 if (misDatos.rows.length === 0) {
-                    return res.status(404).json({
+                    res.status(404).json({
                         respuesta: "No se encontraron tipos de vehículo"
                     });
+                    return; // Solo devolver para detener la ejecución, no devolver el resultado de res.status
                 }
                 res.status(200).json({
                     respuesta: "Consulta de tipos de vehiculos exitosa",

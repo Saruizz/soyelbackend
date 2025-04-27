@@ -19,47 +19,36 @@ class ServicioVehiculoCrear {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 if (!obj ||
-                    !obj.placaVehiculo ||
                     !obj.codTipoVehiculo ||
-                    !obj.codUsuario) {
+                    !obj.codUsuario ||
+                    !obj.placaVehiculo) {
                     return res.status(400).json({
                         respuesta: "Datos de vehículo inválidos",
                     });
                 }
-                const resultado = yield dbConnection_1.default.task((consulta) => __awaiter(this, void 0, void 0, function* () {
-                    const vehiculos = yield consulta.one(sql_vehiculo_1.SQL_VEHICULO.HOW_MANY, [
-                        obj.placaVehiculo,
-                    ]);
-                    if (vehiculos.cantidad > 0) {
-                        return { caso: 1 };
-                    }
-                    const objGrabado = yield consulta.one(sql_vehiculo_1.SQL_VEHICULO.ADD, [
-                        obj.codTipoVehiculo,
-                        obj.codUsuario,
-                        obj.placaVehiculo,
-                    ]);
-                    return { caso: 2, objGrabado };
-                }));
-                switch (resultado.caso) {
-                    case 1:
-                        // Vehículo ya existe
-                        return res.status(409).json({
-                            respuesta: "El vehículo ya existe",
-                        });
-                    case 2:
-                        // Vehículo creado exitosamente
-                        return res.status(201).json(resultado.objGrabado);
-                    default:
-                        // Caso inesperado
-                        return res.status(500).json({
-                            respuesta: "Error inesperado al crear vehículo",
-                        });
+                // Verificar que la placa no exista
+                const vehiculoExistente = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PLACA, [obj.placaVehiculo]);
+                if (vehiculoExistente) {
+                    return res.status(409).json({
+                        respuesta: "Ya existe un vehículo con esta placa",
+                    });
                 }
+                // Crear el vehículo
+                const objGrabado = yield dbConnection_1.default.one(sql_vehiculo_1.SQL_VEHICULO.ADD, [
+                    obj.codTipoVehiculo,
+                    obj.codUsuario,
+                    obj.placaVehiculo,
+                ]);
+                res.status(201).json({
+                    respuesta: "Vehículo creado con éxito",
+                    vehiculo: objGrabado
+                });
             }
             catch (error) {
                 console.log(error);
                 res.status(500).json({
                     respuesta: "Error interno al crear el vehículo",
+                    error: error.message
                 });
             }
         });

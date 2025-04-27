@@ -20,10 +20,6 @@ class ControladorVehiculoConsulta extends ServicioVehiculoConsulta {
     public llamarObtenerPorPlaca(req: Request, res: Response): void {
         ServicioVehiculoConsulta.obtenerPorPlaca(req, res);
     }
-
-    public llamarObtenerPorParqueadero(req: Request, res: Response): void {
-        ServicioVehiculoConsulta.obtenerPorParqueadero(req, res);
-    }
 }
 
 const controladorVehiculoConsulta = new ControladorVehiculoConsulta();

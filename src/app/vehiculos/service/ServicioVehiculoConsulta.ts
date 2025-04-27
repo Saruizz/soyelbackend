@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import pool from "../../../config/connection/dbConnection";
 import { SQL_VEHICULO } from "../repository/sql_vehiculo";
 
-class ServicioVeiculoConsulta {
+class ServicioVehiculoConsulta {
     protected static async obtenerTodos(
         res: Response
     ): Promise<any> {
@@ -35,7 +35,7 @@ class ServicioVeiculoConsulta {
         const { codVehiculo } = req.params;
 
         try {
-            const misDatos = await pool.result(SQL_VEHICULO.FIND_BY_PRIMARY_KEY, [
+            const misDatos = await pool.oneOrNone(SQL_VEHICULO.FIND_BY_PRIMARY_KEY, [
                 codVehiculo,
             ]);
 
@@ -47,7 +47,6 @@ class ServicioVeiculoConsulta {
 
             res.status(200).json({
                 respuesta: "Consulta de vehículo por código exitosa",
-                cantidad: 1,
                 vehiculo: misDatos,
             });
         } catch (miError) {
@@ -123,22 +122,21 @@ class ServicioVeiculoConsulta {
         const { placaVehiculo } = req.params;
 
         try {
-            const misDatos = await pool.result(
+            const misDatos = await pool.oneOrNone(
                 SQL_VEHICULO.FIND_BY_PLACA,
                 [placaVehiculo]
             );
 
-            if (misDatos.rows.length === 0) {
+            if (!misDatos) {
                 return res.status(404).json({
                     respuesta:
-                        "No se encontro vehículo para la placa especificada",
+                        "No se encontró vehículo para la placa especificada",
                 });
             }
 
             res.status(200).json({
                 respuesta: "Consulta de vehículo por placa exitosa",
-                cantidad: misDatos.rows.length,
-                vehiculos: misDatos.rows,
+                vehiculo: misDatos,
             });
 
         } catch (miError) {
@@ -148,34 +146,6 @@ class ServicioVeiculoConsulta {
             });
         }
     }
-    protected static async obtenerPorParqueadero(req: Request, res: Response): Promise<any> {
-        const { codParqueadero } = req.params;
-
-        try {
-            const misDatos = await pool.result(
-                SQL_VEHICULO.FIND_BY_ID_PARQUEADERO,
-                [codParqueadero]
-            );
-
-            if (misDatos.rows.length === 0) {
-                return res.status(404).json({
-                    respuesta:
-                        "No se encontraron vehículos para el parqueadero especificado",
-                });
-            }
-
-            res.status(200).json({
-                respuesta: "Consulta de vehículos por código parqueadero exitosa",
-                cantidad: misDatos.rows.length,
-                vehiculos: misDatos.rows,
-            });
-        } catch (miError) {
-            console.log(miError);
-            res.status(500).json({
-                respuesta: "Error interno al consultar vehículos por parqueadero",
-            });
-        }
-    }
 }
 
-export default ServicioVeiculoConsulta;
+export default ServicioVehiculoConsulta;

@@ -36,7 +36,10 @@ class ServicioVehiculoBorrar {
                     respuesta: "Vehículo eliminado correctamente",
                     detalles: {
                         filasEliminadas: resultado.rowCount,
-                        placaVehiculo: obj.placaVehiculo,
+                        vehiculoEliminado: {
+                            codVehiculo: obj.codVehiculo,
+                            placaVehiculo: vehiculoExistente.placavehiculo,
+                        },
                     },
                 });
             }

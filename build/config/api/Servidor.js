@@ -56,7 +56,7 @@ class Servidor {
         this.app.use("/api/rel_user_functionality", RouteRelUserFunctionality_1.default);
         //Wilson
         //Sebastian
-        this.app.use("api/vehiculo", RutaVehiculo_1.default);
+        this.app.use("/api/vehiculo", RutaVehiculo_1.default);
         //Eduardo
         this.app.use("/api/puesto", RutaPuesto_1.default);
         this.app.use("/api/servicio_diario", RutaServicioDiario_1.default);

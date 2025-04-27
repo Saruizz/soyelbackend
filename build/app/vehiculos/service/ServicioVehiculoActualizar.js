@@ -20,52 +20,50 @@ class ServicioVehiculoActualizar {
             try {
                 if (!objVehiculo ||
                     !objVehiculo.codVehiculo ||
-                    !objVehiculo.placaVehiculo ||
                     !objVehiculo.codTipoVehiculo ||
-                    !objVehiculo.codUsuario) {
+                    !objVehiculo.codUsuario ||
+                    !objVehiculo.placaVehiculo) {
                     return res.status(400).json({
                         respuesta: "Datos de vehículo inválidos",
                     });
                 }
-                const vehiculoExistente = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PLACA, [objVehiculo.placaVehiculo]);
+                // Verificar que el vehículo existe
+                const vehiculoExistente = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PRIMARY_KEY, [objVehiculo.codVehiculo]);
                 if (!vehiculoExistente) {
                     return res.status(404).json({
                         respuesta: "El vehículo no existe",
                     });
                 }
-                const vehiculos = yield dbConnection_1.default.one(sql_vehiculo_1.SQL_VEHICULO.HOW_MANY, [
-                    objVehiculo.placaVehiculo,
-                ]);
-                if (vehiculos.cantidad > 0) {
-                    return res.status(409).json({
-                        respuesta: "Ya existe un vehículo con esta placa",
-                    });
+                // Verificar si la nueva placa existe en otro vehículo (excepto en el actual)
+                if (vehiculoExistente.placavehiculo !== objVehiculo.placaVehiculo) {
+                    const placaExistente = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.FIND_BY_PLACA, [objVehiculo.placaVehiculo]);
+                    if (placaExistente && placaExistente.codvehiculo !== objVehiculo.codVehiculo) {
+                        return res.status(409).json({
+                            respuesta: "Ya existe un vehículo con esta placa",
+                        });
+                    }
                 }
-                const resultado = yield dbConnection_1.default.result(sql_vehiculo_1.SQL_VEHICULO.UPDATE, [
+                const resultado = yield dbConnection_1.default.oneOrNone(sql_vehiculo_1.SQL_VEHICULO.UPDATE, [
                     objVehiculo.codVehiculo,
                     objVehiculo.codTipoVehiculo,
                     objVehiculo.codUsuario,
                     objVehiculo.placaVehiculo,
                 ]);
-                if (resultado.rowCount === 0) {
+                if (!resultado) {
                     return res.status(500).json({
                         respuesta: "No se pudo actualizar el vehículo",
                     });
                 }
                 res.status(200).json({
                     respuesta: "Vehículo actualizado correctamente",
-                    detalles: {
-                        filasActualizadas: resultado.rowCount,
-                        placaVehiculo: objVehiculo.placaVehiculo,
-                        nuevoCodTipoVehiculo: objVehiculo.codTipoVehiculo,
-                        nuevoCodUsuario: objVehiculo.codUsuario,
-                    },
+                    vehiculo: resultado
                 });
             }
             catch (miError) {
                 console.log(miError);
                 res.status(500).json({
                     respuesta: "Error interno al actualizar el vehículo",
+                    error: miError.message
                 });
             }
         });

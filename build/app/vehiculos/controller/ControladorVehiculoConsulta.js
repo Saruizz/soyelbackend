@@ -20,9 +20,6 @@ class ControladorVehiculoConsulta extends ServicioVehiculoConsulta_1.default {
     llamarObtenerPorPlaca(req, res) {
         ServicioVehiculoConsulta_1.default.obtenerPorPlaca(req, res);
     }
-    llamarObtenerPorParqueadero(req, res) {
-        ServicioVehiculoConsulta_1.default.obtenerPorParqueadero(req, res);
-    }
 }
 const controladorVehiculoConsulta = new ControladorVehiculoConsulta();
 exports.default = controladorVehiculoConsulta;
