@@ -63,7 +63,7 @@ class ServicioLogin {
 
             const secret = process.env.JWT_SECRET as string;
 
-            const token = jwt.sign(infoUsuario, secret, { expiresIn: "1m" });
+            const token = jwt.sign(infoUsuario, secret, { expiresIn: "2h" });
 
             if (!infoUsuario) {
                 return res.status(404).json({

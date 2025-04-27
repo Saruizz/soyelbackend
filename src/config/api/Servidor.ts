@@ -19,11 +19,6 @@ import routeRelUserFunctionality from "../../app/rel_usuario_funcionalidad/route
 import rutaPuestoApi from "../../app/puesto/route/RutaPuesto";
 import rutaServicioDiarioApi from "../../app/servicio_diario/route/RutaServicioDiario";
 import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
-//joan
-//Miguel
-//Wilson
-//Sebastian
-//Eduardo
 
 class Servidor {
   public app: express.Application;
@@ -43,26 +38,33 @@ class Servidor {
     this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
     this.app.use("/api/login", rutaLoginApi);
-    this.app.use("/api/turno", rutaTurnoApi);
-    this.app.use("/api/rel_turno_usuario", rutaRelTurnoUsuarioApi);
-    //joan
-    //Miguel
-    this.app.use("/api/turno", rutaTurnoApi);
-    this.app.use("/api/parqueadero", rutaParqueaderoApi);
-    this.app.use("/api/ubicacion", rutaUbicacionApi);
+    this.app.use("/api/turno", security.check, rutaTurnoApi);
+    this.app.use(
+      "/api/rel_turno_usuario",
+      security.check,
+      rutaRelTurnoUsuarioApi
+    );
 
-    this.app.use("/api/usuarios", rutasUser);
-    this.app.use("/api/ingresos", routeIncome);
-    this.app.use("/api/acceso", routeAccess);
-    this.app.use("/api/funcionalidades", routeFunctionalityApi);
-    this.app.use("/api/rel_rol_functionality", routeRelRolFunctionality);
-    this.app.use("/api/rel_user_functionality", routeRelUserFunctionality);
-    //Wilson
-    //Sebastian
-    this.app.use("/api/vehiculo", rutaVehiculoApi);
-    //Eduardo
-    this.app.use("/api/puesto", rutaPuestoApi);
-    this.app.use("/api/servicio_diario", rutaServicioDiarioApi);
+    this.app.use("/api/parqueadero", security.check, rutaParqueaderoApi);
+    this.app.use("/api/ubicacion", security.check, rutaUbicacionApi);
+
+    this.app.use("/api/usuarios", security.check, rutasUser);
+    this.app.use("/api/ingresos", security.check, routeIncome);
+    this.app.use("/api/acceso", security.check, routeAccess);
+    this.app.use("/api/funcionalidades", security.check, routeFunctionalityApi);
+    this.app.use(
+      "/api/rel_rol_functionality",
+      security.check,
+      routeRelRolFunctionality
+    );
+    this.app.use(
+      "/api/rel_user_functionality",
+      security.check,
+      routeRelUserFunctionality
+    );
+    this.app.use("/api/vehiculo", security.check, rutaVehiculoApi);
+    this.app.use("/api/puesto", security.check, rutaPuestoApi);
+    this.app.use("/api/servicio_diario", security.check, rutaServicioDiarioApi);
   }
 
   public arranquelo(): void {
