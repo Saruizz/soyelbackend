@@ -374,6 +374,14 @@ class ControladorRelTurnoUsuario{
   +actualizarRelacion(req: Request, res: Response): Promise<void>
 }
 
+class ServicioRelTurnoUsuario{
+  +crearRelacion(codTurno: number, codUsuario: number, res: Response): Promise<void>
+  +eliminarRelacion(codTurnoUsuario: number, res: Response): Promise<void>
+  +obtenerRelacionPorId(codTurnoUsuario: number, res: Response): Promise<void>
+  +obtenerTodasLasRelaciones(res: Response): Promise<void>
+  +actualizarRelacion(codTurnoUsuario: number, codTurno: number, codUsuario: number, res: Response): Promise<void>
+}
+
 class RelTurnoUsuario{
   -_codTurnoUsuario : number
   -_codTurno : number
@@ -386,14 +394,6 @@ class RelTurnoUsuario{
 class RutaRelTurnoUsuario{
   +rutaApi : Router
   -configurarRutas(): void
-}
-
-class ServicioRelTurnoUsuario{
-  +crearRelacion(codTurno: number, codUsuario: number, res: Response): Promise<void>
-  +eliminarRelacion(codTurnoUsuario: number, res: Response): Promise<void>
-  +obtenerRelacionPorId(codTurnoUsuario: number, res: Response): Promise<void>
-  +obtenerTodasLasRelaciones(res: Response): Promise<void>
-  +actualizarRelacion(codTurnoUsuario: number, codTurno: number, codUsuario: number, res: Response): Promise<void>
 }
 
 class ControladorServicioDiarioActualizar{
@@ -707,6 +707,19 @@ class RutaVehiculo{
   -configurararRutasGestion(): void
 }
 
+class Servidor{
+  +app : express.Application
+  +arranquelo(): void
+}
+
+class Security{
+  +check(req: Request, res: Response, next: NextFunction): any
+}
+
+class ValidarDatos{
+  +ahora(req: Request, res: Response, next: NextFunction): void
+}
+
 RouteFunctionality --> Router
 RutaRol --> Router
 Usuario --> Date
@@ -729,6 +742,7 @@ Turno --> String
 RutaUbicacion --> Router
 Vehiculo --> String
 RutaVehiculo --> Router
+Servidor --> express.Application
 ServiceFunctionalityCreate <|-- ControllerFunctionalityCreate
 ServiceFunctionalityDelete <|-- ControllerFunctionalityDelete
 ServiceFunctionalityGet <|-- ControllerFunctionalityGet
@@ -756,6 +770,7 @@ ServiceGetRelRolFunctionality <|-- ControllerGetRelRolFunctionality
 ServiceCreateRelUserFunctionality <|-- ControllerCreateRelUserFunctionality
 ServiceDeleteRelUserFunctionality <|-- ControllerDeleteRelUserFuncionality
 ServiceGetAllRelUserFunctional <|-- ControllerGetRelUserFunctionality
+ServicioRelTurnoUsuario <|-- ControladorRelTurnoUsuario
 ServicioDiarioActualizar <|-- ControladorServicioDiarioActualizar
 ServicioDiarioBorrar <|-- ControladorServicioDiarioBorrar
 ServicioDiarioConsulta <|-- ControladorServicioDiarioConsulta

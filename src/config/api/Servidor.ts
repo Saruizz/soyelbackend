@@ -32,8 +32,8 @@ class Servidor {
     this.app.use(express.json({ limit: "100Mb" }));
     this.app.use(express.urlencoded({ extended: true }));
 
-    this.app.use("/api/rol", rutaRolApi);
-    this.app.use("/api/tipo_vehiculo", rutaTipoVehiculoApi);
+    this.app.use("/api/rol", security.check, rutaRolApi);
+    this.app.use("/api/tipo_vehiculo", security.check, rutaTipoVehiculoApi);
 
     this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
