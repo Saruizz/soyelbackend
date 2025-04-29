@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import ServicioRelTurnoUsuario from "../service/ServicioRelTurnoUsuario";
 
-class ControladorRelTurnoUsuario {
+class ControladorRelTurnoUsuario extends ServicioRelTurnoUsuario {
     public async crearRelacion(req: Request, res: Response): Promise<void> {
         console.log("📥 Datos recibidos en la solicitud:", req.body);
         const { cod_turno, cod_usuario } = req.body;
