@@ -19,43 +19,48 @@ Este proyecto forma parte del desarrollo del sistema de gestión para un parquea
 ## Instalación
 
 1. Clona este repositorio:
-    ```bash
-    git clone https://github.com/tuusuario/soyelbackend.git
-    cd soyelbackend
-    ```
+
+   ```bash
+   git clone https://github.com/tuusuario/soyelbackend.git
+   cd soyelbackend
+   ```
 
 2. Instala las dependencias:
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. Configura las variables de entorno:
-    Crea un archivo `.env` en la raíz del proyecto con los siguientes valores:
-    ```env
-    DB_HOST=localhost
-    DB_PORT=3306
-    DB_USER=tu_usuario
-    DB_PASSWORD=tu_contraseña
-    DB_NAME=nombre_base_datos
-    JWT_SECRET=tu_secreto
-    ```
+   Crea un archivo `.env` en la raíz del proyecto con los siguientes valores:
+
+   ```env
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_USER=tu_usuario
+   DB_PASSWORD=tu_contraseña
+   DB_NAME=nombre_base_datos
+   JWT_SECRET=tu_secreto
+   ```
 
 4. Ejecuta las migraciones de la base de datos:
-    ```bash
-    npm run migrate
-    ```
+   ```bash
+   npm run migrate
+   ```
 
 ## Uso
 
 1. Inicia el servidor:
-    ```bash
-    npm start
-    ```
+
+   ```bash
+   npm start
+   ```
 
 2. Accede a la API en `http://localhost:3000`.
 
 ## Scripts Disponibles
 
+- `npm run build`: Genera los archivos de producción.
 - `npm start`: Inicia el servidor en modo producción.
 - `npm run dev`: Inicia el servidor en modo desarrollo.
 - `npm run migrate`: Ejecuta las migraciones de la base de datos.
