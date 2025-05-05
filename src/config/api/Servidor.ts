@@ -57,7 +57,7 @@ class Servidor {
     this.app.use("/api/parqueadero", security.check, rutaParqueaderoApi);
     this.app.use("/api/ubicacion", security.check, rutaUbicacionApi);
 
-    this.app.use("/api/usuarios", security.check, rutasUser);
+    this.app.use("/api/usuarios", rutasUser);
     this.app.use("/api/ingresos", security.check, routeIncome);
     this.app.use("/api/acceso", routeAccess);
     this.app.use("/api/funcionalidades", security.check, routeFunctionalityApi);
