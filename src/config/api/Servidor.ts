@@ -27,7 +27,16 @@ class Servidor {
     this.app = express();
 
     this.app.set("PORT", 3123); // Solo un set para el puerto
-    this.app.use(cors());
+    // Configuración mejorada de CORS
+    this.app.use(cors({
+      origin: ["http://localhost:4200", "*"], 
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true
+    }));
+    
+    // Manejo de preflight requests
+    this.app.options('*', cors());
     this.app.use(morgan("dev"));
     this.app.use(express.json({ limit: "100Mb" }));
     this.app.use(express.urlencoded({ extended: true }));
@@ -48,9 +57,9 @@ class Servidor {
     this.app.use("/api/parqueadero", security.check, rutaParqueaderoApi);
     this.app.use("/api/ubicacion", security.check, rutaUbicacionApi);
 
-    this.app.use("/api/usuarios", security.check, rutasUser);
+    this.app.use("/api/usuarios", rutasUser);
     this.app.use("/api/ingresos", security.check, routeIncome);
-    this.app.use("/api/acceso", security.check, routeAccess);
+    this.app.use("/api/acceso", routeAccess);
     this.app.use("/api/funcionalidades", security.check, routeFunctionalityApi);
     this.app.use(
       "/api/rel_rol_functionality",
