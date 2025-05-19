@@ -19,6 +19,7 @@ import routeRelUserFunctionality from "../../app/rel_usuario_funcionalidad/route
 import rutaPuestoApi from "../../app/puesto/route/RutaPuesto";
 import rutaServicioDiarioApi from "../../app/servicio_diario/route/RutaServicioDiario";
 import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
+import registerRoutes from "../../app/register/routes/RegisterRoutes";
 
 class Servidor {
   public app: express.Application;
@@ -29,7 +30,7 @@ class Servidor {
     this.app.set("PORT", 3123); // Solo un set para el puerto
     // Configuración mejorada de CORS
     this.app.use(cors({
-      origin: ["http://localhost:4200", "*"], 
+      origin: ["http://localhost:4200", "*", "http://localhost:8091"], 
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization"],
       credentials: true
@@ -60,6 +61,8 @@ class Servidor {
     this.app.use("/api/usuarios", rutasUser);
     this.app.use("/api/ingresos", security.check, routeIncome);
     this.app.use("/api/acceso", routeAccess);
+
+    this.app.use("/api/register", registerRoutes);
     this.app.use("/api/funcionalidades", security.check, routeFunctionalityApi);
     this.app.use(
       "/api/rel_rol_functionality",

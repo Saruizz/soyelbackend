@@ -20,7 +20,7 @@ class ServicioAccesoCrear {
           const access: any = await consulta.oneOrNone(sql_accesos.getById, [
             obj.codUsuario,
           ]);
-          if (access == null) {
+          if (!access) {
             caso = 2;
           }
           const saltRounds = 10;
