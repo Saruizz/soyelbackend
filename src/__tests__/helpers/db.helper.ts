@@ -1,4 +1,5 @@
-import { db } from '../setup';
+import { db } from '../mockDb';
+import { pgPromiseConnection } from '../setup';
 
 export const dbHelper = {
   /**
@@ -12,7 +13,7 @@ export const dbHelper = {
     const values = Object.values(data);
     const placeholders = values.map((_, i) => `$${i + 1}`).join(', ');
     
-    return await db.one(
+    return await pgPromiseConnection.one(
       `INSERT INTO ${table} (${columns}) VALUES (${placeholders}) RETURNING *`,
       values
     );
@@ -25,7 +26,7 @@ export const dbHelper = {
    * @returns Registro encontrado
    */
   async getTestData(table: string, id: number) {
-    return await db.one(`SELECT * FROM ${table} WHERE id = $1`, [id]);
+    return await pgPromiseConnection.one(`SELECT * FROM ${table} WHERE id = $1`, [id]);
   },
 
   /**
@@ -34,7 +35,7 @@ export const dbHelper = {
    * @param id ID del registro
    */
   async deleteTestData(table: string, id: number) {
-    return await db.none(`DELETE FROM ${table} WHERE id = $1`, [id]);
+    return await pgPromiseConnection.none(`DELETE FROM ${table} WHERE id = $1`, [id]);
   },
 
   /**
@@ -51,7 +52,7 @@ export const dbHelper = {
     
     const values = [id, ...Object.values(data)];
     
-    return await db.one(
+    return await pgPromiseConnection.one(
       `UPDATE ${table} SET ${setClause} WHERE id = $1 RETURNING *`,
       values
     );
@@ -63,7 +64,7 @@ export const dbHelper = {
    * @returns Lista de registros
    */
   async getAllTestData(table: string) {
-    return await db.any(`SELECT * FROM ${table}`);
+    return await pgPromiseConnection.any(`SELECT * FROM ${table}`);
   },
 
   /**

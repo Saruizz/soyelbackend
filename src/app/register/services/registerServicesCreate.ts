@@ -1,4 +1,5 @@
 import { Response } from "express";
+import { hash } from "bcryptjs"; // ✅ Encriptación
 import pool from "../../../config/connection/dbConnection";
 import { sql_usuarios } from "../../usuarios/repository/sql_user";
 import { sql_accesos } from "../../accesos/repository/sql_accesos";
@@ -18,17 +19,22 @@ class RegisterServicesCreate {
         let caso = 1;
         let objUser: any = null;
         let objAccess: any = null;
+
         const usuarios = await consulta.one(sql_usuarios.HOW_MANY, [
           dataUser.documentoUsuario,
         ]);
+
         if (usuarios.cantidad == 0) {
           caso = 2;
-          objUser = await RegisterServicesCreate.addUser(
-            dataUser,
-            consulta
-          );
+          objUser = await RegisterServicesCreate.addUser(dataUser, consulta);
+
           if (objUser) {
             dataAccess.codUsuario = objUser.codUsuario;
+
+            // ✅ Encriptar la contraseña antes de guardarla
+            const claveEncriptada = await hash(dataAccess.clave, 10);
+            dataAccess.clave = claveEncriptada;
+
             objAccess = await RegisterServicesCreate.addAccess(
               dataAccess,
               consulta
@@ -55,10 +61,11 @@ class RegisterServicesCreate {
         }
       })
       .catch((error: any) => {
-        console.log(error);
+        console.error(error);
         res.status(400).json({ respuesta: "Error al crear el usuario" });
       });
   }
+
   private static async addUser(obj: any, consulta: any) {
     return await consulta.one(sql_usuarios.ADD, [
       obj.codRol,
@@ -70,13 +77,15 @@ class RegisterServicesCreate {
       obj.telefonoUsuario,
     ]);
   }
+
   private static async addAccess(obj: any, consulta: any) {
     return await consulta.one(sql_accesos.create, [
       obj.codUsuario,
       obj.correo,
-      obj.clave,
+      obj.clave, // <- Ya encriptada
       obj.uuid,
     ]);
   }
 }
+
 export default RegisterServicesCreate;

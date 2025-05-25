@@ -5,12 +5,20 @@ import { SQL_ACCESO } from "../repository/sql_acceso";
 import { SQL_INGRESO } from "../repository/sql_ingreso";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { compare } from "bcryptjs"; // versión asíncrona
+import InfoToken from "../model/InfoToken";
+import sql_login from "../repository/sql_login";
+import rateLimit from "express-rate-limit";
 
 dotenv.config({ path: "variables.env" });
 
-import cifrar from "bcryptjs";
-import InfoToken from "../model/InfoToken";
-import sql_login from "../repository/sql_login";
+// Configuración de rate limiting
+export const loginLimiter = rateLimit({
+  windowMs: 1000,
+  max: 100000,
+  message:
+    "Demasiados intentos de login desde esta IP, por favor intente más tarde",
+});
 
 class ServicioLogin {
   protected static async iniciarSesion(
@@ -19,7 +27,6 @@ class ServicioLogin {
   ): Promise<any> {
     const { correoAcceso, claveAcceso } = req.body;
 
-    // Validación básica de entrada
     if (!correoAcceso || !claveAcceso) {
       return res.status(400).json({
         respuesta: "Correo y contraseña son requeridos",
@@ -27,58 +34,43 @@ class ServicioLogin {
       });
     }
 
-    const claveCifrada = cifrar.hashSync(claveAcceso as string);
     try {
-      // Verificar si el usuario existe con las credenciales proporcionadas
       const datosUsuario = await pool.oneOrNone(SQL_ACCESO.FIND_BY_EMAIL, [
         correoAcceso,
       ]);
-      
+
       if (!datosUsuario) {
         return res.status(401).json({
-          respuesta: "Credenciales incorrectas",
+          respuesta: "Correo no encontrado",
           autenticado: false,
         });
       }
-      console.log(claveAcceso);
-      console.log(datosUsuario.claveacceso);
-      // Comparación CORRECTA de contraseña
-      const isValid = cifrar.compareSync(
-        claveAcceso, 
-        datosUsuario.claveacceso
-      );
-      console.log(isValid);
 
-      if (isValid) {
+      const isValid = await compare(claveAcceso, datosUsuario.claveacceso);
+      console.log("isValid", isValid);
+      console.log("Contraseña ingresada:", claveAcceso);
+      console.log("Contraseña en base de datos:", datosUsuario.claveacceso);
+      if (!isValid) {
         return res.status(401).json({
-          respuesta: "Credenciales incorrectas",
+          respuesta: "Contraseña incorrecta",
           autenticado: false,
         });
       }
 
-      // Crear un nuevo UUID para la sesión
       const nuevoUUID = uuidv4();
 
-      // Actualizar el UUID en la base de datos
-      const usuarioActualizado = await pool.one(SQL_ACCESO.UPDATE_UUID, [
+      await pool.one(SQL_ACCESO.UPDATE_UUID, [
         datosUsuario.codusuario,
         nuevoUUID,
       ]);
 
-      // Registrar el ingreso al sistema
       const nuevoIngreso = await pool.one(SQL_INGRESO.ADD, [
-        datosUsuario.codusuario // Pasar el ID de usuario como parámetro
-    ]);
+        datosUsuario.codusuario,
+      ]);
 
-      // Obtener información del usuario
       const infoUsuario = (await pool.oneOrNone(sql_login.getData, [
         datosUsuario.codusuario,
       ])) as InfoToken;
-
-
-      const secret = process.env.JWT_SECRET as string;
-
-      const token = jwt.sign(infoUsuario, secret, { expiresIn: "2h" });
 
       if (!infoUsuario) {
         return res.status(404).json({
@@ -87,7 +79,12 @@ class ServicioLogin {
         });
       }
 
-      // Respuesta exitosa con información de usuario
+      const secret = process.env.JWT_SECRET as string;
+      if (!secret)
+        throw new Error("JWT_SECRET no definido en variables de entorno");
+
+      const token = jwt.sign(infoUsuario, secret, { expiresIn: "2h" });
+
       res.status(200).json({
         respuesta: "Inicio de sesión exitoso",
         autenticado: true,
@@ -99,7 +96,7 @@ class ServicioLogin {
         },
       });
     } catch (error) {
-      console.log(error);
+      console.log("Error en iniciarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al iniciar sesión",
         autenticado: false,
@@ -125,11 +122,9 @@ class ServicioLogin {
         });
       }
 
-      // Obtener información del usuario
       const infoUsuario = await pool.oneOrNone(sql_login.dataUser, [
         codUsuario,
       ]);
-
       const ultimoIngreso = await pool.oneOrNone(SQL_INGRESO.LAST_ENTRY, [
         codUsuario,
       ]);
@@ -152,7 +147,7 @@ class ServicioLogin {
           : null,
       });
     } catch (error) {
-      console.log(error);
+      console.log("Error en validarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al validar sesión",
         sesionValida: false,
@@ -167,15 +162,12 @@ class ServicioLogin {
     const { codUsuario } = req.body;
 
     try {
-      // Invalidar el UUID actual generando uno nuevo aleatorio
       const nuevoUUID = uuidv4();
-
       const result = await pool.result(SQL_ACCESO.UPDATE_UUID, [
         codUsuario,
         nuevoUUID,
       ]);
 
-      // Verificar si se actualizó correctamente
       if (result && result.rowCount > 0) {
         return res.status(200).json({
           respuesta: "Sesión cerrada exitosamente",
@@ -186,7 +178,7 @@ class ServicioLogin {
         });
       }
     } catch (error) {
-      console.log(error);
+      console.log("Error en cerrarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al cerrar sesión",
       });
@@ -216,7 +208,7 @@ class ServicioLogin {
         ingresos: historialIngresos.rows,
       });
     } catch (error) {
-      console.log(error);
+      console.log("Error en obtenerHistorialIngresos:", error);
       res.status(500).json({
         respuesta: "Error interno al consultar historial de ingresos",
       });

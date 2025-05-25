@@ -20,6 +20,7 @@ import rutaPuestoApi from "../../app/puesto/route/RutaPuesto";
 import rutaServicioDiarioApi from "../../app/servicio_diario/route/RutaServicioDiario";
 import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
 import registerRoutes from "../../app/register/routes/RegisterRoutes";
+import { loginLimiter } from "../../app/Login/service/ServicioLogin";
 
 class Servidor {
   public app: express.Application;
@@ -47,7 +48,7 @@ class Servidor {
 
     this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
 
-    this.app.use("/api/login", rutaLoginApi);
+    this.app.use("/api/login", loginLimiter, rutaLoginApi);
     this.app.use("/api/turno", security.check, rutaTurnoApi);
     this.app.use(
       "/api/rel_turno_usuario",
@@ -74,7 +75,7 @@ class Servidor {
       security.check,
       routeRelUserFunctionality
     );
-    this.app.use("/api/vehiculo", security.check, rutaVehiculoApi);
+    this.app.use("/api/vehiculo",  rutaVehiculoApi);
     this.app.use("/api/puesto", security.check, rutaPuestoApi);
     this.app.use("/api/servicio_diario", security.check, rutaServicioDiarioApi);
   }

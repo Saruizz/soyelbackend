@@ -20,7 +20,6 @@ class RutaLogin {
         // Ruta para iniciar sesión
         this.rutaLoginApi.post(
             "/iniciar",
-            datosLogin,
             validarDatos.ahora,
             controladorLogin.llamarIniciarSesion
         );
