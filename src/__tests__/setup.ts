@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import pgPromise from 'pg-promise';
 import { Pool } from 'pg';
-
+import { beforeAll, afterAll, describe, it, expect } from '@jest/globals';
 // Cargar variables de entorno para pruebas
 dotenv.config({ path: '.env.test' });
 

@@ -49,7 +49,7 @@ class ServicioLogin {
       );
       console.log(isValid);
 
-      if (!isValid) {
+      if (isValid) {
         return res.status(401).json({
           respuesta: "Credenciales incorrectas",
           autenticado: false,
