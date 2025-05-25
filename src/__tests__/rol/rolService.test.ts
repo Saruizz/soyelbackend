@@ -16,5 +16,10 @@ describe('Servicio de Rol', () => {
     }
   });
 
-  // Agrega aquí más pruebas reales para tu servicio
+  describe('crear rol',()=>{
+    it('deberia crear un rol', async () => {
+      const result = await pool.query('INSERT INTO rol (nombre_rol) VALUES ($1) RETURNING *', ['rol_test']);
+      expect(result.rows[0].nombre_rol).toBe('rol_test');
+    })
+  })
 });
