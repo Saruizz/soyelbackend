@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="4" errors="0" time="2.788">
-  <testsuite name="ServicioRolCrear.grabarRol" errors="0" failures="4" skipped="0" timestamp="2025-05-25T14:52:11" time="2.327" tests="4">
-    <testcase classname="ServicioRolCrear.grabarRol" name="debe retornar 400 si no se envía un nombre de rol válido" time="0.201">
-      <failure>Error: read ECONNRESET
-    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)</failure>
-    </testcase>
-    <testcase classname="ServicioRolCrear.grabarRol" name="debe retornar 409 si ya existe el rol" time="0.099">
-      <failure>Error: read ECONNRESET
-    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)</failure>
-    </testcase>
-    <testcase classname="ServicioRolCrear.grabarRol" name="debe retornar 201 si el rol se crea exitosamente" time="0.086">
-      <failure>Error: read ECONNRESET
-    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)</failure>
-    </testcase>
-    <testcase classname="ServicioRolCrear.grabarRol" name="debe retornar 500 si ocurre un error inesperado" time="0.082">
-      <failure>Error: read ECONNRESET
-    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)</failure>
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="4.034">
+  <testsuite name="Servicio de Rol" errors="0" failures="1" skipped="0" timestamp="2025-05-25T16:14:07" time="3.61" tests="1">
+    <testcase classname="Servicio de Rol" name="debería pasar un test básico" time="0.003">
+      <failure>Error: getaddrinfo ENOTFOUND undefined
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)</failure>
     </testcase>
   </testsuite>
 </testsuites>

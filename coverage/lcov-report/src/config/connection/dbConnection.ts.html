@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/15</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/15</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -94,51 +94,51 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import dotenv from "dotenv";
-import pgPromise from "pg-promise";
-import { optionsPG } from "./optionsPG";
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import dotenv from "dotenv";</span>
+<span class="cstat-no" title="statement not covered" >import pgPromise from "pg-promise";</span>
+<span class="cstat-no" title="statement not covered" >import { optionsPG } from "./optionsPG";</span>
 &nbsp;
-dotenv.config({ path: "variables.env" });
+<span class="cstat-no" title="statement not covered" >dotenv.config({ path: "variables.env" });</span>
 &nbsp;
-const portDB = Number(process.env.PORT);
-const dataDB = String(process.env.DATABASE);
-const hostDB = String(process.env.HOST);
-const userDB = String(process.env.USER_DB);
-const passDB = String(process.env.USER_PASSWORD);
+const portDB = <span class="cstat-no" title="statement not covered" >Number(process.env.PORT) || 5432;</span>
+const dataDB = <span class="cstat-no" title="statement not covered" >String(process.env.DATABASE) || "parqueadero";</span>
+const hostDB = <span class="cstat-no" title="statement not covered" >String(process.env.HOST) || "localhost";</span>
+const userDB = <span class="cstat-no" title="statement not covered" >String(process.env.USER_DB) || "user_parqueadero";</span>
+const passDB = <span class="cstat-no" title="statement not covered" >String(process.env.USER_PASSWORD) || "parqueadero123";</span>
 &nbsp;
-const pgp = pgPromise(optionsPG);
-const pool = pgp({
+const pgp = <span class="cstat-no" title="statement not covered" >pgPromise(optionsPG);</span>
+const pool = <span class="cstat-no" title="statement not covered" >pgp({</span>
     user: userDB,
     password: passDB,
     database: dataDB,
@@ -146,16 +146,16 @@ const pool = pgp({
     port: portDB,
 });
 &nbsp;
-pool
+<span class="cstat-no" title="statement not covered" >pool</span>
     .connect()
-    .then((mithen) =&gt; {
-        console.log("Conectado a: " + dataDB);
+    .then(<span class="fstat-no" title="function not covered" >(m</span>ithen) =&gt; {
+<span class="cstat-no" title="statement not covered" >        console.log("Conectado a: " + dataDB);</span>
     })
     .catch(<span class="fstat-no" title="function not covered" >(m</span>iError) =&gt; {
 <span class="cstat-no" title="statement not covered" >        console.log(miError);</span>
     });
 &nbsp;
-export default pool;
+<span class="cstat-no" title="statement not covered" >export default pool;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -163,7 +163,7 @@ export default pool;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-25T14:52:22.170Z
+                at 2025-05-25T16:14:15.665Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
