@@ -5,26 +5,22 @@ import { SQL_ACCESO } from "../repository/sql_acceso";
 import { SQL_INGRESO } from "../repository/sql_ingreso";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import { compare } from "bcryptjs"; // versión asíncrona
+import { compare } from "bcryptjs";
 import InfoToken from "../model/InfoToken";
 import sql_login from "../repository/sql_login";
 import rateLimit from "express-rate-limit";
 
 dotenv.config({ path: "variables.env" });
 
-// Configuración de rate limiting
 export const loginLimiter = rateLimit({
   windowMs: 1000,
-  max: 100000,
+  max:10000,
   message:
     "Demasiados intentos de login desde esta IP, por favor intente más tarde",
 });
 
 class ServicioLogin {
-  protected static async iniciarSesion(
-    req: Request,
-    res: Response
-  ): Promise<any> {
+  protected static async iniciarSesion(req: Request, res: Response): Promise<any> {
     const { correoAcceso, claveAcceso } = req.body;
 
     if (!correoAcceso || !claveAcceso) {
@@ -35,53 +31,36 @@ class ServicioLogin {
     }
 
     try {
-      const datosUsuario = await pool.oneOrNone(SQL_ACCESO.FIND_BY_EMAIL, [
-        correoAcceso,
-      ]);
+      const resultado = await pool.tx(async t => {
+        const datosUsuario = await t.oneOrNone(SQL_ACCESO.FIND_BY_EMAIL, [correoAcceso]);
+        if (!datosUsuario) return { error: "Correo no encontrado" };
+      
+        const isValid = await compare(claveAcceso, datosUsuario.claveacceso);
+        if (!isValid) return { error: "Contraseña incorrecta" };
+      
+        const nuevoUUID = uuidv4();
+        await t.one(SQL_ACCESO.UPDATE_UUID, [datosUsuario.codusuario, nuevoUUID]);
+      
+        const nuevoIngreso = await t.one(SQL_INGRESO.ADD, [datosUsuario.codusuario]);
+      
+        const infoUsuario = await t.oneOrNone(sql_login.getData, [datosUsuario.codusuario]) as InfoToken;
+        if (!infoUsuario) return { error: "No se encontró información del usuario" };
+      
+        return { infoUsuario, nuevoIngreso };
+      });
+      
 
-      if (!datosUsuario) {
+      if ("error" in resultado) {
         return res.status(401).json({
-          respuesta: "Correo no encontrado",
+          respuesta: resultado.error,
           autenticado: false,
         });
       }
 
-      const isValid = await compare(claveAcceso, datosUsuario.claveacceso);
-      console.log("isValid", isValid);
-      console.log("Contraseña ingresada:", claveAcceso);
-      console.log("Contraseña en base de datos:", datosUsuario.claveacceso);
-      if (!isValid) {
-        return res.status(401).json({
-          respuesta: "Contraseña incorrecta",
-          autenticado: false,
-        });
-      }
-
-      const nuevoUUID = uuidv4();
-
-      await pool.one(SQL_ACCESO.UPDATE_UUID, [
-        datosUsuario.codusuario,
-        nuevoUUID,
-      ]);
-
-      const nuevoIngreso = await pool.one(SQL_INGRESO.ADD, [
-        datosUsuario.codusuario,
-      ]);
-
-      const infoUsuario = (await pool.oneOrNone(sql_login.getData, [
-        datosUsuario.codusuario,
-      ])) as InfoToken;
-
-      if (!infoUsuario) {
-        return res.status(404).json({
-          respuesta: "No se encontró información del usuario",
-          autenticado: false,
-        });
-      }
+      const { infoUsuario, nuevoIngreso } = resultado;
 
       const secret = process.env.JWT_SECRET as string;
-      if (!secret)
-        throw new Error("JWT_SECRET no definido en variables de entorno");
+      if (!secret) throw new Error("JWT_SECRET no definido en variables de entorno");
 
       const token = jwt.sign(infoUsuario, secret, { expiresIn: "2h" });
 
@@ -96,38 +75,39 @@ class ServicioLogin {
         },
       });
     } catch (error) {
-      console.log("Error en iniciarSesion:", error);
+      console.error("Error en iniciarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al iniciar sesión",
         autenticado: false,
+        error: error,
       });
     }
   }
 
-  protected static async validarSesion(
-    req: Request,
-    res: Response
-  ): Promise<any> {
+  protected static async validarSesion(req: Request, res: Response): Promise<any> {
     const { codUsuario, uuidAcceso } = req.body;
 
     try {
-      const datosUsuario = await pool.oneOrNone(SQL_ACCESO.FIND_BY_ID, [
-        codUsuario,
-      ]);
+      const resultado = await pool.task(async t => {
+        const datosUsuario = await t.oneOrNone(SQL_ACCESO.FIND_BY_ID, [codUsuario]);
+        if (!datosUsuario || datosUsuario.uuidacceso !== uuidAcceso) {
+          return { error: "Sesión inválida o expirada" };
+        }
 
-      if (!datosUsuario || datosUsuario.uuidacceso !== uuidAcceso) {
+        const infoUsuario = await t.oneOrNone(sql_login.dataUser, [codUsuario]);
+        const ultimoIngreso = await t.oneOrNone(SQL_INGRESO.LAST_ENTRY, [codUsuario]);
+
+        return { infoUsuario, ultimoIngreso };
+      });
+
+      if ("error" in resultado) {
         return res.status(401).json({
-          respuesta: "Sesión inválida o expirada",
+          respuesta: resultado.error,
           sesionValida: false,
         });
       }
 
-      const infoUsuario = await pool.oneOrNone(sql_login.dataUser, [
-        codUsuario,
-      ]);
-      const ultimoIngreso = await pool.oneOrNone(SQL_INGRESO.LAST_ENTRY, [
-        codUsuario,
-      ]);
+      const { infoUsuario, ultimoIngreso } = resultado;
 
       res.status(200).json({
         respuesta: "Sesión válida",
@@ -147,7 +127,7 @@ class ServicioLogin {
           : null,
       });
     } catch (error) {
-      console.log("Error en validarSesion:", error);
+      console.error("Error en validarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al validar sesión",
         sesionValida: false,
@@ -155,20 +135,16 @@ class ServicioLogin {
     }
   }
 
-  protected static async cerrarSesion(
-    req: Request,
-    res: Response
-  ): Promise<any> {
+  protected static async cerrarSesion(req: Request, res: Response): Promise<any> {
     const { codUsuario } = req.body;
 
     try {
-      const nuevoUUID = uuidv4();
-      const result = await pool.result(SQL_ACCESO.UPDATE_UUID, [
-        codUsuario,
-        nuevoUUID,
-      ]);
+      const resultado = await pool.task(async t => {
+        const nuevoUUID = uuidv4();
+        return await t.result(SQL_ACCESO.UPDATE_UUID, [codUsuario, nuevoUUID]);
+      });
 
-      if (result && result.rowCount > 0) {
+      if (resultado && resultado.rowCount > 0) {
         return res.status(200).json({
           respuesta: "Sesión cerrada exitosamente",
         });
@@ -178,25 +154,22 @@ class ServicioLogin {
         });
       }
     } catch (error) {
-      console.log("Error en cerrarSesion:", error);
+      console.error("Error en cerrarSesion:", error);
       res.status(500).json({
         respuesta: "Error interno al cerrar sesión",
       });
     }
   }
 
-  protected static async obtenerHistorialIngresos(
-    req: Request,
-    res: Response
-  ): Promise<any> {
+  protected static async obtenerHistorialIngresos(req: Request, res: Response): Promise<any> {
     const { codUsuario } = req.params;
 
     try {
-      const historialIngresos = await pool.result(SQL_INGRESO.FIND_BY_USER, [
-        codUsuario,
-      ]);
+      const resultado = await pool.task(async t => {
+        return await t.result(SQL_INGRESO.FIND_BY_USER, [codUsuario]);
+      });
 
-      if (historialIngresos.rows.length === 0) {
+      if (resultado.rows.length === 0) {
         return res.status(404).json({
           respuesta: "No se encontraron registros de ingreso para el usuario",
         });
@@ -204,11 +177,11 @@ class ServicioLogin {
 
       res.status(200).json({
         respuesta: "Consulta de historial de ingresos exitosa",
-        cantidad: historialIngresos.rows.length,
-        ingresos: historialIngresos.rows,
+        cantidad: resultado.rows.length,
+        ingresos: resultado.rows,
       });
     } catch (error) {
-      console.log("Error en obtenerHistorialIngresos:", error);
+      console.error("Error en obtenerHistorialIngresos:", error);
       res.status(500).json({
         respuesta: "Error interno al consultar historial de ingresos",
       });

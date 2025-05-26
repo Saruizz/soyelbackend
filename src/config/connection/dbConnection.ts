@@ -17,10 +17,12 @@ const pool = pgp({
     database: dataDB,
     host: hostDB,
     port: portDB,
-    max: 1000,
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 200000,
+    max: 50, // esto depende del server PostgreSQL
+    idleTimeoutMillis: 10000,
+    connectionTimeoutMillis: 15000,
+    allowExitOnIdle: true, // ayuda en servidores Linux
 });
+
 
 pool
     .connect()
