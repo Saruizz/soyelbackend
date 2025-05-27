@@ -4,6 +4,7 @@ declare module 'express-queue' {
     interface QueueOptions {
       activeLimit?: number;
       queuedLimit?: number;
+      rejectHandler?: (req: any, res: any) => void;
     }
   
     function queue(options?: QueueOptions): RequestHandler;

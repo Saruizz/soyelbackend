@@ -18,7 +18,8 @@
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "dev": "nodemon build/index.js",
-    "build": "tsc -w"
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
