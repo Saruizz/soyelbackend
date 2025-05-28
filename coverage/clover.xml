@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1748193865248" clover="3.2.0">
-  <project timestamp="1748193865248" name="All files">
-    <metrics statements="2324" coveredstatements="4" conditionals="288" coveredconditionals="0" methods="527" coveredmethods="0" elements="3139" coveredelements="4" complexity="0" loc="2324" ncloc="2324" packages="98" files="215" classes="215"/>
+<coverage generated="1748400540001" clover="3.2.0">
+  <project timestamp="1748400540002" name="All files">
+    <metrics statements="2309" coveredstatements="5" conditionals="279" coveredconditionals="0" methods="523" coveredmethods="0" elements="3111" coveredelements="5" complexity="0" loc="2309" ncloc="2309" packages="98" files="215" classes="215"/>
     <package name="src">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\index.ts">
+      <file name="index.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\index.ts">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -13,7 +13,7 @@
     </package>
     <package name="src.app.Login.controller">
       <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorLogin.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\controller\ControladorLogin.ts">
+      <file name="ControladorLogin.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\controller\ControladorLogin.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -27,7 +27,7 @@
     </package>
     <package name="src.app.Login.model">
       <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="0"/>
-      <file name="Acceso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\model\Acceso.ts">
+      <file name="Acceso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\model\Acceso.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -43,11 +43,11 @@
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
       </file>
-      <file name="InfoToken.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\model\InfoToken.ts">
+      <file name="InfoToken.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\model\InfoToken.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="Ingreso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\model\Ingreso.ts">
+      <file name="Ingreso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\model\Ingreso.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -66,15 +66,15 @@
     </package>
     <package name="src.app.Login.repository">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_acceso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\repository\sql_acceso.ts">
+      <file name="sql_acceso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\repository\sql_acceso.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
-      <file name="sql_ingreso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\repository\sql_ingreso.ts">
+      <file name="sql_ingreso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\repository\sql_ingreso.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
-      <file name="sql_login.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\repository\sql_login.ts">
+      <file name="sql_login.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\repository\sql_login.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
@@ -82,7 +82,7 @@
     </package>
     <package name="src.app.Login.route">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="RutaLogin.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\route\RutaLogin.ts">
+      <file name="RutaLogin.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\route\RutaLogin.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -91,84 +91,87 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.Login.service">
-      <metrics statements="62" coveredstatements="0" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ServicioLogin.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\Login\service\ServicioLogin.ts">
-        <metrics statements="62" coveredstatements="0" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="65" coveredstatements="0" conditionals="23" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="ServicioLogin.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\Login\service\ServicioLogin.ts">
+        <metrics statements="65" coveredstatements="0" conditionals="23" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="52" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="53" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
         <line num="83" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="103" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
         <line num="114" count="0" type="stmt"/>
-        <line num="116" count="0" type="stmt"/>
-        <line num="117" count="0" type="stmt"/>
-        <line num="121" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="122" count="0" type="stmt"/>
-        <line num="129" count="0" type="stmt"/>
-        <line num="133" count="0" type="stmt"/>
-        <line num="137" count="0" type="stmt"/>
-        <line num="155" count="0" type="stmt"/>
-        <line num="156" count="0" type="stmt"/>
-        <line num="167" count="0" type="stmt"/>
-        <line num="169" count="0" type="stmt"/>
-        <line num="171" count="0" type="stmt"/>
-        <line num="173" count="0" type="stmt"/>
-        <line num="179" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="180" count="0" type="stmt"/>
-        <line num="184" count="0" type="stmt"/>
-        <line num="189" count="0" type="stmt"/>
-        <line num="190" count="0" type="stmt"/>
+        <line num="118" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+        <line num="164" count="0" type="stmt"/>
+        <line num="165" count="0" type="stmt"/>
+        <line num="166" count="0" type="stmt"/>
+        <line num="171" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="176" count="0" type="stmt"/>
+        <line num="181" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="192" count="0" type="stmt"/>
+        <line num="194" count="0" type="stmt"/>
+        <line num="195" count="0" type="stmt"/>
+        <line num="199" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="200" count="0" type="stmt"/>
-        <line num="202" count="0" type="stmt"/>
-        <line num="203" count="0" type="stmt"/>
-        <line num="207" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="208" count="0" type="stmt"/>
-        <line num="213" count="0" type="stmt"/>
+        <line num="205" count="0" type="stmt"/>
+        <line num="211" count="0" type="stmt"/>
+        <line num="212" count="0" type="stmt"/>
         <line num="219" count="0" type="stmt"/>
-        <line num="220" count="0" type="stmt"/>
-        <line num="227" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.accesos.controller">
       <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControllerAccesCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\controller\ControllerAccesCreate.ts">
+      <file name="ControllerAccesCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\controller\ControllerAccesCreate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -177,7 +180,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControllerAccessDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\controller\ControllerAccessDelete.ts">
+      <file name="ControllerAccessDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\controller\ControllerAccessDelete.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -186,14 +189,14 @@
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControllerAccessGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\controller\ControllerAccessGet.ts">
+      <file name="ControllerAccessGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\controller\ControllerAccessGet.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="ControllerAccessUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\controller\ControllerAccessUpdate.ts">
+      <file name="ControllerAccessUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\controller\ControllerAccessUpdate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -205,7 +208,7 @@
     </package>
     <package name="src.app.accesos.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Accesos.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\model\Accesos.ts">
+      <file name="Accesos.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\model\Accesos.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -224,14 +227,14 @@
     </package>
     <package name="src.app.accesos.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_accesos.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\repository\sql_accesos.ts">
+      <file name="sql_accesos.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\repository\sql_accesos.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.accesos.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RouteAccess.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\route\RouteAccess.ts">
+      <file name="RouteAccess.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\route\RouteAccess.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -251,7 +254,7 @@
     </package>
     <package name="src.app.accesos.service">
       <metrics statements="70" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="18" coveredmethods="0"/>
-      <file name="ServiceAccessDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\service\ServiceAccessDelete.ts">
+      <file name="ServiceAccessDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\service\ServiceAccessDelete.ts">
         <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -273,7 +276,7 @@
         <line num="42" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
       </file>
-      <file name="ServiceAccessGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\service\ServiceAccessGet.ts">
+      <file name="ServiceAccessGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\service\ServiceAccessGet.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -283,7 +286,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
-      <file name="ServicesAccessupdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\service\ServicesAccessupdate.ts">
+      <file name="ServicesAccessupdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\service\ServicesAccessupdate.ts">
         <metrics statements="18" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -304,7 +307,7 @@
         <line num="44" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
       </file>
-      <file name="ServicioAccesoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\accesos\service\ServicioAccesoCrear.ts">
+      <file name="ServicioAccesoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\accesos\service\ServicioAccesoCrear.ts">
         <metrics statements="26" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -336,7 +339,7 @@
     </package>
     <package name="src.app.funcionalidades.controllers">
       <metrics statements="21" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControllerFunctionalityCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityCreate.ts">
+      <file name="ControllerFunctionalityCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityCreate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -345,7 +348,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControllerFunctionalityDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityDelete.ts">
+      <file name="ControllerFunctionalityDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityDelete.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -353,14 +356,14 @@
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControllerFunctionalityGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityGet.ts">
+      <file name="ControllerFunctionalityGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityGet.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="ControllerFunctionalityUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityUpdate.ts">
+      <file name="ControllerFunctionalityUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\controllers\ControllerFunctionalityUpdate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -372,7 +375,7 @@
     </package>
     <package name="src.app.funcionalidades.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Functionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\model\Functionality.ts">
+      <file name="Functionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\model\Functionality.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -391,14 +394,14 @@
     </package>
     <package name="src.app.funcionalidades.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_functionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\repository\sql_functionality.ts">
+      <file name="sql_functionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\repository\sql_functionality.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.funcionalidades.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="routeFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\route\routeFunctionality.ts">
+      <file name="routeFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\route\routeFunctionality.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -418,7 +421,7 @@
     </package>
     <package name="src.app.funcionalidades.services">
       <metrics statements="58" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="20" coveredmethods="0"/>
-      <file name="ServiceFunctionalityDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityDelete.ts">
+      <file name="ServiceFunctionalityDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityDelete.ts">
         <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -438,7 +441,7 @@
         <line num="35" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
       </file>
-      <file name="ServiceFunctionalityGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityGet.ts">
+      <file name="ServiceFunctionalityGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityGet.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -451,7 +454,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
-      <file name="ServiceFunctionalityUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityUpdate.ts">
+      <file name="ServiceFunctionalityUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\services\ServiceFunctionalityUpdate.ts">
         <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -471,7 +474,7 @@
         <line num="36" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
       </file>
-      <file name="ServiceFunctonalityCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\funcionalidades\services\ServiceFunctonalityCreate.ts">
+      <file name="ServiceFunctonalityCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\funcionalidades\services\ServiceFunctonalityCreate.ts">
         <metrics statements="14" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -491,7 +494,7 @@
     </package>
     <package name="src.app.ingresos.controller">
       <metrics statements="21" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControllerIncomeAdd.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\controller\ControllerIncomeAdd.ts">
+      <file name="ControllerIncomeAdd.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\controller\ControllerIncomeAdd.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -500,7 +503,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControllerIncomeDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\controller\ControllerIncomeDelete.ts">
+      <file name="ControllerIncomeDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\controller\ControllerIncomeDelete.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -508,14 +511,14 @@
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="ControllerIncomeGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\controller\ControllerIncomeGet.ts">
+      <file name="ControllerIncomeGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\controller\ControllerIncomeGet.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControllerIncomeUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\controller\ControllerIncomeUpdate.ts">
+      <file name="ControllerIncomeUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\controller\ControllerIncomeUpdate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -527,7 +530,7 @@
     </package>
     <package name="src.app.ingresos.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Ingreso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\model\Ingreso.ts">
+      <file name="Ingreso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\model\Ingreso.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -546,7 +549,7 @@
     </package>
     <package name="src.app.ingresos.repository">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_ingreso.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\repository\sql_ingreso.ts">
+      <file name="sql_ingreso.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\repository\sql_ingreso.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -554,7 +557,7 @@
     </package>
     <package name="src.app.ingresos.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RouteIncome.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\route\RouteIncome.ts">
+      <file name="RouteIncome.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\route\RouteIncome.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -574,7 +577,7 @@
     </package>
     <package name="src.app.ingresos.service">
       <metrics statements="55" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="20" coveredmethods="0"/>
-      <file name="ServiceIncomeDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\service\ServiceIncomeDelete.ts">
+      <file name="ServiceIncomeDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\service\ServiceIncomeDelete.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -587,7 +590,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
       </file>
-      <file name="ServiceIncomeGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\service\ServiceIncomeGet.ts">
+      <file name="ServiceIncomeGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\service\ServiceIncomeGet.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -600,7 +603,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
       </file>
-      <file name="ServiceIncomeUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\service\ServiceIncomeUpdate.ts">
+      <file name="ServiceIncomeUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\service\ServiceIncomeUpdate.ts">
         <metrics statements="16" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -619,7 +622,7 @@
         <line num="28" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
-      <file name="ServicesIncomeAdd.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ingresos\service\ServicesIncomeAdd.ts">
+      <file name="ServicesIncomeAdd.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ingresos\service\ServicesIncomeAdd.ts">
         <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -644,7 +647,7 @@
     </package>
     <package name="src.app.parqueadero.controller">
       <metrics statements="33" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorParqueaderoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoActualizar.ts">
+      <file name="ControladorParqueaderoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoActualizar.ts">
         <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -658,7 +661,7 @@
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="ControladorParqueaderoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoBorrar.ts">
+      <file name="ControladorParqueaderoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoBorrar.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -668,14 +671,14 @@
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="ControladorParqueaderoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoConsulta.ts">
+      <file name="ControladorParqueaderoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoConsulta.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControladorParqueaderoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoCrear.ts">
+      <file name="ControladorParqueaderoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\controller\ControladorParqueaderoCrear.ts">
         <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -692,7 +695,7 @@
     </package>
     <package name="src.app.parqueadero.model">
       <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="Parqueadero.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\model\Parqueadero.ts">
+      <file name="Parqueadero.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\model\Parqueadero.ts">
         <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -714,14 +717,14 @@
     </package>
     <package name="src.app.parqueadero.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_parqueadero.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\repository\sql_parqueadero.ts">
+      <file name="sql_parqueadero.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\repository\sql_parqueadero.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.parqueadero.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaParqueadero.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\route\RutaParqueadero.ts">
+      <file name="RutaParqueadero.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\route\RutaParqueadero.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -741,7 +744,7 @@
     </package>
     <package name="src.app.parqueadero.service">
       <metrics statements="65" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="18" coveredmethods="0"/>
-      <file name="ServicioParqueaderoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoActualizar.ts">
+      <file name="ServicioParqueaderoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoActualizar.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -761,7 +764,7 @@
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
       </file>
-      <file name="ServicioParqueaderoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoBorrar.ts">
+      <file name="ServicioParqueaderoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoBorrar.ts">
         <metrics statements="24" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -788,7 +791,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
-      <file name="ServicioParqueaderoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoConsulta.ts">
+      <file name="ServicioParqueaderoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoConsulta.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -798,7 +801,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="ServicioParqueaderoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoCrear.ts">
+      <file name="ServicioParqueaderoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\parqueadero\service\ServicioParqueaderoCrear.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -821,21 +824,21 @@
     </package>
     <package name="src.app.puesto.controller">
       <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="ControladorPuestoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\controller\ControladorPuestoActualizar.ts">
+      <file name="ControladorPuestoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\controller\ControladorPuestoActualizar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="ControladorPuestoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\controller\ControladorPuestoBorrar.ts">
+      <file name="ControladorPuestoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\controller\ControladorPuestoBorrar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="ControladorPuestoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\controller\ControladorPuestoConsulta.ts">
+      <file name="ControladorPuestoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\controller\ControladorPuestoConsulta.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -843,7 +846,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControladorPuestoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\controller\ControladorPuestoCrear.ts">
+      <file name="ControladorPuestoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\controller\ControladorPuestoCrear.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -853,7 +856,7 @@
     </package>
     <package name="src.app.puesto.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Puesto.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\model\Puesto.ts">
+      <file name="Puesto.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\model\Puesto.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -872,14 +875,14 @@
     </package>
     <package name="src.app.puesto.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_puesto.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\repository\sql_puesto.ts">
+      <file name="sql_puesto.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\repository\sql_puesto.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.puesto.route">
       <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="RutaPuesto.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\route\RutaPuesto.ts">
+      <file name="RutaPuesto.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\route\RutaPuesto.ts">
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -902,7 +905,7 @@
     </package>
     <package name="src.app.puesto.service">
       <metrics statements="62" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="ServicioPuestoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\service\ServicioPuestoActualizar.ts">
+      <file name="ServicioPuestoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\service\ServicioPuestoActualizar.ts">
         <metrics statements="14" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -919,7 +922,7 @@
         <line num="31" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
       </file>
-      <file name="ServicioPuestoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\service\ServicioPuestoBorrar.ts">
+      <file name="ServicioPuestoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\service\ServicioPuestoBorrar.ts">
         <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -934,7 +937,7 @@
         <line num="34" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
       </file>
-      <file name="ServicioPuestoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\service\ServicioPuestoConsulta.ts">
+      <file name="ServicioPuestoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\service\ServicioPuestoConsulta.ts">
         <metrics statements="20" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -957,7 +960,7 @@
         <line num="65" count="0" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
       </file>
-      <file name="ServicioPuestoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\puesto\service\ServicioPuestoCrear.ts">
+      <file name="ServicioPuestoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\puesto\service\ServicioPuestoCrear.ts">
         <metrics statements="16" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -979,7 +982,7 @@
     </package>
     <package name="src.app.register.controllers">
       <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="registerControllerCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\register\controllers\registerControllerCreate.ts">
+      <file name="registerControllerCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\register\controllers\registerControllerCreate.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -995,7 +998,7 @@
     </package>
     <package name="src.app.register.routes">
       <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RegisterRoutes.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\register\routes\RegisterRoutes.ts">
+      <file name="RegisterRoutes.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\register\routes\RegisterRoutes.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1008,41 +1011,44 @@
       </file>
     </package>
     <package name="src.app.register.services">
-      <metrics statements="27" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="registerServicesCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\register\services\registerServicesCreate.ts">
-        <metrics statements="27" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="30" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="registerServicesCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\register\services\registerServicesCreate.ts">
+        <metrics statements="30" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="31" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.rel-turno-usuario.controller">
       <metrics statements="34" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="ControladorRelTurnoUsuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel-turno-usuario\controller\ControladorRelTurnoUsuario.ts">
+      <file name="ControladorRelTurnoUsuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel-turno-usuario\controller\ControladorRelTurnoUsuario.ts">
         <metrics statements="34" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1082,7 +1088,7 @@
     </package>
     <package name="src.app.rel-turno-usuario.model">
       <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="RelTurnoUsuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel-turno-usuario\model\RelTurnoUsuario.ts">
+      <file name="RelTurnoUsuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel-turno-usuario\model\RelTurnoUsuario.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -1098,14 +1104,14 @@
     </package>
     <package name="src.app.rel-turno-usuario.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_rel_turno_usuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel-turno-usuario\repository\sql_rel_turno_usuario.ts">
+      <file name="sql_rel_turno_usuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel-turno-usuario\repository\sql_rel_turno_usuario.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.rel-turno-usuario.route">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="RutaRelTurnoUsuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel-turno-usuario\route\RutaRelTurnoUsuario.ts">
+      <file name="RutaRelTurnoUsuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel-turno-usuario\route\RutaRelTurnoUsuario.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1123,7 +1129,7 @@
     </package>
     <package name="src.app.rel-turno-usuario.service">
       <metrics statements="30" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="ServicioRelTurnoUsuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel-turno-usuario\service\ServicioRelTurnoUsuario.ts">
+      <file name="ServicioRelTurnoUsuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel-turno-usuario\service\ServicioRelTurnoUsuario.ts">
         <metrics statements="30" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1159,7 +1165,7 @@
     </package>
     <package name="src.app.rel_rol_functionalidad.controllers">
       <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="ControllerCreateRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerCreateRelRolFunctionality.ts">
+      <file name="ControllerCreateRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerCreateRelRolFunctionality.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1168,7 +1174,7 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
       </file>
-      <file name="ControllerDeleteRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerDeleteRelRolFunctionality.ts">
+      <file name="ControllerDeleteRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerDeleteRelRolFunctionality.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1177,7 +1183,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControllerGetRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerGetRelRolFunctionality.ts">
+      <file name="ControllerGetRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\controllers\ControllerGetRelRolFunctionality.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1187,7 +1193,7 @@
     </package>
     <package name="src.app.rel_rol_functionalidad.model">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="Rel_rol_funcionalidad.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\model\Rel_rol_funcionalidad.ts">
+      <file name="Rel_rol_funcionalidad.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\model\Rel_rol_funcionalidad.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1200,7 +1206,7 @@
     </package>
     <package name="src.app.rel_rol_functionalidad.repository">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_rel_rol_funcionalidad.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\repository\sql_rel_rol_funcionalidad.ts">
+      <file name="sql_rel_rol_funcionalidad.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\repository\sql_rel_rol_funcionalidad.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1208,7 +1214,7 @@
     </package>
     <package name="src.app.rel_rol_functionalidad.route">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RouteRelRolFuncionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\route\RouteRelRolFuncionality.ts">
+      <file name="RouteRelRolFuncionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\route\RouteRelRolFuncionality.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1226,7 +1232,7 @@
     </package>
     <package name="src.app.rel_rol_functionalidad.services">
       <metrics statements="29" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="15" coveredmethods="0"/>
-      <file name="ServiceCreateRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceCreateRelRolFunctionality.ts">
+      <file name="ServiceCreateRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceCreateRelRolFunctionality.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1236,7 +1242,7 @@
         <line num="15" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
       </file>
-      <file name="ServiceDeleteRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceDeleteRelRolFunctionality.ts">
+      <file name="ServiceDeleteRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceDeleteRelRolFunctionality.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1247,7 +1253,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
       </file>
-      <file name="ServiceGetRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceGetRelRolFunctionality.ts">
+      <file name="ServiceGetRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_rol_functionalidad\services\ServiceGetRelRolFunctionality.ts">
         <metrics statements="14" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1267,7 +1273,7 @@
     </package>
     <package name="src.app.rel_usuario_funcionalidad.controllers">
       <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="ControllerCreateRelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerCreateRelUserFunctionality.ts">
+      <file name="ControllerCreateRelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerCreateRelUserFunctionality.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1276,7 +1282,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControllerDeleteRelUserFuncionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerDeleteRelUserFuncionality.ts">
+      <file name="ControllerDeleteRelUserFuncionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerDeleteRelUserFuncionality.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1285,7 +1291,7 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
       </file>
-      <file name="ControllerGetRelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerGetRelUserFunctionality.ts">
+      <file name="ControllerGetRelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\controllers\ControllerGetRelUserFunctionality.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1295,7 +1301,7 @@
     </package>
     <package name="src.app.rel_usuario_funcionalidad.model">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="RelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\model\RelUserFunctionality.ts">
+      <file name="RelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\model\RelUserFunctionality.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1308,14 +1314,14 @@
     </package>
     <package name="src.app.rel_usuario_funcionalidad.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_RelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\repository\sql_RelUserFunctionality.ts">
+      <file name="sql_RelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\repository\sql_RelUserFunctionality.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.rel_usuario_funcionalidad.route">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RouteRelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\route\RouteRelUserFunctionality.ts">
+      <file name="RouteRelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\route\RouteRelUserFunctionality.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1333,7 +1339,7 @@
     </package>
     <package name="src.app.rel_usuario_funcionalidad.services">
       <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="0"/>
-      <file name="ServiceCreateRelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceCreateRelUserFunctionality.ts">
+      <file name="ServiceCreateRelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceCreateRelUserFunctionality.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1345,7 +1351,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
-      <file name="ServiceDeleteUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceDeleteUserFunctionality.ts">
+      <file name="ServiceDeleteUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceDeleteUserFunctionality.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1357,7 +1363,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
-      <file name="ServiceGetAllRelUserFunctional.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceGetAllRelUserFunctional.ts">
+      <file name="ServiceGetAllRelUserFunctional.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rel_usuario_funcionalidad\services\ServiceGetAllRelUserFunctional.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1372,7 +1378,7 @@
     </package>
     <package name="src.app.rol.controller">
       <metrics statements="26" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorRolActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\controller\ControladorRolActualizar.ts">
+      <file name="ControladorRolActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\controller\ControladorRolActualizar.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1383,7 +1389,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControladorRolBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\controller\ControladorRolBorrar.ts">
+      <file name="ControladorRolBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\controller\ControladorRolBorrar.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1393,14 +1399,14 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControladorRolConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\controller\ControladorRolConsulta.ts">
+      <file name="ControladorRolConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\controller\ControladorRolConsulta.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControladorRolCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\controller\ControladorRolCrear.ts">
+      <file name="ControladorRolCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\controller\ControladorRolCrear.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1413,7 +1419,7 @@
     </package>
     <package name="src.app.rol.model">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="Rol.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\model\Rol.ts">
+      <file name="Rol.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\model\Rol.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1426,14 +1432,14 @@
     </package>
     <package name="src.app.rol.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_rol.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\repository\sql_rol.ts">
+      <file name="sql_rol.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\repository\sql_rol.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.rol.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaRol.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\route\RutaRol.ts">
+      <file name="RutaRol.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\route\RutaRol.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1453,7 +1459,7 @@
     </package>
     <package name="src.app.rol.service">
       <metrics statements="54" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ServicioRolActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\service\ServicioRolActualizar.ts">
+      <file name="ServicioRolActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\service\ServicioRolActualizar.ts">
         <metrics statements="18" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1474,7 +1480,7 @@
         <line num="62" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
       </file>
-      <file name="ServicioRolBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\service\ServicioRolBorrar.ts">
+      <file name="ServicioRolBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\service\ServicioRolBorrar.ts">
         <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1490,7 +1496,7 @@
         <line num="39" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
       </file>
-      <file name="ServicioRolConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\service\ServicioRolConsulta.ts">
+      <file name="ServicioRolConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\service\ServicioRolConsulta.ts">
         <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1503,7 +1509,7 @@
         <line num="24" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
       </file>
-      <file name="ServicioRolCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\rol\service\ServicioRolCrear.ts">
+      <file name="ServicioRolCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\rol\service\ServicioRolCrear.ts">
         <metrics statements="13" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1522,21 +1528,21 @@
     </package>
     <package name="src.app.servicio_diario.controller">
       <metrics statements="18" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="ControladorServicioDiarioActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioActualizar.ts">
+      <file name="ControladorServicioDiarioActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioActualizar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControladorServicioDiarioBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioBorrar.ts">
+      <file name="ControladorServicioDiarioBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioBorrar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControladorServicioDiarioConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioConsulta.ts">
+      <file name="ControladorServicioDiarioConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioConsulta.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1545,7 +1551,7 @@
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
       </file>
-      <file name="ControladorServicioDiarioCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioCrear.ts">
+      <file name="ControladorServicioDiarioCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\controller\ControladorServicioDiarioCrear.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1555,7 +1561,7 @@
     </package>
     <package name="src.app.servicio_diario.model">
       <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="0"/>
-      <file name="ServicioDiario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\model\ServicioDiario.ts">
+      <file name="ServicioDiario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\model\ServicioDiario.ts">
         <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="0"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -1583,14 +1589,14 @@
     </package>
     <package name="src.app.servicio_diario.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_servicio_diario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\repository\sql_servicio_diario.ts">
+      <file name="sql_servicio_diario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\repository\sql_servicio_diario.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.servicio_diario.route">
       <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="RutaServicioDiario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\route\RutaServicioDiario.ts">
+      <file name="RutaServicioDiario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\route\RutaServicioDiario.ts">
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1613,7 +1619,7 @@
     </package>
     <package name="src.app.servicio_diario.service">
       <metrics statements="70" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="ServicioDiarioActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\service\ServicioDiarioActualizar.ts">
+      <file name="ServicioDiarioActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\service\ServicioDiarioActualizar.ts">
         <metrics statements="14" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1630,7 +1636,7 @@
         <line num="62" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
       </file>
-      <file name="ServicioDiarioBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\service\ServicioDiarioBorrar.ts">
+      <file name="ServicioDiarioBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\service\ServicioDiarioBorrar.ts">
         <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1645,7 +1651,7 @@
         <line num="34" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
       </file>
-      <file name="ServicioDiarioConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\service\ServicioDiarioConsulta.ts">
+      <file name="ServicioDiarioConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\service\ServicioDiarioConsulta.ts">
         <metrics statements="28" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1676,7 +1682,7 @@
         <line num="97" count="0" type="stmt"/>
         <line num="103" count="0" type="stmt"/>
       </file>
-      <file name="ServicioDiarioCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\servicio_diario\service\ServicioDiarioCrear.ts">
+      <file name="ServicioDiarioCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\servicio_diario\service\ServicioDiarioCrear.ts">
         <metrics statements="16" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1698,21 +1704,21 @@
     </package>
     <package name="src.app.tarifa_diaria.controller">
       <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="ControladorTarifaDiariaActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaActualizar.ts">
+      <file name="ControladorTarifaDiariaActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaActualizar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTarifaDiariaBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaBorrar.ts">
+      <file name="ControladorTarifaDiariaBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaBorrar.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTarifaDiariaConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaConsulta.ts">
+      <file name="ControladorTarifaDiariaConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaConsulta.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1722,7 +1728,7 @@
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTarifaDiariaCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaCrear.ts">
+      <file name="ControladorTarifaDiariaCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\controller\ControladorTarifaDiariaCrear.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -1731,9 +1737,9 @@
       </file>
     </package>
     <package name="src.app.tarifa_diaria.model">
-      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="TarifaDiaria.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\model\TarifaDiaria.ts">
-        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="10" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="TarifaDiaria.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\model\TarifaDiaria.ts">
+        <metrics statements="10" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -1743,19 +1749,19 @@
         <line num="25" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.tarifa_diaria.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_tarifa_diaria.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\repository\sql_tarifa_diaria.ts">
+      <file name="sql_tarifa_diaria.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\repository\sql_tarifa_diaria.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.tarifa_diaria.route">
       <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="RutaTarifaDiaria.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\route\RutaTarifaDiaria.ts">
+      <file name="RutaTarifaDiaria.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\route\RutaTarifaDiaria.ts">
         <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1780,7 +1786,7 @@
     </package>
     <package name="src.app.tarifa_diaria.service">
       <metrics statements="74" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="ServicioTarifaDiariaActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaActualizar.ts">
+      <file name="ServicioTarifaDiariaActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaActualizar.ts">
         <metrics statements="14" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1797,7 +1803,7 @@
         <line num="39" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTarifaDiariaBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaBorrar.ts">
+      <file name="ServicioTarifaDiariaBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaBorrar.ts">
         <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1812,7 +1818,7 @@
         <line num="35" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTarifaDiariaConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaConsulta.ts">
+      <file name="ServicioTarifaDiariaConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaConsulta.ts">
         <metrics statements="34" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1849,7 +1855,7 @@
         <line num="117" count="0" type="stmt"/>
         <line num="124" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTarifaDiariaCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaCrear.ts">
+      <file name="ServicioTarifaDiariaCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tarifa_diaria\service\ServicioTarifaDiariaCrear.ts">
         <metrics statements="14" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1869,7 +1875,7 @@
     </package>
     <package name="src.app.tipo_vehiculo.controller">
       <metrics statements="26" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorTipoVehiculoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoActualizar.ts">
+      <file name="ControladorTipoVehiculoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoActualizar.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1880,7 +1886,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTipoVehiculoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoBorrar.ts">
+      <file name="ControladorTipoVehiculoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoBorrar.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1890,14 +1896,14 @@
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTipoVehiculoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoConsulta.ts">
+      <file name="ControladorTipoVehiculoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoConsulta.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTipoVehiculoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoCrear.ts">
+      <file name="ControladorTipoVehiculoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\controller\ControladorTipoVehiculoCrear.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1910,7 +1916,7 @@
     </package>
     <package name="src.app.tipo_vehiculo.model">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="TipoVehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\model\TipoVehiculo.ts">
+      <file name="TipoVehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\model\TipoVehiculo.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -1923,14 +1929,14 @@
     </package>
     <package name="src.app.tipo_vehiculo.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_tipo_vehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\repository\sql_tipo_vehiculo.ts">
+      <file name="sql_tipo_vehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\repository\sql_tipo_vehiculo.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.tipo_vehiculo.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaTipoVehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\route\RutaTipoVehiculo.ts">
+      <file name="RutaTipoVehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\route\RutaTipoVehiculo.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -1950,7 +1956,7 @@
     </package>
     <package name="src.app.tipo_vehiculo.service">
       <metrics statements="64" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="ServicioTipoVehiculoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoActualizar.ts">
+      <file name="ServicioTipoVehiculoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoActualizar.ts">
         <metrics statements="18" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1971,7 +1977,7 @@
         <line num="64" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTipoVehiculoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoBorrar.ts">
+      <file name="ServicioTipoVehiculoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoBorrar.ts">
         <metrics statements="17" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -1991,7 +1997,7 @@
         <line num="54" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTipoVehiculoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoConsulta.ts">
+      <file name="ServicioTipoVehiculoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoConsulta.ts">
         <metrics statements="11" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2005,7 +2011,7 @@
         <line num="25" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTipoVehiculoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoCrear.ts">
+      <file name="ServicioTipoVehiculoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\tipo_vehiculo\service\ServicioTipoVehiculoCrear.ts">
         <metrics statements="18" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2029,7 +2035,7 @@
     </package>
     <package name="src.app.turno.controller">
       <metrics statements="35" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorTurnoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\controller\ControladorTurnoActualizar.ts">
+      <file name="ControladorTurnoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\controller\ControladorTurnoActualizar.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2044,7 +2050,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\controller\ControladorTurnoBorrar.ts">
+      <file name="ControladorTurnoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\controller\ControladorTurnoBorrar.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2054,14 +2060,14 @@
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\controller\ControladorTurnoConsulta.ts">
+      <file name="ControladorTurnoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\controller\ControladorTurnoConsulta.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\controller\ControladorTurnoCrear.ts">
+      <file name="ControladorTurnoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\controller\ControladorTurnoCrear.ts">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2079,7 +2085,7 @@
     </package>
     <package name="src.app.turno.model">
       <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="0"/>
-      <file name="Turno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\model\Turno.ts">
+      <file name="Turno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\model\Turno.ts">
         <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -2104,14 +2110,14 @@
     </package>
     <package name="src.app.turno.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_turno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\repository\sql_turno.ts">
+      <file name="sql_turno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\repository\sql_turno.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.turno.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaTurno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\route\RutaTurno.ts">
+      <file name="RutaTurno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\route\RutaTurno.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2131,7 +2137,7 @@
     </package>
     <package name="src.app.turno.service">
       <metrics statements="65" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="18" coveredmethods="0"/>
-      <file name="ServicioTurnoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\service\ServicioTurnoActualizar.ts">
+      <file name="ServicioTurnoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\service\ServicioTurnoActualizar.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2151,7 +2157,7 @@
         <line num="49" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\service\ServicioTurnoBorrar.ts">
+      <file name="ServicioTurnoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\service\ServicioTurnoBorrar.ts">
         <metrics statements="24" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -2178,7 +2184,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\service\ServicioTurnoConsulta.ts">
+      <file name="ServicioTurnoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\service\ServicioTurnoConsulta.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2188,7 +2194,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turno\service\ServicioTurnoCrear.ts">
+      <file name="ServicioTurnoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turno\service\ServicioTurnoCrear.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2211,7 +2217,7 @@
     </package>
     <package name="src.app.turnos.controller">
       <metrics statements="44" coveredstatements="0" conditionals="34" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorTurnoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\controller\ControladorTurnoActualizar.ts">
+      <file name="ControladorTurnoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\controller\ControladorTurnoActualizar.ts">
         <metrics statements="15" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2229,7 +2235,7 @@
         <line num="32" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\controller\ControladorTurnoBorrar.ts">
+      <file name="ControladorTurnoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\controller\ControladorTurnoBorrar.ts">
         <metrics statements="8" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2240,7 +2246,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\controller\ControladorTurnoConsulta.ts">
+      <file name="ControladorTurnoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\controller\ControladorTurnoConsulta.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2248,7 +2254,7 @@
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControladorTurnoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\controller\ControladorTurnoCrear.ts">
+      <file name="ControladorTurnoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\controller\ControladorTurnoCrear.ts">
         <metrics statements="16" coveredstatements="0" conditionals="22" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2270,7 +2276,7 @@
     </package>
     <package name="src.app.turnos.model">
       <metrics statements="37" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="15" coveredmethods="0"/>
-      <file name="Turno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\model\Turno.ts">
+      <file name="Turno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\model\Turno.ts">
         <metrics statements="37" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="15" coveredmethods="0"/>
         <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
@@ -2313,14 +2319,14 @@
     </package>
     <package name="src.app.turnos.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_turno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\repository\sql_turno.ts">
+      <file name="sql_turno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\repository\sql_turno.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.turnos.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaTurno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\route\RutaTurno.ts">
+      <file name="RutaTurno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\route\RutaTurno.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2340,7 +2346,7 @@
     </package>
     <package name="src.app.turnos.service">
       <metrics statements="80" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="13" coveredmethods="0"/>
-      <file name="ServicioTurnoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\service\ServicioTurnoActualizar.ts">
+      <file name="ServicioTurnoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\service\ServicioTurnoActualizar.ts">
         <metrics statements="26" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2369,7 +2375,7 @@
         <line num="53" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\service\ServicioTurnoBorrar.ts">
+      <file name="ServicioTurnoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\service\ServicioTurnoBorrar.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2380,7 +2386,7 @@
         <line num="20" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\service\ServicioTurnoConsulta.ts">
+      <file name="ServicioTurnoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\service\ServicioTurnoConsulta.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2392,7 +2398,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
       </file>
-      <file name="ServicioTurnoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\turnos\service\ServicioTurnoCrear.ts">
+      <file name="ServicioTurnoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\turnos\service\ServicioTurnoCrear.ts">
         <metrics statements="37" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2435,7 +2441,7 @@
     </package>
     <package name="src.app.ubicaciones.controller">
       <metrics statements="32" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="ControladorUbicacionActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionActualizar.ts">
+      <file name="ControladorUbicacionActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionActualizar.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2448,7 +2454,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControladorUbicacionBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionBorrar.ts">
+      <file name="ControladorUbicacionBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionBorrar.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2459,14 +2465,14 @@
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="ControladorUbicacionConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionConsulta.ts">
+      <file name="ControladorUbicacionConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionConsulta.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
-      <file name="ControladorUbicacionCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionCrear.ts">
+      <file name="ControladorUbicacionCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\controller\ControladorUbicacionCrear.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2482,7 +2488,7 @@
     </package>
     <package name="src.app.ubicaciones.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Ubicacion.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\model\Ubicacion.ts">
+      <file name="Ubicacion.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\model\Ubicacion.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -2501,14 +2507,14 @@
     </package>
     <package name="src.app.ubicaciones.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_ubicacion.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\repository\sql_ubicacion.ts">
+      <file name="sql_ubicacion.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\repository\sql_ubicacion.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.ubicaciones.route">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="RutaUbicacion.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\route\RutaUbicacion.ts">
+      <file name="RutaUbicacion.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\route\RutaUbicacion.ts">
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2528,7 +2534,7 @@
     </package>
     <package name="src.app.ubicaciones.service">
       <metrics statements="65" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="18" coveredmethods="0"/>
-      <file name="ServicioUbicacionActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionActualizar.ts">
+      <file name="ServicioUbicacionActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionActualizar.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2548,7 +2554,7 @@
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
       </file>
-      <file name="ServicioUbicacionBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionBorrar.ts">
+      <file name="ServicioUbicacionBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionBorrar.ts">
         <metrics statements="24" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2575,7 +2581,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
-      <file name="ServicioUbicacionConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionConsulta.ts">
+      <file name="ServicioUbicacionConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionConsulta.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2585,7 +2591,7 @@
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="ServicioUbicacionCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionCrear.ts">
+      <file name="ServicioUbicacionCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\ubicaciones\service\ServicioUbicacionCrear.ts">
         <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -2608,7 +2614,7 @@
     </package>
     <package name="src.app.usuarios.controller">
       <metrics statements="23" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="ControllerUserCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\controller\ControllerUserCreate.ts">
+      <file name="ControllerUserCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\controller\ControllerUserCreate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2617,7 +2623,7 @@
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
       </file>
-      <file name="ControllerUserDelete,.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\controller\ControllerUserDelete,.ts">
+      <file name="ControllerUserDelete,.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\controller\ControllerUserDelete,.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2625,7 +2631,7 @@
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="ControllerUserGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\controller\ControllerUserGet.ts">
+      <file name="ControllerUserGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\controller\ControllerUserGet.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2634,7 +2640,7 @@
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="ControllerUserUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\controller\ControllerUserUpdate.ts">
+      <file name="ControllerUserUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\controller\ControllerUserUpdate.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2646,7 +2652,7 @@
     </package>
     <package name="src.app.usuarios.model">
       <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Usuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\model\Usuario.ts">
+      <file name="Usuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\model\Usuario.ts">
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
@@ -2669,14 +2675,14 @@
     </package>
     <package name="src.app.usuarios.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_user.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\repository\sql_user.ts">
+      <file name="sql_user.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\repository\sql_user.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.usuarios.route">
       <metrics statements="15" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="routeUser.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\route\routeUser.ts">
+      <file name="routeUser.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\route\routeUser.ts">
         <metrics statements="15" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2697,7 +2703,7 @@
     </package>
     <package name="src.app.usuarios.service">
       <metrics statements="61" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="21" coveredmethods="0"/>
-      <file name="ServiceUserCreate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\service\ServiceUserCreate.ts">
+      <file name="ServiceUserCreate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\service\ServiceUserCreate.ts">
         <metrics statements="18" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2718,7 +2724,7 @@
         <line num="39" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
       </file>
-      <file name="ServiceUserDelete.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\service\ServiceUserDelete.ts">
+      <file name="ServiceUserDelete.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\service\ServiceUserDelete.ts">
         <metrics statements="20" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2741,7 +2747,7 @@
         <line num="30" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
       </file>
-      <file name="ServiceUserGet.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\service\ServiceUserGet.ts">
+      <file name="ServiceUserGet.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\service\ServiceUserGet.ts">
         <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2755,7 +2761,7 @@
         <line num="27" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
       </file>
-      <file name="ServiceUserUpdate.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\usuarios\service\ServiceUserUpdate.ts">
+      <file name="ServiceUserUpdate.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\usuarios\service\ServiceUserUpdate.ts">
         <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2773,7 +2779,7 @@
     </package>
     <package name="src.app.vehiculos.controller">
       <metrics statements="34" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="ControladorVehiculoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoActualizar.ts">
+      <file name="ControladorVehiculoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoActualizar.ts">
         <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2786,7 +2792,7 @@
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ControladorVehiculoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoBorrar.ts">
+      <file name="ControladorVehiculoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoBorrar.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2796,7 +2802,7 @@
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="ControladorVehiculoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoConsulta.ts">
+      <file name="ControladorVehiculoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoConsulta.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -2807,7 +2813,7 @@
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
-      <file name="ControladorVehiculoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoCrear.ts">
+      <file name="ControladorVehiculoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\controller\ControladorVehiculoCrear.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2822,7 +2828,7 @@
     </package>
     <package name="src.app.vehiculos.model">
       <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="Vehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\model\Vehiculo.ts">
+      <file name="Vehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\model\Vehiculo.ts">
         <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -2841,14 +2847,14 @@
     </package>
     <package name="src.app.vehiculos.repository">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="sql_vehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\repository\sql_vehiculo.ts">
+      <file name="sql_vehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\repository\sql_vehiculo.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.vehiculos.route">
       <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="RutaVehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\route\RutaVehiculo.ts">
+      <file name="RutaVehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\route\RutaVehiculo.ts">
         <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -2874,7 +2880,7 @@
     </package>
     <package name="src.app.vehiculos.service">
       <metrics statements="87" coveredstatements="0" conditionals="25" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="ServicioVehiculoActualizar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\service\ServicioVehiculoActualizar.ts">
+      <file name="ServicioVehiculoActualizar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\service\ServicioVehiculoActualizar.ts">
         <metrics statements="19" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -2896,7 +2902,7 @@
         <line num="69" count="0" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
       </file>
-      <file name="ServicioVehiculoBorrar.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\service\ServicioVehiculoBorrar.ts">
+      <file name="ServicioVehiculoBorrar.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\service\ServicioVehiculoBorrar.ts">
         <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2912,7 +2918,7 @@
         <line num="46" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
       </file>
-      <file name="ServicioVehiculoConsulta.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\service\ServicioVehiculoConsulta.ts">
+      <file name="ServicioVehiculoConsulta.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\service\ServicioVehiculoConsulta.ts">
         <metrics statements="42" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2957,7 +2963,7 @@
         <line num="144" count="0" type="stmt"/>
         <line num="151" count="0" type="stmt"/>
       </file>
-      <file name="ServicioVehiculoCrear.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\app\vehiculos\service\ServicioVehiculoCrear.ts">
+      <file name="ServicioVehiculoCrear.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\app\vehiculos\service\ServicioVehiculoCrear.ts">
         <metrics statements="13" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -2975,9 +2981,9 @@
       </file>
     </package>
     <package name="src.config.api">
-      <metrics statements="50" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="Servidor.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\api\Servidor.ts">
-        <metrics statements="50" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="51" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="Servidor.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\api\Servidor.ts">
+        <metrics statements="51" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3000,42 +3006,43 @@
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.config.connection">
-      <metrics statements="50" coveredstatements="4" conditionals="11" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="camelCase.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\connection\camelCase.ts">
+      <metrics statements="28" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="camelCase.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\connection\camelCase.ts">
         <metrics statements="10" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -3045,63 +3052,41 @@
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="dbConnection.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\connection\dbConnection.ts">
-        <metrics statements="37" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="dbConnection.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\connection\dbConnection.ts">
+        <metrics statements="15" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="92" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="98" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
       </file>
-      <file name="optionsPG.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\connection\optionsPG.ts">
+      <file name="optionsPG.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\connection\optionsPG.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.config.domain">
       <metrics statements="82" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="ValidarFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarFunctionality.ts">
+      <file name="ValidarFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarFunctionality.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ValidarLogin.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarLogin.ts">
+      <file name="ValidarLogin.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarLogin.ts">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3109,33 +3094,33 @@
         <line num="28" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
       </file>
-      <file name="ValidarParqueadero.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarParqueadero.ts">
+      <file name="ValidarParqueadero.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarParqueadero.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ValidarPuesto.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarPuesto.ts">
+      <file name="ValidarPuesto.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarPuesto.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
       </file>
-      <file name="ValidarRelTurnoUsuario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarRelTurnoUsuario.ts">
+      <file name="ValidarRelTurnoUsuario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarRelTurnoUsuario.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
       </file>
-      <file name="ValidarRol.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarRol.ts">
+      <file name="ValidarRol.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarRol.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
       </file>
-      <file name="ValidarServicioDiario.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarServicioDiario.ts">
+      <file name="ValidarServicioDiario.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarServicioDiario.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3144,7 +3129,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
       </file>
-      <file name="ValidarTarifaDiaria.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarTarifaDiaria.ts">
+      <file name="ValidarTarifaDiaria.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarTarifaDiaria.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3156,35 +3141,35 @@
         <line num="85" count="0" type="stmt"/>
         <line num="86" count="0" type="stmt"/>
       </file>
-      <file name="ValidarTipoVehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarTipoVehiculo.ts">
+      <file name="ValidarTipoVehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarTipoVehiculo.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
       </file>
-      <file name="ValidarTuno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarTuno.ts">
+      <file name="ValidarTuno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarTuno.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ValidarTurno.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarTurno.ts">
+      <file name="ValidarTurno.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarTurno.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
       </file>
-      <file name="ValidarUbicacion.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarUbicacion.ts">
+      <file name="ValidarUbicacion.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarUbicacion.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ValidarVehiculo.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidarVehiculo.ts">
+      <file name="ValidarVehiculo.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidarVehiculo.ts">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3195,39 +3180,39 @@
         <line num="45" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
       </file>
-      <file name="ValidationUser.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidationUser.ts">
+      <file name="ValidationUser.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidationUser.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
-      <file name="ValidatorAccess.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidatorAccess.ts">
+      <file name="ValidatorAccess.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidatorAccess.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
-      <file name="ValidatorIncome.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidatorIncome.ts">
+      <file name="ValidatorIncome.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidatorIncome.ts">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="ValidatorRegister.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidatorRegister.ts">
+      <file name="ValidatorRegister.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidatorRegister.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
       </file>
-      <file name="ValidatorRelRolFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidatorRelRolFunctionality.ts">
+      <file name="ValidatorRelRolFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidatorRelRolFunctionality.ts">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
-      <file name="ValidatorRelUserFunctionality.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\config\domain\ValidatorRelUserFunctionality.ts">
+      <file name="ValidatorRelUserFunctionality.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\config\domain\ValidatorRelUserFunctionality.ts">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3236,7 +3221,7 @@
     </package>
     <package name="src.middleware">
       <metrics statements="22" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="Security.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\middleware\Security.ts">
+      <file name="Security.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\middleware\Security.ts">
         <metrics statements="15" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -3254,7 +3239,7 @@
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
       </file>
-      <file name="ValidarDatos.ts" path="C:\Users\andre\OneDrive\Documentos\archivosLinux\unimag\Desarrollo_software\backRojo\soyelbackend\src\middleware\ValidarDatos.ts">
+      <file name="ValidarDatos.ts" path="C:\2 - UNIVERSIDAD\IngenieriaDeSoftware\backend_paqueadero\soyelbackend\src\middleware\ValidarDatos.ts">
         <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>

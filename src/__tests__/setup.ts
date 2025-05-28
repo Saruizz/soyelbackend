@@ -18,9 +18,9 @@ beforeAll(async () => {
     const config = {
       host: process.env.DB_HOST || "localhost",
       port: parseInt(process.env.DB_PORT || "5432"),
-      database: process.env.DB_NAME || "parqueadero",
-      user: process.env.DB_USER || "user_parqueadero",
-      password: process.env.DB_PASSWORD || "parqueadero123",
+      database: process.env.DB_NAME || "db_ingsoftparking",
+      user: process.env.DB_USER || "user_ingsoftparking",
+      password: process.env.DB_PASSWORD || "123456",
       max: 5, // Número menor de conexiones para pruebas
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 2000,

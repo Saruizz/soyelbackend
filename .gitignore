@@ -1,5 +1,7 @@
 # Logs
 node_modules/
+coverage/
+# Compiled source
 logs
 *.log
 npm-debug.log*
