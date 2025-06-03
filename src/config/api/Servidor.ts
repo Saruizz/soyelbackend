@@ -21,7 +21,7 @@ import rutaServicioDiarioApi from "../../app/servicio_diario/route/RutaServicioD
 import rutaVehiculoApi from "../../app/vehiculos/route/RutaVehiculo";
 import registerRoutes from "../../app/register/routes/RegisterRoutes";
 import { loginLimiter } from "../../app/Login/service/ServicioLogin";
-import queue from 'express-queue';
+import queue from "express-queue";
 
 const queueMiddleware = queue({ activeLimit: 5, queuedLimit: 100 });
 
@@ -33,23 +33,25 @@ class Servidor {
 
     this.app.set("PORT", 3123); // Solo un set para el puerto
     // Configuración mejorada de CORS
-    this.app.use(cors({
-      origin: ["http://localhost:4200", "*", "http://localhost:8091"], 
-      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true
-    }));
-    
+    this.app.use(
+      cors({
+        origin: ["http://localhost:4200", "*", "http://localhost:8091"],
+        methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+        credentials: true,
+      })
+    );
+
     // Manejo de preflight requests
-    this.app.options('*', cors());
+    this.app.options("*", cors());
     this.app.use(morgan("dev"));
     this.app.use(express.json({ limit: "100Mb" }));
     this.app.use(express.urlencoded({ extended: true }));
 
     this.app.use("/api/rol", security.check, rutaRolApi);
-    this.app.use("/api/tipo_vehiculo", security.check, rutaTipoVehiculoApi);
+    this.app.use("/api/tipo_vehiculo", rutaTipoVehiculoApi);
 
-    this.app.use("/api/tarifa_diaria", security.check, rutaTarifaDiariaApi);
+    this.app.use("/api/tarifa_diaria", rutaTarifaDiariaApi);
 
     this.app.use("/api/login", loginLimiter, queueMiddleware, rutaLoginApi);
     this.app.use("/api/turno", security.check, rutaTurnoApi);
@@ -78,16 +80,22 @@ class Servidor {
       security.check,
       routeRelUserFunctionality
     );
-    this.app.use("/api/vehiculo",  rutaVehiculoApi);
+    this.app.use("/api/vehiculo", rutaVehiculoApi);
     this.app.use("/api/puesto", security.check, rutaPuestoApi);
     this.app.use("/api/servicio_diario", security.check, rutaServicioDiarioApi);
     // Al final del constructor, después de todas las rutas
-    this.app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-      console.error("Error global:", err.stack);
-      res.status(500).json({ mensaje: "Error interno del servidor" });
-    });
+    this.app.use(
+      (
+        err: any,
+        req: express.Request,
+        res: express.Response,
+        next: express.NextFunction
+      ) => {
+        console.error("Error global:", err.stack);
+        res.status(500).json({ mensaje: "Error interno del servidor" });
+      }
+    );
   }
-
 
   public arranquelo(): void {
     this.app.listen(this.app.get("PORT"), () => {

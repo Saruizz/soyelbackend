@@ -1,19 +1,26 @@
-import { jest } from '@jest/globals';
+import { jest } from "@jest/globals";
 
-const mockDb = {
+const db = {
   one: jest.fn(),
   none: jest.fn(),
+  oneOrNone: jest.fn(),
+  result: jest.fn(),
+  any: jest.fn(),
+  task: jest.fn((cb: any) => cb(db)),
   $pool: {
-    end: jest.fn()
-  }
+    end: jest.fn(),
+  },
 };
 
 const mockPool = {
-  end: jest.fn()
+  end: jest.fn(),
+  connect: jest.fn(),
+  query: jest.fn(),
 };
 
 beforeEach(() => {
   jest.clearAllMocks();
 });
 
-export { mockDb as db, mockPool as pool };
+export { db, mockPool };
+export default db;

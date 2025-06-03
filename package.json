@@ -18,16 +18,17 @@
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "dev": "nodemon build/index.js",
-    "build": "tsc",
-    "start": "node build/index.js"
+    "build": "tsc -w"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "compression": "^1.8.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "express-queue": "^0.0.13",
     "express-rate-limit": "^7.5.0",
     "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "pg-promise": "^11.10.2",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/compression": "^1.8.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.2",
     "@types/jest": "^29.5.14",

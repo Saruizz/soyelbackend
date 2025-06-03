@@ -18,9 +18,9 @@ beforeAll(async () => {
     const config = {
       host: process.env.DB_HOST || "localhost",
       port: parseInt(process.env.DB_PORT || "5432"),
-      database: process.env.DB_NAME || "parqueadero",
-      user: process.env.DB_USER || "user_parqueadero",
-      password: process.env.DB_PASSWORD || "parqueadero123",
+      database: process.env.DB_NAME || "db_ingsoftparking",
+      user: process.env.DB_USER || "user_ingsoftparking",
+      password: process.env.DB_PASSWORD || "123456",
       max: 5, // Número menor de conexiones para pruebas
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 2000,
@@ -62,25 +62,14 @@ afterAll(async () => {
 async function createTestTables() {
   try {
     await pool.query(`
-      CREATE TABLE IF NOT EXISTS rol (
-        cod_rol SERIAL PRIMARY KEY,
-        nombre_rol VARCHAR(100) NOT NULL UNIQUE,
+      CREATE TABLE IF NOT EXISTS tarifa_diaria (
+        cod_parqueadero INTEGER NOT NULL REFERENCES parqueaderos(cod_parqueadero),
+        cod_tipo_vehiculo INTEGER NOT NULL REFERENCES tipos_vehiculos(cod_tipo_vehiculo),
+        valor_tarifa_diaria DECIMAL(10,2) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT pk_tarifa_diaria PRIMARY KEY (cod_parqueadero, cod_tipo_vehiculo)
       );
-      
-      CREATE TABLE IF NOT EXISTS usuarios (
-        cod_usuario SERIAL PRIMARY KEY,
-        cod_rol INTEGER NOT NULL REFERENCES rol(cod_rol),
-        documento_usuario VARCHAR(20) NOT NULL UNIQUE,
-        nombres_usuario VARCHAR(100) NOT NULL,
-        apellidos_usuario VARCHAR(100) NOT NULL,
-        telefono_usuario VARCHAR(20) NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      );
-      
-      -- Agregar aquí otras tablas necesarias para pruebas
     `);
     console.log("✅ Esquema de prueba creado correctamente");
   } catch (error) {
@@ -93,9 +82,7 @@ async function createTestTables() {
 async function cleanTestData() {
   try {
     await pool.query(`
-      TRUNCATE TABLE usuarios CASCADE;
-      TRUNCATE TABLE rol CASCADE;
-      -- Agregar otras tablas que necesiten limpieza
+      TRUNCATE TABLE tarifa_diaria CASCADE;
     `);
     console.log("✅ Datos de prueba limpiados correctamente");
   } catch (error) {

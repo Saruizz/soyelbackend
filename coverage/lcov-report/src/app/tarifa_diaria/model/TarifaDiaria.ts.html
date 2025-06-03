@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -105,80 +105,80 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class TarifaDiaria {
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">class TarifaDiaria {
     private _codTipoVehiculo: number;
     private _codParqueadero: number;
     private _valorTarifaDiaria: number;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    constructor(c</span>odParqueadero: number, codTpVh: number, valor: number) {
-<span class="cstat-no" title="statement not covered" >        this._codParqueadero = codParqueadero;</span>
-<span class="cstat-no" title="statement not covered" >        this._codTipoVehiculo = codTpVh;</span>
-<span class="cstat-no" title="statement not covered" >        this._valorTarifaDiaria = valor;</span>
+    constructor(codParqueadero: number, codTpVh: number, valor: number) {
+        this._codParqueadero = codParqueadero;
+        this._codTipoVehiculo = codTpVh;
+        this._valorTarifaDiaria = valor;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public get c</span>odTipoVehiculo(): number {
-<span class="cstat-no" title="statement not covered" >        return this._codTipoVehiculo;</span>
+    public get codTipoVehiculo(): number {
+        return this._codTipoVehiculo;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public get c</span>odParqueadero(): number {
-<span class="cstat-no" title="statement not covered" >        return this._codParqueadero;</span>
+    public get codParqueadero(): number {
+        return this._codParqueadero;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public get v</span>alorTarifaDiaria(): number {
-<span class="cstat-no" title="statement not covered" >        return this._valorTarifaDiaria;</span>
+    public get valorTarifaDiaria(): number {
+        return this._valorTarifaDiaria;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public set c</span>odTipoVehiculo(cod: number) {
-<span class="cstat-no" title="statement not covered" >        this._codTipoVehiculo = cod;</span>
+    public set codTipoVehiculo(cod: number) {
+        this._codTipoVehiculo = cod;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public set c</span>odParqueadero(cod: number) {
-<span class="cstat-no" title="statement not covered" >        this._codParqueadero = cod;</span>
+    public set codParqueadero(cod: number) {
+        this._codParqueadero = cod;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public set v</span>alorTarifaDiaria(valor: number) {
-<span class="cstat-no" title="statement not covered" >        this._valorTarifaDiaria = valor;</span>
+    public set valorTarifaDiaria(valor: number) {
+        this._valorTarifaDiaria = valor;
     }
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export default TarifaDiaria;</span></pre></td></tr></table></pre>
+export default TarifaDiaria;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-25T17:24:24.438Z
+                at 2025-06-03T00:51:42.973Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

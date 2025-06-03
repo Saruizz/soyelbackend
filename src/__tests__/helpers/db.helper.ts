@@ -1,5 +1,4 @@
-import { db } from '../mockDb';
-import { pgPromiseConnection } from '../setup';
+import { pgPromiseConnection } from "../setup";
 
 export const dbHelper = {
   /**
@@ -9,10 +8,10 @@ export const dbHelper = {
    * @returns Registro creado
    */
   async createTestData(table: string, data: any) {
-    const columns = Object.keys(data).join(', ');
+    const columns = Object.keys(data).join(", ");
     const values = Object.values(data);
-    const placeholders = values.map((_, i) => `$${i + 1}`).join(', ');
-    
+    const placeholders = values.map((_, i) => `$${i + 1}`).join(", ");
+
     return await pgPromiseConnection.one(
       `INSERT INTO ${table} (${columns}) VALUES (${placeholders}) RETURNING *`,
       values
@@ -22,38 +21,52 @@ export const dbHelper = {
   /**
    * Obtiene un registro de prueba por ID
    * @param table Nombre de la tabla
+   * @param idColumn Nombre de la columna ID (por defecto 'id')
    * @param id ID del registro
    * @returns Registro encontrado
    */
-  async getTestData(table: string, id: number) {
-    return await pgPromiseConnection.one(`SELECT * FROM ${table} WHERE id = $1`, [id]);
+  async getTestData(table: string, id: number, idColumn: string = "id") {
+    return await pgPromiseConnection.one(
+      `SELECT * FROM ${table} WHERE ${idColumn} = $1`,
+      [id]
+    );
   },
 
   /**
    * Elimina un registro de prueba
    * @param table Nombre de la tabla
+   * @param idColumn Nombre de la columna ID (por defecto 'id')
    * @param id ID del registro
    */
-  async deleteTestData(table: string, id: number) {
-    return await pgPromiseConnection.none(`DELETE FROM ${table} WHERE id = $1`, [id]);
+  async deleteTestData(table: string, id: number, idColumn: string = "id") {
+    return await pgPromiseConnection.none(
+      `DELETE FROM ${table} WHERE ${idColumn} = $1`,
+      [id]
+    );
   },
 
   /**
    * Actualiza un registro de prueba
    * @param table Nombre de la tabla
+   * @param idColumn Nombre de la columna ID (por defecto 'id')
    * @param id ID del registro
    * @param data Datos a actualizar
    * @returns Registro actualizado
    */
-  async updateTestData(table: string, id: number, data: any) {
+  async updateTestData(
+    table: string,
+    id: number,
+    data: any,
+    idColumn: string = "id"
+  ) {
     const setClause = Object.keys(data)
       .map((key, index) => `${key} = $${index + 2}`)
-      .join(', ');
-    
+      .join(", ");
+
     const values = [id, ...Object.values(data)];
-    
+
     return await pgPromiseConnection.one(
-      `UPDATE ${table} SET ${setClause} WHERE id = $1 RETURNING *`,
+      `UPDATE ${table} SET ${setClause} WHERE ${idColumn} = $1 RETURNING *`,
       values
     );
   },
@@ -72,6 +85,6 @@ export const dbHelper = {
    * @param table Nombre de la tabla
    */
   async cleanTable(table: string) {
-    return await db.none(`TRUNCATE TABLE ${table} CASCADE`);
-  }
-}; 
+    return await pgPromiseConnection.none(`TRUNCATE TABLE ${table} CASCADE`);
+  },
+};

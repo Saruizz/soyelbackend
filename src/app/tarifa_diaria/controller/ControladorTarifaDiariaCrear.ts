@@ -1,9 +1,15 @@
 import { Request, Response } from "express";
 import ServicioTarifaDiariaCrear from "../service/ServicioTarifaDiariaCrear";
+import TarifaDiaria from "../model/TarifaDiaria";
 
 class ControladorTarifaDiariaCrear extends ServicioTarifaDiariaCrear {
     public llamarGrabarTarifaDiaria(req: Request, res: Response): void {
-        ServicioTarifaDiariaCrear.grabarTarifaDiaria(req, res);
+        const obj = new TarifaDiaria(
+            req.body.codParqueadero,
+            req.body.codTipoVehiculo,
+            req.body.valorTarifaDiaria
+        );
+        ServicioTarifaDiariaCrear.grabarTarifaDiaria(obj, res);
     }
 }
 
